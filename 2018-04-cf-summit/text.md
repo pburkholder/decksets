@@ -14,27 +14,17 @@ footer: @clouddotgov
 
 ^Before I started with the federal government 2 years, I would assume the worst about the folks behind a government website or other IT system that I was obliged to use, or would read about in the headlines. Thanks to Mark Schwartz, I started to better understand the good intentions behind the bad outcomes.
 
-^We know that the best outcomes in technology are built on teams with a high-level 
-of psychological trust, and when teams are empowered to deliver value without outside 
-impediment. Trust is the key ingredient. But trust can become a rare commodity: our 
-constitutional system is predicated on the populace not trusting the government, on the
-three branches set up to provide checks on the others' powers. Contracting and procurement
-are set up to not trust the person making the procurement (for fear of favoritism or 
-nepotism), let alone the bidders on a contract. 
+^We know that the best outcomes in technology are built on teams with a high-level of psychological trust, and when teams are empowered to deliver value without outside impediment. Trust is the key ingredient. But trust can become a rare commodity: our constitutional system is predicated on the populace not trusting the government, on the three branches set up to provide checks on the others' powers. Contracting and procurement are set up to not trust the person making the procurement (for fear of favoritism or nepotism), let alone the bidders on a contract. 
 
 ---
 
 # Death spiral
 
-^All of this feeds into what Brad Katsuyama of IEX has identified as the regulated industry
-death spiral: A loophole or oversight exists, it's exploited, resulting in scandal. The
-response is to write more regulation. This bleeds talent, bleeds innovation, bleeds resources.
-So we're now more likely to miss a loophole, and the spiral continues.
+^All of this feeds into what Brad Katsuyama of IEX has identified as the regulated industry death spiral: A loophole or oversight exists, it's exploited, resulting in scandal. The response is to write more regulation. This bleeds talent, bleeds innovation, bleeds resources. So we're now more likely to miss a loophole, and the spiral continues.
 
 ^The regulatory spiral Specific to our domain is the ATO process. Any US Government information system, like a web application, must be granted an Authority to Operate, or ATO. Pertinent to CIO signing off on the ATO, and going to production, there are 4006 pages of regulations 4006! As a result, just the ATO process can take 6-14 months. 
 
-^To inject innovation into the cycle, the last administration established the Presidential Innovation Fellow program in 2012, which lead in 2014 to the creation of 18F: a digital consultancy within the federal government, housed within the General Services Administration. 
-The team assembled there tackled problems by starting from user-centered design, agile development, lean acquisition and open-source practices. 
+^To inject innovation into the cycle, the last administration established the Presidential Innovation Fellow program in 2012, which lead in 2014 to the creation of 18F: a digital consultancy within the federal government, housed within the General Services Administration. The team assembled there tackled problems by starting from user-centered design, agile development, lean acquisition and open-source practices. 
 
 ^But thanks to those 4006 pages of regulation standing between their work and obtaining an ATO, their work was either stranded, or stuck. 
 
