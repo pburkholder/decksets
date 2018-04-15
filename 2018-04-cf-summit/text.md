@@ -176,21 +176,35 @@ Isolation segments / TIC | FedRAMP High
 
 ^What I'm finding is that it works to shift the conversation to all the things the PaaS doesn't do. The PaaS won't run every application. The applications that aren't cloud-ready need their expertise to get them to cloud ready. The PaaS is still dumb: it doesn't know how to scale your application. It doesn't know what to do with the logs it ships you. That's still on you. And the PaaS doesn't do all the things you've been wanting to do but never had time for: real CI/CD, meaningful dashboards, sensible alerting so you can sleep through the night, or finally getting the developers the tools they need.
 
+^There are flavors of this. "PaaS isn't a serious proposition, only for toys" and 
+
 ^The broken mirror has one particular manifestation that needs to be called out as its own barrier. Namely, that "we already have a PaaS"
 
 ---
 
 ## 3. PaaS ✅
 
-^We alread
+^We already have a PaaS. You'll see this in part because some providers will label themselves as PaaS, when they're not actually self-service or provide the other key characteristics of a PaaS. In some cases, they see a PaaS as either not having all the features they need, or being too complex for the subset of features needed. 
+
+^Then the "let's build our own PaaS" fever takes hold: I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, the it gets routed to Pat for approval, and that'll get checked out in a validation environment for security scans ... and so and so on. 
+
+^Toolchains are awesome, but it's hard to enable flow in toolchain in an organization that hasn't practiced it. Time and again, the public and private sector, I've seen this devolve into Platform-as-a-Conceirge-Service, with bottlenecks acruing where manual work (or worse, manual rework) has to occur. But because it works for some folks, or because it was build "here", it can persist.
+
+^Fortunately, since cloud.gov is outside that ecosystem, we can point to it as being low-risk. It doesn't threaten the PaaCS if one pilot system moves to it. And if we can shift the conversation from outputs, a complex bespoke pseudo-PaaS, to outcomes: lead time, # releases, MTTR; then we can start to show the value of the PaaS approach.
 
 ---
 
-## 4. PaaS 🚫
+## 4. Too risky 🎲🎰🎲🎰
+
+^Because there are so many Federal regulations, once you've mastered a subset of them it's very easy for folks to get caugh in a status-quo bias.
+---
+
+## 5. PaaS 🚫 <br>(we have a DevOps team)
+
+
 
 ---
 
-## 5. 
 
 # Thank you!
 
@@ -209,6 +223,11 @@ Mark Schwartz, How DevOps Can Fix Federal Government IT, https://www.youtube.com
 Jen Pahlka, "Death Star Thinking and Government Refrom", Journal of Design and Science, https://jods.mitpress.mit.edu/pub/issue3-pahlka
 
 Brad Katsuyama, Regulatory Death Spiral. _N.B._ I've been unable to find this other than one photo of slide online. Thanks to Julian Dunn for bringing it to my attention.
+
+Characteristics on a PaaS: https://csrc.nist.gov/publications/detail/sp/800-145/final
+
+
+Status Quo Bias: Mark Schwartz, March 2018: https://medium.com/aws-enterprise-collection/reducing-risk-in-the-cloud-by-overcoming-the-status-quo-bias-4a2459cca2ef
 
 
 
