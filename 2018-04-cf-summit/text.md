@@ -1,3 +1,4 @@
+footer: @clouddotgov
 
 # `#hi`
 
@@ -123,25 +124,91 @@ NSF |  USDS | ATF
 
 ## Federal Deposit Insurance Corporation
 
+---
+
 ## Federalist 
 
 --- 
 
+<!-- 
 # Globally
-
-<!-- TKTK fill in -->
 * United Kingdom GDS
 * Australia 
 
-
-
----
-
-Now let's build adoption:
+N.B: Not doing this slide. Too hard to get right, doesn't add enough value.
+-->
 
 ---
 
-### (blank)
+The road ahead| <br> 
+---|---|
+Multiple Clouds: |  Windows
+CI/CD-as-a-Service | Container Runtime 
+Isolation segments / TIC | FedRAMP High
+
+## Adoption, adoption, adoption
+
+---
+
+# Clearing the five barriers to adoption
+
+^In the order that we need to tackle them....
+
+^I have partial answers here, but I know they're complete. So the exent that you can solve, or share your ideas, I'm eager to hear them.
+
+---
+
+## 0. :ear:?
+
+^I'm not indexing from 0. In this case there's a preliminary hurdle in that I don't talk much to the people who haven't heard about cloud.gov. Our ability to market is pretty limited, so the extent to which you can tweet or write or talk about us, the better. Thanks you. So once we do talk to folks, the first hurdle is:
+
+---
+
+## 1. The ☁️ is someone else's 💻
+
+^Although the sticker: "There is no cloud, it's just someone else's computer" is cute and has a point, it points to a persistent mental model of thinking about "computers" instead of "compute" or even more broadly, of outcomes or your mission.
+
+^A typical example of this was a pricing conversation we had with a potential customer, who shared with us the quote from an IaaS contractor. The quote spelled out the specifications, in CPUs and GBs, not just for the AppServer itself, but also for the Varnish caching server, the NginX web server, the Redis server, and the DB Cluster itself. There was no mention of using IaaS provided database services, or scaling groups, or load balancers, let alone the cloud value add of a CICD pipeline.
+
+^People can visualize their servers humming in racks in their datacenter, and perhaps they still have names. Moving to naive IaaS, or lift-and-shift, fits that model, but brings few if any benefits.
+
+^The best I can do at this point is to talk the mission-enablement provided by the code that's bundled in, say, a J2EE WAR file. Then consider all the bit in an IaaS needed to run that WAR file: VPC, jumpbox, server, OS, Java install, J2EE runtime, scaling group, load balancers, SSL certs, etc. Not to mention what the deployment process is going to be. None of that provides value as such. Only what runs in the WAR. With cloud.gov, you provide the WAR, and the platform takes care of the rest.
+
+^But clearing that mental model wall brings us crashing into:
+
+---
+
+## 2. The broken mirror
+
+^The person you're talking to, when they look in the mirror, sees someone who has years if not decades of experience running datacenters, spec'ing out hardware, configuring firewalls and routers, and learning the ins & outs of various operating systems. What we propose is really threatening to their identity. We're not taking away their worries, we're potentially taking away their sense of self.
+
+^This is real, and even if, or particularly if, some administrator mandates a move to a PaaS. And it's unlikely that the true motivation behind this resistance will be discussed openly.
+
+^What I'm finding is that it works to shift the conversation to all the things the PaaS doesn't do. The PaaS won't run every application. The applications that aren't cloud-ready need their expertise to get them to cloud ready. The PaaS is still dumb: it doesn't know how to scale your application. It doesn't know what to do with the logs it ships you. That's still on you. And the PaaS doesn't do all the things you've been wanting to do but never had time for: real CI/CD, meaningful dashboards, sensible alerting so you can sleep through the night, or finally getting the developers the tools they need.
+
+^The broken mirror has one particular manifestation that needs to be called out as its own barrier. Namely, that "we already have a PaaS"
+
+---
+
+## 3. PaaS ✅
+
+^We alread
+
+---
+
+## 4. PaaS 🚫
+
+---
+
+## 5. 
+
+# Thank you!
+
+(Image of our team from Zoom)
+
+---
+
+### 
 
 ---
 
