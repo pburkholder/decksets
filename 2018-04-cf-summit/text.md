@@ -46,7 +46,7 @@ The shortcut to an ATO is to start with most of those 4006 pages of regulations 
 
 The problem in 2015 was that the FedRAMP Marketplace didn't have a authorized general-purpose PaaS. If you started with IaaS provider, you could inherit controls for, say, the Physical Environment, Media Handling and Network Controls, but you were still responsible for all the operating systems, programming languages, logging, patching, etc. etc. So if you had 325 controls to satisfy for your application that had a Moderate risk profile, maybe you could re-use 85 of those, and then take on the work of satisfying the other 240. Ouch.
 
-The 18F answer was to build their own PaaS, satisfy as many of those controls as possible, and make that available as Platform-as-a-Service for other agencies throughout government. The cloud.gov platform was launched as a platform for federal users on 9 Oct 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov.
+The 18F answer was to build their own PaaS, satisfy as many of those controls as possible, and make that available as Platform-as-a-Service for other agencies throughout government. The cloud.gov platform was launched for federal users on 9 Oct 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. It's been awhile, and a lot is new.
 
 <!-- https://18f.gsa.gov/2015/10/09/cloud-gov-launch/ -->
 
@@ -55,4 +55,27 @@ The 18F answer was to build their own PaaS, satisfy as many of those controls as
 
 ---
 
-Fortunately there   
+So let's do whirlwind tour of what cloud.gov offers, because those feature may be relevant to your use case.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
+
+First, we're FedRAMP authorized for workloads up to FISMA moderate.  (More TKTK)
+
+Second, because we're platform-as-a-service, instead of infrastructure-as-a-service, a tenant can inherit a far larger number of security and compliance controls. For example, if you're running a FISMA-moderate workload, your security plan for an ATO needs to address 325 of NIST 800-53 controls. If you're building atop a typical IaaS, you can inherit and reuse TKTK controls from the cloud service provider, like assurance there's fire suppression in the datacenter.  When you run atop cloud.gov, you can inherit and reuse up to TKTK of those controls, document how we share responsibility for TKTK, and then you're fully responsible for the remaining TKTK.
+
+Third, we enable tenant security by making the secure choice the default choice. By reducing cognitive burden at the platform level, product teams can focus on security in their source code. Examples: S3 buckets are either public or private, and that's that, reducing the chance stashing private data in a bucket that is later accidentally exposed. S3 buckets enforce server-side encryption. DBs are encrypted at rest, and only allow TLS connections. And so on...
+
+Beyond these core security and compliance features, we've enhanced or extended Cloud Foundry offering, and I'll highlight a few of those in case you want to use them in your work:
+
+- Everything (almost) is open-source
+- cg-dashboard
+- TKTK - see repositories in cloud.gov
+
+
+
+
+
+
+How we built it.
+
+How we've made a difference.
+
+Now let's build adoption:
