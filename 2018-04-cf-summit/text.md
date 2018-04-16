@@ -25,7 +25,8 @@ slidenumbers: true
 
 ---
 
-# Death spiral
+
+![](media/reg-industry.png)
 
 ^All of this feeds into what Brad Katsuyama of IEX has identified as the regulated industry death spiral: A loophole or oversight exists, it's exploited, resulting in scandal. The response is to write more regulation. This bleeds talent, bleeds innovation, bleeds resources. So we're now more likely to miss a loophole, and the spiral continues.
 
@@ -38,15 +39,15 @@ slidenumbers: true
 
 ---
 
-# Inject innovation here
+![](media/inject-here.png)
+
+
 
 ^To inject innovation into the cycle, the last administration established the Presidential Innovation Fellow program in 2012, which lead in 2014 to the creation of 18F: a digital consultancy within the federal government, housed within the General Services Administration. The team assembled there tackled problems by starting from user-centered design, agile development, lean acquisition and open-source practices. 
 
 ---
 
-
-# Aral Sea
-
+![](media/aral-sea.jpg)
 
 ^But thanks to those 4006 pages of regulation standing between their work and obtaining an ATO, their work was either stranded, or stuck. 
 
@@ -272,7 +273,7 @@ Mark Schwartz, How DevOps Can Fix Federal Government IT, https://www.youtube.com
 
 Jen Pahlka, "Death Star Thinking and Government Refrom", Journal of Design and Science, https://jods.mitpress.mit.edu/pub/issue3-pahlka
 
-Brad Katsuyama, Regulatory Death Spiral. _N.B._ I've been unable to find this other than one photo of slide online. Thanks to Julian Dunn for bringing it to my attention.
+Brad Katsuyama, Regulatory Death Spiral. _N.B._ I've been unable to find this other than one photo of slide online. Thanks to Julian Dunn for bringing it to my attention, e.g., https://www.slideshare.net/chef-software/security-at-velocity-dc-cap-one
 
 cloud.gov repositories: https://cloud.gov/docs/ops/repos/
 
