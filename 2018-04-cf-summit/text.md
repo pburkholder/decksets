@@ -84,26 +84,25 @@ slidenumbers: true
 ^Beyond these core security and compliance features, we've enhanced or extended Cloud Foundry offering, and I'll highlight a few of those in case you want to use them in your work, as we open-source everything we can:
 
 ---
-<!-- 
 
 | Customer facing: | |
 | --- | --- |
-| cloud.gov Dashboard (like Stratos)  | Kibana proxy for tenant logs |
+| cloud.gov Dashboard | Kibana proxy for tenant logs |
 | CDN Broker for CloudFront + LetsEncrypt | Identity Broker to reuse UAA for applications |
-| Notify tenants on outdated buildpacks | Sandbox-bot: sweep clean after 90 days |
+| Notify tenants on outdated buildpacks | Create free Sandbox accounts |
 | RDS & S3 Brokers | Redis & Elasticsearch Brokers for K8S |
 
 ---
 
-| Infrastructure: |
-| --- |
-| Bosh: Ship CF audit logs to CloudWatch |
-| Bosh: Create free Sandbox accounts |
-| Bosh PowerDNS for DNSSEC support |
-| Bosh releases for: ClamAV, Nessus, NewRelic, Tripwire, Snort, Ubuntu hardening|
-| NGINX proxy for CF Router to force HTTPS, add HTTP headers, set timeout & size limits |
-| All the Terraform plans and Concourse pipelines to build cloud.gov |
-| BugBounty: Not a service, but we can provide advice | 
+| Infrastructure/Bosh | <br> |
+| --- | --- |
+| BOSH: Ship audit logs to CloudWatch | BOSH: PowerDNS for DNSSEC support |
+| BOSH: ClamAV, Nessus, NewRelic | BOSH: Tripwire, Snort, Ubuntu hardening|
+| Sandbox-bot: 90 day sweep-up|  NGINX `secureproxy`  |
+| Terraform plans | Concourse pipelines |
+| Ephemeral _Jumpboxes_ | BugBounty: Not a service |
+
+^for CF Router to force HTTPS, add HTTP headers, set timeout & size limits |
 
 ---
 
@@ -131,15 +130,25 @@ NSF |  USDS | ATF
 
 ## Federal Election Commission
 
-## Forest Service e-Permitting
+^The case study on our site focusses on cost savings, and in a small agency dropping their reducing their $1.4M/annum spend by 85% made a real difference. But I've been more interested in the process and culture change where they could adopt Agile from inception to delivery. Instead of quarterly releases with high change fail rate, they now deliver weekly, and are engaged in user-centered design and rapid prototyping in their endeavor to move the filing system to cloud.gov, not just public view.
+
+---
 
 ## Federal Deposit Insurance Corporation
+
+^FDIC migrated their main public website to us, and the only time we paused doing continuous delivery of the platform was on Friday afternoon the first few months, because that was when they published bank seizures and they just wanted nothing to go wrong until they got confidence in our reliability.
+
+^They are now eager cloud foundry users, and written their own "Compliance Bot" which they're not yet ready to open source, but it's a separate task worker periodically grab audit data, ship to S3, rotate service keys, do backups, and validate user roles. 
 
 ---
 
 ## Federalist 
 
---- 
+^Many offices just need a static website they can update as needed. CMS's
+are overkill for them, so our sibling project Federalist lets people edit locally, push to GitHub, preview on the web, and the publish.
+
+^Federalist now hosts 119 sites for eight federal agencies.
+
 
 
 ---
@@ -149,11 +158,9 @@ The road ahead| <br>
 Multiple Clouds: |  Windows
 CI/CD-as-a-Service | Container Runtime 
 Isolation segments / TIC | FedRAMP High
-
-## Adoption, adoption, adoption
+**Adoption, adoption** | **Adoption, adoption** 
 
 ---
--->
 
 # Clearing the five barriers to adoption
 
@@ -197,7 +204,7 @@ Isolation segments / TIC | FedRAMP High
 
 ---
 
-## 3. PaaS ✅
+## 3. ✅PaaS 
 
 ^We already have a PaaS. . Internally within an organization,  In some cases, they see a PaaS as either not having all the features they need, or being too complex for the subset of features needed. 
 
@@ -241,9 +248,14 @@ Isolation segments / TIC | FedRAMP High
 
 ---
 
-# cloud.gov
+![fit](media/cloud-gov.png)
 
-^Technology in government is hard thanks to low trust, regulatory death spiral, and you can't rule-make your way out. Innovation is possible, but you need to automate compliance so you can focus on innovation. Cloud.gov paves the way to compliance and innovation, and is built with open source tools that you can leverage and learn from. The barriers now in the adoption of cloud.gov, or any highly-abstracted compute platform, are not technical so much as cultural -- so I hope that some of what we've observed will help you overcome similar obstacles in your path forward.
+[.background-color: #FFFFFF]
+[.hide-footer]
+[.slidecount: false]
+
+
+^Technology in government is hard thanks to low trust, the regulatory death spiral, and that you can't rule-make your way out. Innovation is possible, but you need to automate compliance so you can focus on innovation. Cloud.gov paves the way to compliance and innovation, and is built with open source tools that you can leverage and learn from. The barriers now in the adoption of cloud.gov, or any highly-abstracted compute platform, are not technical so much as cultural -- so I hope that some of what we've observed will help you overcome similar obstacles in your path forward.
 
 ---
 
@@ -262,6 +274,8 @@ Jen Pahlka, "Death Star Thinking and Government Refrom", Journal of Design and S
 
 Brad Katsuyama, Regulatory Death Spiral. _N.B._ I've been unable to find this other than one photo of slide online. Thanks to Julian Dunn for bringing it to my attention.
 
+cloud.gov repositories: https://cloud.gov/docs/ops/repos/
+
 Characteristics of a PaaS: https://csrc.nist.gov/publications/detail/sp/800-145/final
 
 
@@ -270,6 +284,16 @@ Status Quo Bias: Mark Schwartz, March 2018: https://medium.com/aws-enterprise-co
 [.autoscale: true]
 
 ---
+
+Points I haven't made yet:
+* DOD and JEDI and PaaS first
+* Legitimacy (A. Clay Shafer)
+* What about _The Outage_?  DevOps investment, failure happens, drill for it.
+* ATO sprinting team successes
+* How does Kibana work?
+* Is cloudfront going away?
+
+
 
 <!-- 
 # Globally
