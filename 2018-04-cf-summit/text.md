@@ -1,5 +1,6 @@
 footer: @clouddotgov
 slidenumbers: true
+build-lists: true
 
 # `#hi`
 
@@ -58,6 +59,7 @@ slidenumbers: true
 
 ![](media/aral-sea.jpg)
 
+[.footer: https://www.flickr.com/photos/martijnmunneke/3417016257]
 ---
 
 ![](media/aral-sea.jpg)
@@ -75,6 +77,7 @@ slidenumbers: true
     * IaaS: TKTK of 325
 * Where's my PaaS?
 
+
 ^To foster use of cloud, the federal government has the FedRAMP program. Cloud service providers can complete the authorization process, specifying which security "controls" they satisfy, and then tenant agencies can build on top of that and largely inherit those controls. 
 
 ^In 2015 though, that FedRAMP Marketplace didn't include a general-purpose PaaS. If you started with IaaS provider, you could inherit controls for, say, the Physical Environment, Media Protection, Personnel Security. But if you're launching a system with a FISMA moderate impact, you need to document 325 controls. An IaaS would provide 85 of those, but you were still responsible for 240 controls regarding the operating systems, intrusion detection, logging, patching, etc. etc.  All things that a PaaS should provide.  
@@ -87,6 +90,8 @@ slidenumbers: true
 
 ^The cloud.gov platform was launched for federal users in Autumn 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. It's been awhile, and a lot is new.
 
+^So let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
+
 <!-- https://18f.gsa.gov/2015/10/09/cloud-gov-launch/ -->
 <!-- https://schd.ws/hosted_files/cfsummit2016/13/CFSummit2016-cloud.gov-compliance.pdf -->
 
@@ -94,28 +99,27 @@ slidenumbers: true
 
 # Compliance and Security
 
-1. FedRAMP
+1. FedRAMP JAB P-ATO
 2. Control Inheritance
 3. Security by Convention
 4. Continuous Improvement
 
-^So let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
+^First, we're FedRAMP JAB authorized for workloads up to FISMA moderate. If you're the CIO of the Agency of Silly Walks, and want to use cloud.gov, you and CISO can obtain from FedRAMP our entire System Security Plan, compliance finding, and outstanding items. You don't have to do you own technical audit, that's been done. You have the docs you need to determine whether our security posture fits your needs, and how you want to inherit those controls.  We've leveraged FedRAMP ourselves by building the platform atop AWS GovCloud, and inheriting their controls in our own SSP.
 
-^First, we're FedRAMP authorized for workloads up to FISMA moderate.  (More TKTK)
+^Second, because we're platform-as-a-service, instead of infrastructure-as-a-service, a tenant can inherit a far larger number of security and compliance controls. For example, if you're running a FISMA-moderate workload, your security plan for an ATO needs to address 325 of NIST 800-53 controls. If you're building atop a typical IaaS, you could inherit and reuse TKTK controls.  When you run atop cloud.gov, you can inherit and reuse up to TKTK of those controls, document how we share responsibility for TKTK, and then you're fully responsible for the remaining TKTK.
 
-^Second, because we're platform-as-a-service, instead of infrastructure-as-a-service, a tenant can inherit a far larger number of security and compliance controls. For example, if you're running a FISMA-moderate workload, your security plan for an ATO needs to address 325 of NIST 800-53 controls. If you're building atop a typical IaaS, you can inherit and reuse TKTK controls from the cloud service provider, like assurance there's fire suppression in the datacenter.  When you run atop cloud.gov, you can inherit and reuse up to TKTK of those controls, document how we share responsibility for TKTK, and then you're fully responsible for the remaining TKTK.
-
-^Third, we enable tenant security by making the secure choice the default choice. By reducing cognitive burden at the platform level, product teams can focus on security in their source code. Examples: S3 buckets are either public or private, and that's that, reducing the chance stashing private data in a bucket that is later accidentally exposed. S3 buckets enforce server-side encryption. DBs are encrypted at rest, and only allow TLS connections. The platform is continually updated, and we.
-
+^Third, we enable tenant security by making the secure choice the default choice. By reducing cognitive burden at the platform level, product teams can focus on security in their source code. Examples: S3 buckets are either public or private, and that's that, reducing the chance stashing private data in a bucket that is later accidentally exposed. S3 buckets enforce server-side encryption. DBs are encrypted at rest, and only allow TLS connections. And so on.
 
 ^Lastly, we're because we're a built-for-compliance offering, we're always looking for ways to make compliance easier on tenants. We notify our users when their buildpacks are out-of-date.  We're the only FedRAMP CSP to have an active bug bounty program. As Bret will tell you later, we're extending our container security with SysDig Falco.
 <!-- I've only check AWS, Azure and CSP on this. -->
+
+^Since all this work is open source, it means this is
 
 ---
 
 # News you can use
 
-^Beyond these core security and compliance features, we've enhanced or extended Cloud Foundry offering, and I'll highlight a few of those in case you want to use them in your work, as we open-source everything we can:
+^So you have these core security and compliance features, and we've enhanced or extended Cloud Foundry offering for our base, so I'll highlight a few of those in case you want to use them in your work
 
 ---
 
@@ -144,11 +148,13 @@ slidenumbers: true
 |--- | --- | --- |
 |service-connect | migrate-db | route-lookup |
 
+^So, what's come of all this work?
+
 --- 
 
 # Making a difference
 
-^ The folks at 18F originally adopted Cloud Foundry to solve their delivery problem, they made into _cloud.gov_ to change how agencies operate. How has that worked out?
+^The folks at 18F originally adopted Cloud Foundry to solve their delivery problem, they made into _cloud.gov_ to change how agencies operate. How has that worked out?
 
 ---
 
@@ -185,7 +191,11 @@ are overkill for them, so our sibling project Federalist lets people edit locall
 
 ---
 
-# Image: 1 month to ATO
+# (Image: 1 month to ATO)
+
+^Within GSA, many of our products are now built for cloud.gov, and we have team adept at generating the require documentation, and at working with our auditors. As the auditors are also now familiar with cloud.gov, this ATO Sprinting Team can obtain ATOs in less than a month.
+
+^All this has us looking forward to 
 
 ---
 
@@ -196,31 +206,30 @@ CI/CD-as-a-Service | Container Runtime
 Isolation segments / TIC | FedRAMP High
 **Adoption, adoption** | **Adoption, adoption** 
 
+^Mostly, though, we're wanting to build adoption. We want agencies to deliver on their mission with speed and stability, in way that doesn't involve vendor lock-in, or dependency on a single cloud provider. The barriers there are less technical than they are cognitive and cultural.
+
+
 ---
 
 # Clearing the five barriers to adoption
 
-^In the order that we need to tackle them....
-
-^I have partial answers here, but I know they're complete. So the exent that you can solve, or share your ideas, I'm eager to hear them.
-
----
-
-## 0. :ear:?
-
-^I'm not indexing from 0. In this case there's a preliminary hurdle in that I don't talk much to the people who haven't heard about cloud.gov. Our ability to market is pretty limited, so the extent to which you can tweet or write or talk about us, the better. Thanks you. So once we do talk to folks, the first hurdle is:
+^Let's look at these five barriers, that I've seen, as you'll likely encounter the same when working with colleagues, internal organizations, or clients.
 
 ---
 
 ## 1. The ☁️ is someone else's 💻
 
-^Although the sticker: "There is no cloud, it's just someone else's computer" is cute and has a point, it points to a persistent mental model of thinking about "computers" instead of "compute" or even more broadly, of outcomes or your mission.
+^Although that saying is cute, and true, it points to a persistent mental model of thinking about "computers" instead of "compute".
 
-^A typical example of this was a pricing conversation we had with a potential customer, who shared with us the quote from an IaaS contractor. The quote spelled out the specifications, in CPUs and GBs, not just for the AppServer itself, but also for the Varnish caching server, the NginX web server, the Redis server, and the DB Cluster itself. There was no mention of using IaaS provided database services, or scaling groups, or load balancers, let alone the cloud value add of a CICD pipeline.
+^People can visualize their servers humming in racks in their datacenter, and perhaps they still have names. When you think of the cloud as someone else's computer, you'll picture virtual servers humming in virtual racks. It can be tempting to make a one-to-one mapping, and miss all the cloud opportunities for automation, elasticity, and disposability.
 
-^People can visualize their servers humming in racks in their datacenter, and perhaps they still have names. Moving to naive IaaS, or lift-and-shift, fits that model, but brings few if any benefits.
+^A typical example: A potential customer shared with us the quote from an IaaS contractor. The quote spelled out, for each fo their environments, the number of CPUs and GBs RAM, for every server including the Varnish caching server, the NginX web server, the Redis server, and the DB Cluster itself. There was no mention of manage DB services, or scaling groups, or managed load balancers, let alone the cloud value add of a CICD pipelines and disposable infrastructure.
 
-^The best I can do at this point is to talk the mission-enablement provided by the code that's bundled in, say, a J2EE WAR file. Then consider all the bit in an IaaS needed to run that WAR file: VPC, jumpbox, server, OS, Java install, J2EE runtime, scaling group, load balancers, SSL certs, etc. Not to mention what the deployment process is going to be. None of that provides value as such. Only what runs in the WAR. With cloud.gov, you provide the WAR, and the platform takes care of the rest.
+^Moving to naive IaaS, or lift-and-shift, fits that model, but brings few if any benefits.
+
+^The best I can do at this point is to talk the mission-enablement provided by the code that's bundled in, say, a J2EE WAR file. That code, running in production, is what provides value. 
+
+^Then consider all the bit in an IaaS needed to run that WAR file: VPC, jumpbox, server, OS, Java install, J2EE runtime, scaling group, load balancers, SSL certs, etc. Not to mention what the deployment process is going to be. None of that provides value as such. Only what runs in the WAR. With cloud.gov, you provide the WAR, and the platform takes care of the rest.
 
 ^But clearing that mental model wall brings us crashing into:
 
@@ -228,13 +237,11 @@ Isolation segments / TIC | FedRAMP High
 
 ## 2. The broken mirror
 
-^The person you're talking to, when they look in the mirror, sees someone who has years if not decades of experience running datacenters, spec'ing out hardware, configuring firewalls and routers, and learning the ins & outs of various operating systems. What we propose is really threatening to their identity. We're not taking away their worries, we're potentially taking away their sense of self.
+^The person you're talking to, when they look in the mirror, sees someone who has years if not decades of experience running datacenters, spec'ing out hardware, configuring firewalls and routers, and learning the ins & outs of various operating systems. What we propose can be really threatening to their identity. We're not taking away their worries, we're potentially taking away their sense of self.
 
-^This is real, and even if, or particularly if, some administrator mandates a move to a PaaS. And it's unlikely that the true motivation behind this resistance will be discussed openly.
+^This is real, and even if, or particularly if, there's an mandate coming from on high. And it won't be expressed openly, the speaker may just see their objections fully rooted in the org's best interests.
 
-^What I'm finding is that it works to shift the conversation to all the things the PaaS doesn't do. The PaaS won't run every application. The applications that aren't cloud-ready need their expertise to get them to cloud ready. The PaaS is still dumb: it doesn't know how to scale your application. It doesn't know what to do with the logs it ships you. That's still on you. And the PaaS doesn't do all the things you've been wanting to do but never had time for: real CI/CD, meaningful dashboards, sensible alerting so you can sleep through the night, or finally getting the developers the tools they need.
-
-^There are flavors of this. "PaaS isn't a serious proposition, only for toys" and 
+^What I'm finding is that it works to shift the conversation to all the things the PaaS or Automation doesn't do. The PaaS won't run every application. The applications that aren't cloud-ready need their expertise to get them to cloud ready. The PaaS is still dumb: it doesn't know how to scale your application. It doesn't know what to do with the logs it ships you. That's still on you. And the PaaS doesn't do all the things you've been wanting to do but never had time for: real CI/CD, meaningful dashboards, sensible alerting so you can sleep through the night, or finally getting the developers the tools they need.
 
 ^The broken mirror has one particular manifestation that needs to be called out as its own barrier. Namely, that "we already have a PaaS"
 
@@ -242,45 +249,44 @@ Isolation segments / TIC | FedRAMP High
 
 ## 3. ✅PaaS 
 
-^We already have a PaaS. . Internally within an organization,  In some cases, they see a PaaS as either not having all the features they need, or being too complex for the subset of features needed. 
+^We already have a PaaS. In some cases, they see something like Cloud Foundry as either not having all the features they need, or being too complex for the smaller subset of features needed.
 
-^Then the "let's build our own PaaS" fever takes hold: I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, the it gets routed to Pat for approval, and that'll get checked out in a validation environment for security scans ... and so and so on. 
+^If they've already investing in automation, then the "let's build our own PaaS" fever takes hold: I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, the it gets routed to Pat for approval, and that'll get checked out in a validation environment for security scans ... and so and so on. 
 
-^Toolchains are awesome, but it's hard to enable flow in toolchain in an organization that hasn't practiced it. Time and again, the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service, with bottlenecks acruing where manual work (or worse, manual rework) has to occur. But because it works for some folks, or because it was build "here", it can persist.
+^Toolchains are awesome, but it's hard to enable flow in toolchain in an organization that hasn't practiced flow and continuous delivery. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service, with bottlenecks acruing where manual work has to occur. But because it works for some folks, or because it was build "here", it can persist.
 
-^compounding the problem, some providers will label themselves as PaaS, when they're not actually self-service or provide the other key characteristics of a PaaS
-
-^Fortunately, since cloud.gov is outside an organization's ecosystem, we can point to it as being low-risk. It doesn't threaten the PaaCS if one pilot system moves to it. And if we can shift the conversation from outputs, a complex bespoke pseudo-PaaS, to outcomes: lead time, # releases, MTTR; then we can start to show the value of the PaaS approach.
+^For us, since cloud.gov is outside an organization's ecosystem, we can point to it as being low-risk experiment or pilot. It doesn't threaten the PaaCS if one pilot system moves to it. And if we can shift the conversation from outputs, "Hey we build this complex bespoke pseudo-PaaS", to outcomes: "lead time, # releases, MTTR"; then we can start to show the value of the PaaS approach.
 
 ---
 
 ## 4. Too risky <br>🎲🎰🎲🎰
 
-^Because there are so many Federal regulations, once you've mastered a subset of them, and how they apply to your current operations, it's very easy for folks to get caught sticking with what they know, even if they know it's pretty awful.
+^"Interesting, but we can't take the risk."  Because there are so many Federal regulations, once you've mastered a subset of them, and how they apply to your current operations, it's very easy for folks to get caught sticking with what they know, even if they know it's pretty awful.
 
 ^People may ask, "Is cloud.gov secure enough?" But that's the wrong question. The salient question is, "Where will my security posture be best — in cloud.gov, or in my onsite data center, or in an IaaS service using a new and unfamiliar toolset?"
 
-^This fauly risk perception is often the result of the "Status Quo Bias", a cognitive bias that explains our preference for familiarity. We tend to resist change and prefer the current state of affairs. That tendency is buttressed by the endowment effect, the tendency of people, when making decisions, to give a higher weighting to things they already have.
+^In general, the solution that minimize your attack surface is best, and enables a robust security architecture. But faulty risk perception can come in with the "Status Quo Bias", a cognitive bias that explains our preference for familiarity. We tend to resist change and prefer the current state of affairs. That tendency is buttressed by the endowment effect, the tendency of people, when making decisions, to give a higher weighting to things they already have.
 
-^Recognizing that there's a status quo bias, and being empathetic to that, can help folks start to step back and evaluate their risk posture more objectively.
+^Personally, I'm experimenting more with talking about cognitive biases, usually with the angle that the people I'm talking to are wise enough to step back and weigh matters objectively. It's hard because I tend to want to make technical counterarguments, instead of saying: Yes, we can't account for all these hypotheticals. But is that better or worse than your current posture?
 
+^The last barrier is: We don't need a PaaS, we have a DevOps team.
 ---
 
 ## 5. 🚫 PaaS <br>(we have a DevOps team)
 
 ^Everybody wants the DevOps. They read about the high performing organizations that move with speed _and_ stability. Then they focus on the tooling and the forms of DevOps, and lose sight of the outcomes which should be paramount. 
 
-^Core to DevOps practice is having teams empowered to deliver value, to deliver on mission, without external bottlenecks. In private industry, in smaller start-ups, in mature DevOps organizations, it may be feasible to embed ops expertise in each team, and grant those folks the authority to make changes on behalf of the team.
+^Core to DevOps practice is having teams empowered to deliver value, to deliver on mission, without external bottlenecks. In private industry, in smaller start-ups, in mature DevOps organizations, it may be feasible to embed ops expertise in each team, and grant those teams the authority to make changes on behalf on the organizational goals.
 
 ^But as we discussed at the beginning of this talk, government and regulated industries are low-trust organizations. When I worked for Chef Software, I would see organizations that would have multiple Chef runs: One for ops, one for security, and one for the developers. Nevermind that they were practicing Infrastructure-as-Code -- that the same developer team they trusted to write code handling credit card data, they wouldn't trust to write code to install Tomcat on their systems. 
 
-^So when folks insist they have a DevOps team, that might be awesome. But it often means they've created CI/CD and infra-as-code team that is, despite best intentions, just a bottleneck to value delivery.
+^So when folks insist they have a DevOps team, that might be awesome. But it often means they've created CI/CD and infra-as-code team that is, despite best intentions, just a bottleneck to value delivery, because now all changes have to go through that team, instead of trusting the people closest to the product.
 
 ---
 
 # The PaaS to DevOps Outcomes
 
-^In short, I believe that a high-level PaaS is a prerequisite for DevOps outcomes for application delivery in government. Without it, teams are unlikely to have the authority to create, change and delete resources, and there will be too many impediments to move with speed and stability.
+^In short, I believe that a high-level PaaS is a prerequisite for DevOps outcomes for application delivery in government. Without it, teams are unlikely to have the authority to create, change and delete resources, and there will be too many impediments to move with speed and stability. And that's what motivates us in cloud.gov:
 
 ---
 
