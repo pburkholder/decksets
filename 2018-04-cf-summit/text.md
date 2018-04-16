@@ -1,63 +1,91 @@
 footer: @clouddotgov
 slidenumbers: true
 
-# Escape routes
-
-^I don't have to show this slide. But I think it's awesome in terms of  of contingency planning and safety culture. So I'm probably going to open all my future talks by pointing out where the exits are. And when everyone has to flee because a LiIon device bursts info flame, they'll all appreciate the foresight.
-
----
-
 # `#hi`
 
-^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working with federal agencies to adopt cloud.gov, and more generally, the notion of working in a PaaS or other high-level computing abstraction.
+^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working to help federal agencies adopt cloud.gov, and more generally, the notion of working in a PaaS or other high-level computing abstraction.
 
-^So it's exciting to be with folks who understand something about Cloud Foundry, and about working with technology in government, and the joys and challenges of that work.
+^So it's exciting to be with folks who understand Cloud Foundry, and about working with technology in government, and the joys and challenges of that work.
 
-^To understand the mission of cloud.gov, and it's raison d'etre, I think it's worth reflecting on whytech in government is challenging.
+^To understand the mission of cloud.gov, and it's raison d'etre, I think it's worth reflecting on why tech in government is challenging.
 
 ---
 
 # Trust
 
-^Before I started with the federal government 2 years, I would assume the worst about the folks behind a government website I used, or would read about in the headlines. Thanks to Mark Schwartz, I started to better understand the good intentions behind the bad outcomes.
+^It might be tempting to assume, when you're using a government website and finding the experience less than delightful, that there's some truth to the narrative that the government inherently can't do technology well.
 
-^We know that the best outcomes in technology are built on teams with a high-level of psychological trust, and when teams are empowered to deliver value without outside impediment. Trust is the key ingredient. But trust within government can become a rare commodity: our constitutional system is predicated on the populace not trusting the government, on the three branches set up to provide checks on the others' powers. Contracting and procurement are set up to not trust the person making the procurement (for fear of favoritism or nepotism), let alone the bidders on a contract. 
+^But what constitutes doing "technology well" in any environment, public or private? 
+
+^We know from research on team productivity and DevOps practices that the best outcomes are built on teams with a high-level of psychological trust, and when teams are empowered to deliver value. In other words, that trust is the key ingredient.
+
+^But trust within government can become a rare commodity: our constitutional system is predicated on the populace not trusting the government, on the three branches set up to provide checks on the others' powers. Contracting and procurement are set up to not trust the person making the procurement (for fear of favoritism or nepotism), let alone the bidders on a contract. 
+
+^Trust is replaced by regulation and audit. And this feeds what Brad Katsuyama dubbed 
 
 ---
 
+# Regulated Industry Death Spiral
+
+---
 
 ![](media/reg-industry.png)
 
-^All of this feeds into what Brad Katsuyama of IEX has identified as the regulated industry death spiral: A loophole or oversight exists, it's exploited, resulting in scandal. The response is to write more regulation. This bleeds talent, bleeds innovation, bleeds resources. So we're now more likely to miss a loophole, and the spiral continues.
+^A loophole or oversight exists, it's exploited, resulting in scandal. The response is to write more regulation. This bleeds talent, bleeds innovation, bleeds resources. So we're now more likely to miss a loophole, and the spiral continues.
 
 ^The regulatory spiral Specific to our domain is the ATO process. Any US Government information system, like a web application, must be granted an Authority to Operate, or ATO. Pertinent to CIO signing off on the ATO, and going to production, there are 4006 pages of regulations 4006! As a result, just the ATO process can take 6-14 months. 
+
+^We can't regulate our way out of this.
 
 ---
 
 > You can’t fix the problem of a system that is based on rigid rules by specifying new rules.
 -- Jen Pahlka 
 
+^We can inject innovation
+
 ---
 
 ![](media/inject-here.png)
 
 
+^To inject innovation, the last administration established the Presidential Innovation Fellow program in 2012, which led in 2014 to the creation of 18F: a digital consultancy within the federal government, housed in the General Services Administration. The team assembled there tackled problems by starting from user-centered design, agile development, lean acquisition and open-source practices. 
 
-^To inject innovation into the cycle, the last administration established the Presidential Innovation Fellow program in 2012, which lead in 2014 to the creation of 18F: a digital consultancy within the federal government, housed within the General Services Administration. The team assembled there tackled problems by starting from user-centered design, agile development, lean acquisition and open-source practices. 
+^But thanks to those 4006 pages of regulation standing between their work and obtaining an ATO, their work was either stranded, or stuck. They simply couldn't ship.
+
 
 ---
 
 ![](media/aral-sea.jpg)
 
-^But thanks to those 4006 pages of regulation standing between their work and obtaining an ATO, their work was either stranded, or stuck. 
+---
 
-^The shortcut to an ATO is to start with most of those 4006 pages of regulations already satisfied by re-use of technology -- and cloud computing is a huge boon here. The Federal government recognized that with FedRAMP program, where cloud service providers could get authorization that they met a certain number of compliance "controls", and tenants could build on top of their infrastructure or service and largely inherit those controls. 
+![](media/aral-sea.jpg)
 
+### 6 to 14 months to ATO
 
+^The shortcut to an ATO is to reuse technology that already satisfies most of those 4k pages. And cloud computing is a huge boon here. 
 
-^The problem in 2015 was that the FedRAMP Marketplace didn't have a authorized general-purpose PaaS. If you started with IaaS provider, you could inherit controls for, say, the Physical Environment, Media Handling and Network Controls, but you were still responsible for all the operating systems, programming languages, logging, patching, etc. etc. So if you had 325 controls to satisfy for your application that had a Moderate risk profile, maybe you could re-use 85 of those, and then take on the work of satisfying the other 240. Ouch.
+----
 
-^The 18F answer was to build their own PaaS, satisfy as many of those controls as possible, and make that available as Platform-as-a-Service for other agencies throughout government. The cloud.gov platform was launched for federal users on 9 Oct 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. It's been awhile, and a lot is new.
+# The FedRAMP Marketplace (2015)
+
+* Cloud Service Providers
+* Compliance Control Inheritance:
+    * IaaS: TKTK of 325
+* Where's my PaaS?
+
+^To foster use of cloud, the federal government has the FedRAMP program. Cloud service providers can complete the authorization process, specifying which security "controls" they satisfy, and then tenant agencies can build on top of that and largely inherit those controls. 
+
+^In 2015 though, that FedRAMP Marketplace didn't include a general-purpose PaaS. If you started with IaaS provider, you could inherit controls for, say, the Physical Environment, Media Protection, Personnel Security. But if you're launching a system with a FISMA moderate impact, you need to document 325 controls. An IaaS would provide 85 of those, but you were still responsible for 240 controls regarding the operating systems, intrusion detection, logging, patching, etc. etc.  All things that a PaaS should provide.  
+
+^There was no general purpose FedRAMP PaaS. So the 18F answer was to build their own PaaS, satisfy as many of those controls as possible, and make that available for other agencies throughout government. 
+
+---
+
+![](media/2015.png)
+
+^The cloud.gov platform was launched for federal users in Autumn 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. It's been awhile, and a lot is new.
 
 <!-- https://18f.gsa.gov/2015/10/09/cloud-gov-launch/ -->
 <!-- https://schd.ws/hosted_files/cfsummit2016/13/CFSummit2016-cloud.gov-compliance.pdf -->
@@ -66,7 +94,12 @@ slidenumbers: true
 
 # Compliance and Security
 
-^So let's do whirlwind tour of what cloud.gov offers, because those feature may be relevant to your use case.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
+1. FedRAMP
+2. Control Inheritance
+3. Security by Convention
+4. Continuous Improvement
+
+^So let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
 
 ^First, we're FedRAMP authorized for workloads up to FISMA moderate.  (More TKTK)
 
@@ -150,7 +183,9 @@ are overkill for them, so our sibling project Federalist lets people edit locall
 
 ^Federalist now hosts 119 sites for eight federal agencies.
 
+---
 
+# Image: 1 month to ATO
 
 ---
 
