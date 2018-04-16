@@ -1,10 +1,17 @@
 footer: @clouddotgov
+slidenumbers: true
+
+# Escape routes
+
+^I don't have to show this slide. But I think it's awesome in terms of  of contingency planning and safety culture. So I'm probably going to open all my future talks by pointing out where the exits are. And when everyone has to flee because a LiIon device bursts info flame, they'll all appreciate the foresight.
+
+---
 
 # `#hi`
 
 ^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working with federal agencies to adopt cloud.gov, and more generally, the notion of working in a PaaS or other high-level computing abstraction.
 
-^So it's a relief to be with folks who understand something about Cloud Foundry, and about working with technology in government, and the joys and challenges of that work.
+^So it's exciting to be with folks who understand something about Cloud Foundry, and about working with technology in government, and the joys and challenges of that work.
 
 ^To understand the mission of cloud.gov, and it's raison d'etre, I think it's worth reflecting on whytech in government is challenging.
 
@@ -12,9 +19,9 @@ footer: @clouddotgov
 
 # Trust
 
-^Before I started with the federal government 2 years, I would assume the worst about the folks behind a government website or other IT system that I was obliged to use, or would read about in the headlines. Thanks to Mark Schwartz, I started to better understand the good intentions behind the bad outcomes.
+^Before I started with the federal government 2 years, I would assume the worst about the folks behind a government website I used, or would read about in the headlines. Thanks to Mark Schwartz, I started to better understand the good intentions behind the bad outcomes.
 
-^We know that the best outcomes in technology are built on teams with a high-level of psychological trust, and when teams are empowered to deliver value without outside impediment. Trust is the key ingredient. But trust can become a rare commodity: our constitutional system is predicated on the populace not trusting the government, on the three branches set up to provide checks on the others' powers. Contracting and procurement are set up to not trust the person making the procurement (for fear of favoritism or nepotism), let alone the bidders on a contract. 
+^We know that the best outcomes in technology are built on teams with a high-level of psychological trust, and when teams are empowered to deliver value without outside impediment. Trust is the key ingredient. But trust within government can become a rare commodity: our constitutional system is predicated on the populace not trusting the government, on the three branches set up to provide checks on the others' powers. Contracting and procurement are set up to not trust the person making the procurement (for fear of favoritism or nepotism), let alone the bidders on a contract. 
 
 ---
 
@@ -24,15 +31,28 @@ footer: @clouddotgov
 
 ^The regulatory spiral Specific to our domain is the ATO process. Any US Government information system, like a web application, must be granted an Authority to Operate, or ATO. Pertinent to CIO signing off on the ATO, and going to production, there are 4006 pages of regulations 4006! As a result, just the ATO process can take 6-14 months. 
 
+---
+
+> You can’t fix the problem of a system that is based on rigid rules by specifying new rules.
+-- Jen Pahlka 
+
+---
+
+# Inject innovation here
+
 ^To inject innovation into the cycle, the last administration established the Presidential Innovation Fellow program in 2012, which lead in 2014 to the creation of 18F: a digital consultancy within the federal government, housed within the General Services Administration. The team assembled there tackled problems by starting from user-centered design, agile development, lean acquisition and open-source practices. 
+
+---
+
+
+# Aral Sea
+
 
 ^But thanks to those 4006 pages of regulation standing between their work and obtaining an ATO, their work was either stranded, or stuck. 
 
 ^The shortcut to an ATO is to start with most of those 4006 pages of regulations already satisfied by re-use of technology -- and cloud computing is a huge boon here. The Federal government recognized that with FedRAMP program, where cloud service providers could get authorization that they met a certain number of compliance "controls", and tenants could build on top of their infrastructure or service and largely inherit those controls. 
 
----
 
-# Aral Sea
 
 ^The problem in 2015 was that the FedRAMP Marketplace didn't have a authorized general-purpose PaaS. If you started with IaaS provider, you could inherit controls for, say, the Physical Environment, Media Handling and Network Controls, but you were still responsible for all the operating systems, programming languages, logging, patching, etc. etc. So if you had 325 controls to satisfy for your application that had a Moderate risk profile, maybe you could re-use 85 of those, and then take on the work of satisfying the other 240. Ouch.
 
@@ -64,6 +84,7 @@ footer: @clouddotgov
 ^Beyond these core security and compliance features, we've enhanced or extended Cloud Foundry offering, and I'll highlight a few of those in case you want to use them in your work, as we open-source everything we can:
 
 ---
+<!-- 
 
 | Customer facing: | |
 | --- | --- |
@@ -120,13 +141,6 @@ NSF |  USDS | ATF
 
 --- 
 
-<!-- 
-# Globally
-* United Kingdom GDS
-* Australia 
-
-N.B: Not doing this slide. Too hard to get right, doesn't add enough value.
--->
 
 ---
 
@@ -139,6 +153,7 @@ Isolation segments / TIC | FedRAMP High
 ## Adoption, adoption, adoption
 
 ---
+-->
 
 # Clearing the five barriers to adoption
 
@@ -184,24 +199,51 @@ Isolation segments / TIC | FedRAMP High
 
 ## 3. PaaS ✅
 
-^We already have a PaaS. You'll see this in part because some providers will label themselves as PaaS, when they're not actually self-service or provide the other key characteristics of a PaaS. In some cases, they see a PaaS as either not having all the features they need, or being too complex for the subset of features needed. 
+^We already have a PaaS. . Internally within an organization,  In some cases, they see a PaaS as either not having all the features they need, or being too complex for the subset of features needed. 
 
 ^Then the "let's build our own PaaS" fever takes hold: I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, the it gets routed to Pat for approval, and that'll get checked out in a validation environment for security scans ... and so and so on. 
 
-^Toolchains are awesome, but it's hard to enable flow in toolchain in an organization that hasn't practiced it. Time and again, the public and private sector, I've seen this devolve into Platform-as-a-Conceirge-Service, with bottlenecks acruing where manual work (or worse, manual rework) has to occur. But because it works for some folks, or because it was build "here", it can persist.
+^Toolchains are awesome, but it's hard to enable flow in toolchain in an organization that hasn't practiced it. Time and again, the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service, with bottlenecks acruing where manual work (or worse, manual rework) has to occur. But because it works for some folks, or because it was build "here", it can persist.
 
-^Fortunately, since cloud.gov is outside that ecosystem, we can point to it as being low-risk. It doesn't threaten the PaaCS if one pilot system moves to it. And if we can shift the conversation from outputs, a complex bespoke pseudo-PaaS, to outcomes: lead time, # releases, MTTR; then we can start to show the value of the PaaS approach.
+^compounding the problem, some providers will label themselves as PaaS, when they're not actually self-service or provide the other key characteristics of a PaaS
+
+^Fortunately, since cloud.gov is outside an organization's ecosystem, we can point to it as being low-risk. It doesn't threaten the PaaCS if one pilot system moves to it. And if we can shift the conversation from outputs, a complex bespoke pseudo-PaaS, to outcomes: lead time, # releases, MTTR; then we can start to show the value of the PaaS approach.
 
 ---
 
-## 4. Too risky 🎲🎰🎲🎰
+## 4. Too risky <br>🎲🎰🎲🎰
 
-^Because there are so many Federal regulations, once you've mastered a subset of them it's very easy for folks to get caugh in a status-quo bias.
+^Because there are so many Federal regulations, once you've mastered a subset of them, and how they apply to your current operations, it's very easy for folks to get caught sticking with what they know, even if they know it's pretty awful.
+
+^People may ask, "Is cloud.gov secure enough?" But that's the wrong question. The salient question is, "Where will my security posture be best — in cloud.gov, or in my onsite data center, or in an IaaS service using a new and unfamiliar toolset?"
+
+^This fauly risk perception is often the result of the "Status Quo Bias", a cognitive bias that explains our preference for familiarity. We tend to resist change and prefer the current state of affairs. That tendency is buttressed by the endowment effect, the tendency of people, when making decisions, to give a higher weighting to things they already have.
+
+^Recognizing that there's a status quo bias, and being empathetic to that, can help folks start to step back and evaluate their risk posture more objectively.
+
 ---
 
-## 5. PaaS 🚫 <br>(we have a DevOps team)
+## 5. 🚫 PaaS <br>(we have a DevOps team)
 
+^Everybody wants the DevOps. They read about the high performing organizations that move with speed _and_ stability. Then they focus on the tooling and the forms of DevOps, and lose sight of the outcomes which should be paramount. 
 
+^Core to DevOps practice is having teams empowered to deliver value, to deliver on mission, without external bottlenecks. In private industry, in smaller start-ups, in mature DevOps organizations, it may be feasible to embed ops expertise in each team, and grant those folks the authority to make changes on behalf of the team.
+
+^But as we discussed at the beginning of this talk, government and regulated industries are low-trust organizations. When I worked for Chef Software, I would see organizations that would have multiple Chef runs: One for ops, one for security, and one for the developers. Nevermind that they were practicing Infrastructure-as-Code -- that the same developer team they trusted to write code handling credit card data, they wouldn't trust to write code to install Tomcat on their systems. 
+
+^So when folks insist they have a DevOps team, that might be awesome. But it often means they've created CI/CD and infra-as-code team that is, despite best intentions, just a bottleneck to value delivery.
+
+---
+
+# The PaaS to DevOps Outcomes
+
+^In short, I believe that a high-level PaaS is a prerequisite for DevOps outcomes for application delivery in government. Without it, teams are unlikely to have the authority to create, change and delete resources, and there will be too many impediments to move with speed and stability.
+
+---
+
+# cloud.gov
+
+^Technology in government is hard thanks to low trust, regulatory death spiral, and you can't rule-make your way out. Innovation is possible, but you need to automate compliance so you can focus on innovation. Cloud.gov paves the way to compliance and innovation, and is built with open source tools that you can leverage and learn from. The barriers now in the adoption of cloud.gov, or any highly-abstracted compute platform, are not technical so much as cultural -- so I hope that some of what we've observed will help you overcome similar obstacles in your path forward.
 
 ---
 
@@ -209,10 +251,6 @@ Isolation segments / TIC | FedRAMP High
 # Thank you!
 
 (Image of our team from Zoom)
-
----
-
-### 
 
 ---
 
@@ -224,12 +262,22 @@ Jen Pahlka, "Death Star Thinking and Government Refrom", Journal of Design and S
 
 Brad Katsuyama, Regulatory Death Spiral. _N.B._ I've been unable to find this other than one photo of slide online. Thanks to Julian Dunn for bringing it to my attention.
 
-Characteristics on a PaaS: https://csrc.nist.gov/publications/detail/sp/800-145/final
+Characteristics of a PaaS: https://csrc.nist.gov/publications/detail/sp/800-145/final
 
 
-Status Quo Bias: Mark Schwartz, March 2018: https://medium.com/aws-enterprise-collection/reducing-risk-in-the-cloud-by-overcoming-the-status-quo-bias-4a2459cca2ef
+Status Quo Bias: Mark Schwartz, March 2018: https://medium.com/aws-enterprise-collection/reducing-risk-in-the-cloud-by-overcoming-the-status-quo-bias-4a2459cca2ef and Daniel Kahneman, _Thinking, Fast and Slow_, 2013.
 
+[.autoscale: true]
 
+---
 
+<!-- 
+# Globally
+* United Kingdom GDS
+* Australia 
 
-
+N.B: Not doing this slide. Too hard to get right, doesn't add enough value.
+-->
+<!-- Kubectl is not the top of the architectural layer cake -->
+<!-- A consistent PaaS definitely enables higher levels of DevOps achievement, but I've seen results even with basic, repurposeable dev/prod IT services.
+https://twitter.com/aidanfeldman/status/968140481145303043 -->
