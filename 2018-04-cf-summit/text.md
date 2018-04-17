@@ -4,11 +4,11 @@ build-lists: true
 
 # `#hi`
 
-^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working to help federal agencies adopt cloud.gov, and more generally, the notion of working in a PaaS or other high-level computing abstraction.
+^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working to help federal agencies adopt cloud.gov, and explaining what it means to work in Platform-as-a-Service.
 
-^So it's exciting to be with folks who understand Cloud Foundry, and about working with technology in government, and the joys and challenges of that work.
+^So it's exciting to be with folks who already understand Cloud Foundry, about working with technology in government, and the joys and challenges of that work.
 
-^To understand the mission of cloud.gov, and it's raison d'etre, I think it's worth reflecting on why tech in government is challenging.
+^To understand the mission of cloud.gov, and it's origins, lets reflect on why tech in government is challenging.
 
 ---
 
@@ -34,7 +34,7 @@ build-lists: true
 
 ^A loophole or oversight exists, it's exploited, resulting in scandal. The response is to write more regulation. This bleeds talent, bleeds innovation, bleeds resources. So we're now more likely to miss a loophole, and the spiral continues.
 
-^The regulatory spiral Specific to our domain is the ATO process. Any US Government information system, like a web application, must be granted an Authority to Operate, or ATO. Pertinent to CIO signing off on the ATO, and going to production, there are 4006 pages of regulations 4006! As a result, just the ATO process can take 6-14 months. 
+^The regulatory spiral Specific to our domain is the ATO process. Any US Government information system, like a web application, must be granted an Authority to Operate, or ATO. Pertinent to CIO signing off on the ATO, and going to production, there are 4006 pages of regulations 4006! As a result, just the ATO process can take 6-14 months.
 
 ^We can't regulate our way out of this.
 
@@ -115,6 +115,7 @@ build-lists: true
 
 ^Since all this work is open source, it means this is
 
+<!-- 7 m 20 s to get to this point -->
 ---
 
 # News you can use
@@ -155,6 +156,8 @@ build-lists: true
 # Making a difference
 
 ^The folks at 18F originally adopted Cloud Foundry to solve their delivery problem, they made into _cloud.gov_ to change how agencies operate. How has that worked out?
+
+<!-- 4m  to cover our open-source offerings -->
 
 ---
 
@@ -208,68 +211,72 @@ Isolation segments / TIC | FedRAMP High
 
 ^Mostly, though, we're wanting to build adoption. We want agencies to deliver on their mission with speed and stability, in way that doesn't involve vendor lock-in, or dependency on a single cloud provider. The barriers there are less technical than they are cognitive and cultural.
 
-
+<!-- 5m 34s -->
 ---
 
 # Clearing the five barriers to adoption
 
-^Let's look at these five barriers, that I've seen, as you'll likely encounter the same when working with colleagues, internal organizations, or clients.
+^Let's look at these five barriers, that I've seen, as you'll likely encounter the same when working with colleagues, internal organizations, or clients. I have some suggestions for getting past them, I would love to engage you all later on perhaps better ways to clear these.
 
 ---
 
-## 1. The ☁️ is someone else's 💻
+# 1. The ☁️ is someone else's 💻
+## ("compute", not "computer")
 
-^Although that saying is cute, and true, it points to a persistent mental model of thinking about "computers" instead of "compute".
+^I deeply regret ever saying "The cloud is someone else's computer" in a general intro talk. Although that saying is cute, and true, it points to a persistent mental model of thinking about "computers" instead of "compute".
 
-^People can visualize their servers humming in racks in their datacenter, and perhaps they still have names. When you think of the cloud as someone else's computer, you'll picture virtual servers humming in virtual racks. It can be tempting to make a one-to-one mapping, and miss all the cloud opportunities for automation, elasticity, and disposability.
+^People today visualize their servers humming in racks in their datacenter. When you think of the cloud as someone else's computer, you'll picture virtual servers humming in virtual racks. You can make a one-to-one mapping, and miss all the real benefits of cloud computing.
 
-^A typical example: A potential customer shared with us the quote from an IaaS contractor. The quote spelled out, for each fo their environments, the number of CPUs and GBs RAM, for every server including the Varnish caching server, the NginX web server, the Redis server, and the DB Cluster itself. There was no mention of manage DB services, or scaling groups, or managed load balancers, let alone the cloud value add of a CICD pipelines and disposable infrastructure.
-
-^Moving to naive IaaS, or lift-and-shift, fits that model, but brings few if any benefits.
+^A typical example: A potential customer shared a quote from an IaaS contractor. The quote spelled out, for each of their environments, the number of CPUs and GBs RAM, for every server including the Varnish caching server, the NginX web server, the Redis server, and the DB Cluster itself. There was no mention of manage DB services, or scaling groups, or managed load balancers, let alone the cloud value add of automation, elasticity or disposability.
 
 ^The best I can do at this point is to talk the mission-enablement provided by the code that's bundled in, say, a J2EE WAR file. That code, running in production, is what provides value. 
 
-^Then consider all the bit in an IaaS needed to run that WAR file: VPC, jumpbox, server, OS, Java install, J2EE runtime, scaling group, load balancers, SSL certs, etc. Not to mention what the deployment process is going to be. None of that provides value as such. Only what runs in the WAR. With cloud.gov, you provide the WAR, and the platform takes care of the rest.
+^Then consider all the bits in an IaaS needed to run that WAR file: VPC, jumpbox, server, OS, Java install, J2EE runtime, scaling group, load balancers, SSL certs, etc. Not to mention what the deployment process is going to be. None of that provides value as such. Only what runs in the WAR. With cloud.gov, you provide the WAR, and the platform takes care of the rest.
 
 ^But clearing that mental model wall brings us crashing into:
 
 ---
 
-## 2. The broken mirror
+# 2. The broken mirror
 
-^The person you're talking to, when they look in the mirror, sees someone who has years if not decades of experience running datacenters, spec'ing out hardware, configuring firewalls and routers, and learning the ins & outs of various operating systems. What we propose can be really threatening to their identity. We're not taking away their worries, we're potentially taking away their sense of self.
-
-^This is real, and even if, or particularly if, there's an mandate coming from on high. And it won't be expressed openly, the speaker may just see their objections fully rooted in the org's best interests.
+^The people I talk to, when they look in the mirror, see someone who has years or decades of experience running datacenters, spec'ing out hardware, configuring routers, and learning various operating systems. What we propose can be really threatening to their identity. We're not taking away their worries, we're taking away their sense of self. 
+^This is Particularly so if there's an mandate coming from on high. And this core identity issue won't be expressed openly, the speaker may just see their objections as fully rooted in the org's best interests.
 
 ^What I'm finding is that it works to shift the conversation to all the things the PaaS or Automation doesn't do. The PaaS won't run every application. The applications that aren't cloud-ready need their expertise to get them to cloud ready. The PaaS is still dumb: it doesn't know how to scale your application. It doesn't know what to do with the logs it ships you. That's still on you. And the PaaS doesn't do all the things you've been wanting to do but never had time for: real CI/CD, meaningful dashboards, sensible alerting so you can sleep through the night, or finally getting the developers the tools they need.
 
-^The broken mirror has one particular manifestation that needs to be called out as its own barrier. Namely, that "we already have a PaaS"
+^The broken mirror has one particular form that needs to be called out as its own barrier. Namely, when a lot of work has been invested, and we're told: "we already have a PaaS"
 
 ---
 
-## 3. ✅PaaS 
+# 3. ✅PaaS 
+## (or a PaaCS?)
 
-^We already have a PaaS. In some cases, they see something like Cloud Foundry as either not having all the features they need, or being too complex for the smaller subset of features needed.
+^I see this when an organization is already investing in automation. They see private industry using Terraform/Cloudformation and Chef or Ansible, they adopt these too, and then the "let's build our own PaaS" fever takes hold. 
 
-^If they've already investing in automation, then the "let's build our own PaaS" fever takes hold: I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, the it gets routed to Pat for approval, and that'll get checked out in a validation environment for security scans ... and so and so on. 
+^For example: "I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, and commit to Git. The PR gets routed to Pat for approval, then it'll get instantiated in a validation environment for security scans ... and so and so on. 
 
-^Toolchains are awesome, but it's hard to enable flow in toolchain in an organization that hasn't practiced flow and continuous delivery. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service, with bottlenecks acruing where manual work has to occur. But because it works for some folks, or because it was build "here", it can persist.
+^Toolchains are awesome, but not at scale in an organization that hasn't practiced flow. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service (or PaaCS), with bottlenecks accruing where manual work has to occur. And cloud.gov hits the Not Invented Here syndrome.
 
-^For us, since cloud.gov is outside an organization's ecosystem, we can point to it as being low-risk experiment or pilot. It doesn't threaten the PaaCS if one pilot system moves to it. And if we can shift the conversation from outputs, "Hey we build this complex bespoke pseudo-PaaS", to outcomes: "lead time, # releases, MTTR"; then we can start to show the value of the PaaS approach.
+^The agencies I talk with are interested in Lean, are interested in experimentation. Since cloud.gov is outside an organization's ecosystem, It doesn't threaten the PaaCS if one pilot system moves to it. And when it works, when we can talk about short lead time and number of releases, then we can tackle risk perception.
 
 ---
 
-## 4. Too risky <br>🎲🎰🎲🎰
+# 4. Too risky <br>🎲🎰🎲🎰
+## (status quo bias)
 
-^"Interesting, but we can't take the risk."  Because there are so many Federal regulations, once you've mastered a subset of them, and how they apply to your current operations, it's very easy for folks to get caught sticking with what they know, even if they know it's pretty awful.
+^People ask, "Is cloud.gov secure enough?" Important question, but a better framing is: "Where will my security be best — in cloud.gov, or in my data center, or in an IaaS using a new and unfamiliar toolset?"
 
-^People may ask, "Is cloud.gov secure enough?" But that's the wrong question. The salient question is, "Where will my security posture be best — in cloud.gov, or in my onsite data center, or in an IaaS service using a new and unfamiliar toolset?"
+^Generally, its best to minimize your attack surface, by using the highest level compute abstraction you can. Saas over PaaS, PaaS over IaaS. 
 
-^In general, the solution that minimize your attack surface is best, and enables a robust security architecture. But faulty risk perception can come in with the "Status Quo Bias", a cognitive bias that explains our preference for familiarity. We tend to resist change and prefer the current state of affairs. That tendency is buttressed by the endowment effect, the tendency of people, when making decisions, to give a higher weighting to things they already have.
+^But we prefer known risks to new ones. We are prey to the "status quo bias," a cognitive bias to resist change and prefer the current state of affairs, and to discount the advantages change brings. 
+Quantifying risk, quantifying all the hypotheticals is hard, and that's when the status quo bias will nudge people to the shortcut of saying: No.
 
-^Personally, I'm experimenting more with talking about cognitive biases, usually with the angle that the people I'm talking to are wise enough to step back and weigh matters objectively. It's hard because I tend to want to make technical counterarguments, instead of saying: Yes, we can't account for all these hypotheticals. But is that better or worse than your current posture?
+^To counter this, I'm experimenting more with talking about cognitive biases, with the angle that the people I'm talking to are wise enough to step back and weigh matters objectively, and move past that bias.
+
+^We also need to account for risk budgets: Risk is never zero, and at some point you must deliver on your mission.  cloud.gov enables mission delivery like few other tools available to the federal government.
 
 ^The last barrier is: We don't need a PaaS, we have a DevOps team.
+
 ---
 
 ## 5. 🚫 PaaS <br>(we have a DevOps team)
@@ -286,7 +293,7 @@ Isolation segments / TIC | FedRAMP High
 
 # The PaaS to DevOps Outcomes
 
-^In short, I believe that a high-level PaaS is a prerequisite for DevOps outcomes for application delivery in government. Without it, teams are unlikely to have the authority to create, change and delete resources, and there will be too many impediments to move with speed and stability. And that's what motivates us in cloud.gov:
+^In short, I believe that a PaaS is a prerequisite for DevOps outcomes in government. Without it, teams are unlikely to have the authority to create, change and delete resources, and there will be too many impediments to move with speed and stability. And that's what motivates us in cloud.gov:
 
 ---
 
@@ -297,14 +304,19 @@ Isolation segments / TIC | FedRAMP High
 [.slidecount: false]
 
 
-^Technology in government is hard thanks to low trust, the regulatory death spiral, and that you can't rule-make your way out. Innovation is possible, but you need to automate compliance so you can focus on innovation. Cloud.gov paves the way to compliance and innovation, and is built with open source tools that you can leverage and learn from. The barriers now in the adoption of cloud.gov, or any highly-abstracted compute platform, are not technical so much as cultural -- so I hope that some of what we've observed will help you overcome similar obstacles in your path forward.
+^Technology in government is hard thanks to low trust, the regulatory death spiral, and that you can't rule-make your way out. Innovation is possible, but you need to automate compliance so you can focus on innovation. Cloud.gov paves the way to compliance and innovation, and is built with open source tools that you can leverage and learn from. The barriers now in the adoption of cloud.gov, or any highly-abstracted compute platform, are not technical so much as cognitive and cultural; so I hope that some of what we've observed will help you overcome similar obstacles in your path forward.
 
 ---
 
 
+<br>
+<br>
+<br>
 # Thank you!
 
-(Image of our team from Zoom)
+![original](media/cgteam.png)
+
+[.header: #FFFFFF]
 
 ---
 
@@ -312,7 +324,7 @@ Isolation segments / TIC | FedRAMP High
 
 Mark Schwartz, How DevOps Can Fix Federal Government IT, https://www.youtube.com/watch?v=QwHVlJtqhaI, DevOps Enterprise Summit 2014
 
-Jen Pahlka, "Death Star Thinking and Government Refrom", Journal of Design and Science, https://jods.mitpress.mit.edu/pub/issue3-pahlka
+Jen Pahlka, "Death Star Thinking and Government Reform", Journal of Design and Science, https://jods.mitpress.mit.edu/pub/issue3-pahlka
 
 Brad Katsuyama, Regulatory Death Spiral. _N.B._ I've been unable to find this other than one photo of slide online. Thanks to Julian Dunn for bringing it to my attention, e.g., https://www.slideshare.net/chef-software/security-at-velocity-dc-cap-one
 
