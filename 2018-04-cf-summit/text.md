@@ -14,7 +14,7 @@ build-lists: false
 
 # Trust
 
-^If you're using a less-than delightful government web application, you may believe there's some truth to the narrative that the government inherently can't do technology well. But what constitutes doing "technology well" in any environment, public or private? 
+^When you use some government websites, you may believe there's some truth to the notion that the government just can't do technology well. But what constitutes doing "technology well" in any environment, public or private? 
 
 ^We know from research on team productivity and DevOps practices that the best outcomes are built on teams with a high-level of psychological trust, and when teams are empowered, are entrusted, to deliver value from concept to production. In other words, that trust is the key ingredient to performance.
 
@@ -80,7 +80,7 @@ build-lists: false
 
 # The FedRAMP Marketplace
 
-* Cloud Service Providers
+* Cloud Service Providers and JAB P-ATOs
 * Compliance Control Inheritance
 * A FISMA moderate System needs 325 Controls
 * A typical IaaS: ~100 of 325
@@ -88,19 +88,24 @@ build-lists: false
 
 [.build-lists: true]
 
-^Cloud service providers can complete the FedRAMP authorization process, specifying which security "controls" they satisfy, and then tenant agencies can build on top of that and largely inherit those controls. 
+^1. Cloud service providers can complete the FedRAMP authorization process, where the broadest authorization is a "Provisional ATO" granted by a "Joint Authorization Board."
 
-^In 2015 though, that FedRAMP Marketplace didn't include a general-purpose PaaS. If you started with IaaS provider, you could inherit controls for, say, the Physical Environment, Media Protection, Personnel Security. But if you're launching a system with a FISMA moderate impact, you need to document 325 controls. An IaaS would provide maybe 100 of those, but you were still responsible for 225 controls regarding OS hardening, intrusion detection, logging, patching, etc. etc.  All things that a PaaS should provide.
+^2. When an agency builds systems on top of that provider, they inherit compliance "controls" when then can, and build their town tooling and documentation on the remaining controls. But how many controls are there?
 
-^There was no general purpose FedRAMP PaaS. So the 18F answer was to build their own PaaS, satisfy as many of those controls as possible, and make that available for other agencies throughout government. Hence the birth of cloud.gov, which looked like this:
+^3. For a FISMA moderate impact system, which can have PII, there are 325 controls to manage. Everything for data center locks and fire suppression, to which ciphers you have in use.
+
+^4. If you build on an IaaS, you can inherit ~100 of those, the rest are "shared" or wholly on you.
+
+^5. So where's the PaaS that can meet controls on OS hardening, and DB encryption, and log managements? In 2015, there wasn't one in FedRAMP. So the 18F answer was to build their own PaaS, satisfy as many of those controls as possible, and make that available for other agencies throughout government. Hence the birth of cloud.gov
 
 ---
 
-![](media/2015.png)
+![fit](media/2018.png)
 
-^... when it was launched for federal users in Autumn 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. It's been awhile, and a lot is new.
+^... which launched for federal users in Autumn 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. It's been awhile, and a lot is new.
 
 ^Let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
+
 
 ---
 
@@ -108,7 +113,9 @@ build-lists: false
 
 1. FedRAMP JAB P-ATO
 
-^First, we're FedRAMP JAB authorized for workloads up to FISMA moderate. If you're the CIO of the Agency of Silly Walks, and want to use cloud.gov, you and CISO can obtain from FedRAMP our entire System Security Plan, compliance finding, and outstanding items. You don't have to do you own technical audit, that's been done. You have the docs you need to determine whether our security posture fits your needs, and how you want to inherit those controls.  We've leveraged FedRAMP ourselves by building the platform atop AWS GovCloud, and inheriting their controls in our own SSP.
+^First, we're FedRAMP JAB authorized for workloads up to FISMA moderate. 
+
+^At an agency, you can obtain from FedRAMP our entire System Security Plan and compliance findings. You don't have to do you own technical audit, that's been done. From those docs, you determine whether our security posture fits your needs, and how you want to inherit those controls.  
 
 ---
 
@@ -121,13 +128,11 @@ build-lists: false
 
 ---
 
-# Images:
+![](media/325-graph.png)
 
-* bar 0 to 325
-* bar 100 of those completed
-* bar 269 of those completed (with 54 inherited), and 56 shared/customer responsibility.
+^As mentioned, if you're running a FISMA-moderate workload, your security plan needs to address 325 controls and if you're building atop a typical IaaS, you could inherit and reuse ~100 controls 
 
-^For example, if you're running a FISMA-moderate workload, your security plan for an ATO needs to address 325 of NIST 800-53 controls. If you're building atop a typical IaaS, you could inherit and reuse ~100 controls, then you're fully or partially-responsible for the rest.  When you run atop cloud.gov, you can inherit and reuse up to 269 of those controls, and then you have 56 which are shared or fully your responsibility. And I note that building atop AWS GovCloud, we have also fully inherited 54 controls.
+^When you run atop cloud.gov, you can inherit and reuse up to 269 of those controls, and then you have 56 which are shared or fully your responsibility. And I note we've leveraged FedRAMP ourselves by building atop AWS GovCloud, and inheriting of their 54 controls in our own SSP.
 
 --- 
 
@@ -137,7 +142,7 @@ build-lists: false
 2. Control Inheritance
 3. Security by Convention
 
-^Third, we enable tenant security by making the secure choice the default choice. By reducing cognitive burden at the platform level, product teams can focus on security in their source code. Examples: S3 buckets are either public or private, and that's that, reducing the chance stashing private data in a bucket that is later accidentally exposed. S3 buckets enforce server-side encryption. DBs are encrypted at rest, and only allow TLS connections. And so on.
+^Third, we enable tenant security by making the secure choice the default choice. By reducing cognitive burden at the platform level, product teams can focus on security in their source code. One Example: S3 buckets are either public or private, and that's that, reducing the chance stashing private data in a bucket that is later accidentally exposed. A few others: S3 buckets enforce server-side encryption. DBs are encrypted at rest, and only allow TLS connections. And so on.
 
 ---
 # Compliance and Security
@@ -147,36 +152,33 @@ build-lists: false
 3. Security by Convention
 4. Continuous Improvement
 
-^Lastly, we're because we're a built-for-compliance offering, we're always looking for ways to make compliance easier on tenants. I'll encourage you to tune in to Bret's talk for what's really new on that front.
-
-^Since all this work is open source, it means this it's out there for you to use
+^Lastly, we're because we're a built-for-compliance offering, we're always looking for ways to make compliance easier on tenants. I'll encourage you to tune in to Bret's talk for what's really new on that front. That's how we support our tenant's compliance and security, what is we've built?
 
 ---
 
 # Open source <br>all-the-things
 
-^So you have these core security and compliance features, and we've enhanced or extended Cloud Foundry offering for our base, so I'll highlight a few of those in case you want to use them in your work
+^In short, cloud.gov is Cloud Foundry running on AWS GovCloud, with tooling to keep it fully automated, and enhancements for four federal customers. All our work is open source, it means this it's out there for you to use. Let's take a quick 
 
 ---
 
 | Customer facing: | |
 | --- | --- |
 | **cloud.gov Dashboard** | **CDN Broker for CloudFront + LetsEncrypt** |
-| Identity Broker to reuse UAA for applications | Create free Sandbox accounts | 
+| **Kibana proxy to customer logs** | Identity Broker to reuse UAA for applications | 
 | Notify tenants on outdated buildpacks |  RDS & S3 Brokers | 
-| Redis & Elasticsearch Brokers for K8S | <br> |
+| Redis & Elasticsearch Brokers for K8S | Free Sandbox accounts | 
+
 
 ---
 
 | Infrastructure/Bosh | <br> |
 | --- | --- |
-| BOSH: Ship audit logs to CloudWatch | **BOSH: PowerDNS for DNSSEC support** |
+| BOSH: Ship audit logs to CloudWatch | BOSH: PowerDNS for DNSSEC support |
 | BOSH: ClamAV, Nessus, NewRelic | BOSH: Tripwire, Snort, Ubuntu hardening|
 | Sandbox-bot: 90 day sweep-up|  NGINX `secureproxy`  |
 | Terraform plans | Concourse pipelines |
-| **Ephemeral Jumpboxes** | BugBounty |
-
-^for CF Router to force HTTPS, add HTTP headers, set timeout & size limits 
+| **Ephemeral Jumpboxes** | **BugBounty** |
 
 ^So, what's come of all this work?
 
@@ -215,7 +217,7 @@ NSF | USDS | ATF
 
 ^FDIC migrated their main public website to us in March 2017, depending on our reliability especially for the Friday afternoon publication of bank seizures.  FDIC now sees us a core to modernizing and realizing the benefits of agile practices, and they are now prototyping a number of different systems on cloud.gov for eventual use in production.
 
-^And they've adopted a gret cloud foundry mentality, having written their own "Compliance Bot," a separate task worker periodically grab audit data, ship to S3, rotate service keys, do backups, and validate user roles. 
+^And they've adopted a great cloud foundry mentality, having written their own "Compliance Bot," a separate task worker periodically grab audit data, ship to S3, rotate service keys, do backups, and validate user roles. 
 
 ---
 
@@ -228,9 +230,10 @@ Federalist now hosts 119 sites for eight federal agencies.
 
 ---
 
-# (Image: 1 month to ATO)
+# (dry run: imagine an image of speedboat
+# 1 month to ATO
 
-^Within GSA, many of our products are now built for cloud.gov, and we have team adept at generating the require documentation, and at working with our auditors. As the auditors are also now familiar with cloud.gov, this ATO Sprinting Team can obtain ATOs in less than a month.
+^Within GSA, many of our products are now built for cloud.gov, and we have team adept at generating the require documentation, and at working with our auditors. As the auditors are also now familiar with cloud.gov, this ATO Sprinting Team can now obtain ATOs in less than a month.
 
 ^All this has us looking forward to 
 
@@ -242,9 +245,12 @@ The road ahead| <br>
 CI/CD-as-a-Service | Container Runtime 
 FedRAMP High | **Adoption, adoption** 
 
-^Mostly, though, we're wanting to build adoption. We want agencies to deliver on their mission with speed and stability, in way that doesn't involve vendor lock-in, or dependency on a single cloud provider. Agencies know they must modernize. They needs speed and stability. But cloud.gov, or any PaaS, is a different beast, and the barriers to adoption are less technical than they are cognitive and cultural.
+^All these things matter: Windows, CI/CD, getting the upstream Container Runtime for K8s, and moving to FR high. Of particular interest: multiple clouds: Getting workloads perhaps closer to other services, and not just in a monoculture.
 
-<!-- 5m 34s -->
+^Mostly, though, we're wanting to build adoption.  Agencies know they must modernize. They needs speed and stability. We want agencies to deliver on their mission with speed and stability, in way that doesn't involve vendor lock-in. But cloud.gov, or any PaaS, is a different beast, and the barriers to adoption are less technical than they are cognitive and cultural.
+
+<!-- 14m 15s to this point -->
+
 ---
 
 # Clearing the five barriers to adoption
@@ -351,6 +357,8 @@ Quantifying risk, quantifying all the hypotheticals is hard, and that's when the
 ![original](media/cgteam.png)
 
 [.header: #FFFFFF]
+
+<!-- 8m 11s + 14m 15s = 22m 30s -->
 
 ---
 
