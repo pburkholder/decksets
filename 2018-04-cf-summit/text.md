@@ -40,10 +40,13 @@ slidenumbers: true
 
 ---
 
-![](media/6600.png)
+
+![original](media/6600.png)
 
 ## pages in total:
 # ~6600
+
+[.header: #FF0000]
 
 
 ^So three years ago, 18F was in a quandary. 18F is a digital consultancy housed within the GSA, and we partner with other agencies on innovation starting from principles
@@ -95,8 +98,13 @@ including user-centered design, agile development, lean acquisition and open-sou
 <!-- 4m 30s to here -->
 ---
 
-# images from seismogram, rack, devops
+<!-->
+![](https://earthquake.usgs.gov/monitoring/seismograms/data/nca/nc.MDR_EHZ_NC_02_00.2222121200.gif)
+-->
 
+# From digging to devops
+
+![inline](https://clubrunner.blob.core.windows.net/00000008680/Images/P-Chung.jpg) ![inline](https://secure.meetupstatic.com/photos/event/c/c/c/5/600_467212421.jpeg)
 
 ^I came up through technology first as a geophysicist, doing field work and data analysis, and then as a sysadmin for research labs, then the private sector. I caught the DevOps bug in 2010, as soon as I heard about it, as it pulled together the work I'd been doing with infrastructure automation and testing, and it added a framework for team collaboration.
 
@@ -104,8 +112,10 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ---
 
+# 18F
 
-# Washington, 18F photo, GSA
+![inline](https://18f.gsa.gov/assets/blog/join-us/18F-IRL-2016.jpg)
+
 
 ^ I hadn't fully cracked that nut when I started with 18F. I admit to being dismissive of cloud.gov at first: "It's just Heroku for government. It can't tackle serious problems -- thats for real sysadmins and their DevOps tools." Then my first engagement with 18F was with an agency just moving past their first pilot or running anything in the cloud. Instead of coaching I was down in the trenches in an agency working with them to build a hardened, functional and automated development & staging environment in Azure. In 9 months we didn't get to the point of having a single line of developer code running in that env, but where I felt failure, they felt we "had exceeded all expectations" by having a repeatable process for building and managing that environment -- and because we had them running "in the cloud"
 
@@ -307,15 +317,13 @@ https://github.com/cloudfoundry-community/logsearch-for-cloudfoundry
 
 ^The folks at 18F originally adopted Cloud Foundry to solve their delivery problem, they made into _cloud.gov_ to change how agencies operate. How has that worked out?
 
----
-
 Agencies: | <br> | <br>
 ---|---|---
 NOAA | Air Force | Forest Service
-Interior | Education | IRS
+FDIC | Education | IRS
 FBI | EPA | OMB
 NSF | USDS | ATF
-**FDIC** | **FEC** | **GSA**
+**Interior** | **FEC** | **GSA**
 
 (plus 71 agencies in sandbox orgs)
 
@@ -347,12 +355,15 @@ are overkill for them, so our sibling project Federalist lets people edit locall
 
 ---
 
-# (dry run: imagine an image of speedboat
+![original](https://farm2.staticflickr.com/1023/784286985_51338a3fe1_o_d.jpg)
+
 # 1 month to ATO
 
 ^Within GSA, many of our products are now built for cloud.gov, and we have team adept at generating the require documentation, and at working with our auditors. As the auditors are also now familiar with cloud.gov, this ATO Sprinting Team can now obtain ATOs in less than a month.
 
 ^All this has us looking forward to 
+
+[.footer: https://www.flickr.com/photos/robwallace/784286985]
 
 ---
 
