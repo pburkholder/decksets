@@ -1,4 +1,4 @@
-footer: @clouddotgov
+footer: https://cloud.gov 
 slidenumbers: true
 build-lists: false
 
@@ -6,33 +6,29 @@ build-lists: false
 
 ^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working to help federal agencies adopt cloud.gov, and explaining what it means to work in Platform-as-a-Service.
 
-^So it's exciting to be with folks who already understand Cloud Foundry, about working with technology in government, and the joys and challenges of that work.
+^So it's exciting to be with folks who already understand Cloud Foundry, and may already  be using it government or in their own highly regulated setting. 
 
-^To understand the mission of cloud.gov, and it's origins, lets reflect on why tech in government is challenging.
+^To understand cloud.gov and its mission, let's talk about the key ingredient to working effectively in technology: Trust
 
 ---
 
 # Trust
 
-^When you use some government websites, you may believe there's some truth to the notion that the government just can't do technology well. But what constitutes doing "technology well" in any environment, public or private? 
+* Psychological Safety
+* Team Empowerment
+* Regulatory Setting
 
-^We know from research on team productivity and DevOps practices that the best outcomes are built on teams with a high-level of psychological trust, and when teams are empowered, are entrusted, to deliver value from concept to production. In other words, that trust is the key ingredient to performance.
+^We know from research on team productivity and DevOps practices that the best outcomes are built on teams with a high-level of psychological trust, and when teams are empowered, are entrusted, to deliver value from concept to production. 
 
-^But trust within government can be rare by design: our constitutional system is predicated on the populace not trusting the government, on the three branches providing checks on the others' powers. Procurement is set up to not trust the people making the buy to avoid favoritism. Nor to trust the contractors themselves.
+^Now these are two different kinds of trust. 1! One is internal to a team: trust that your input matters, trust that your are heard, trust that you can fail without blame or shame. The other 2! is team context: Are they trusted to operate in their domain of expertise? Do they trust that failure be a learning opportunity and not cause for punishment? 
 
-^So Trust is replaced by regulation and audit. And this feeds what Brad Katsuyama dubbed 
+^This latter form of trust is very much in tension with a 3! regulatory setting. And within government trust can be rare by design: our constitutional system is predicated on the populace not trusting the government, on the three branches providing checks on the others' powers. Procurement is set up to not trust the people making the buy to avoid favoritism. Nor to trust the contractors themselves.
 
----
+^So Trust is replaced by regulation and audit; and this is fine -- it enables a bureaucracy to operate on behalf of the people.  
 
-# Regulated Industry Death Spiral
+^Still, it can feed regulatory escalation: A loophole exists, it's exploited, resulting in scandal. The response is to write more regulation. And so on.
 
----
-
-![](media/reg-industry.png)
-
-^A loophole or oversight exists, it's exploited, resulting in scandal. The response is to write more regulation. This bleeds talent, bleeds innovation, bleeds resources. So we're now more likely to miss a loophole, and the spiral continues.
-
-^The regulatory spiral Specific to our domain is the ATO process. Any US Government information system, like a web application, must be granted an Authority to Operate, or ATO. The ATO documentation runs between 200-100 pages, to address all these published regulations:
+^The regulatory framework relevant to running information systems in the Federal government is the "Authority to Operate" process. Any US Government information system, like a web application, must be granted an Authority to Operate, or ATO. The ATO documentation runs between 200-1000 pages, to address all these published regulations:
 
 ---
 
@@ -41,40 +37,56 @@ build-lists: false
 ## pages in total:
 # ~6600
 
-^We can't regulate our way out of this.
+---
+
+![inline](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAAAb1BMVEUAAAD///8lJSVMTExERETd3d2ZmZmIiIgICAgzMzMcHBz6+vr29vbl5eWKiooRERHExMTw8PCTk5PCwsJ1dXWoqKhfX1+ysrIrKys+Pj5paWk4ODjX19fOzs4XFxelpaVbW1t9fX1SUlK3t7dvb28SRRCMAAADg0lEQVR4nO2c63KqMBCAQUAxgIFWxRtWre//jEdkE3NZsNM2wTPd72ealW8S2Cwk06CI0uDFSKMiiMeWwIiClxurlpeUIgiCIAiCIAiCIAiCIAiCIAjif4RzjxdLt7HKBu3ElnURhmGWrHZHtMM8xth+fwNlGWpkyJBsarXDlNk99iHO8ttaM+OXJmYHPs30HvnMGoSoR2vmTIs19tVKcya9a80r7HKJ0cu31rHAr3fQb0HPWikygx21Y634kNwRw6JpneUFmuWese05kQ0nTKtINA4/342OEC0ubqxKSuxyaErSJ8G/A/bLC6GgNMpn4DqWVgoTW2mpfwtprBlLawtNRq5+g2Y2GOxOC274ykjqRxiu9Uhaq67lw+z63rUvRtIq0TmUs/gxGOxOq7EmqwMmtx4MdqdV2pngDuSN1UhaUGa9mV1XVrtXLRiVxOiZQkLdjaR1gSZjZdtB83wkLQ7rX6MlLg65vxgOdqcVfIRWKghSyFpa0eJXaw5tYS2rPgaPZ5izJ8HutMQzd1uAlneLyUzUNWqO9651VCr5pCyVClort3xrBbHxMibI52jwdKawd6cVrFGrLMKDNd4dasnqSsNcvVGt0qHWGZ3FfIcH+9JCx6rlPKZWr5VRV/jVUu73vF5cr4vPx5RmMRLsRYvJ3FmsIU3xq8xkBbeDV1OFXzlJ3V9v3SorJXfyR+tg8C9h/7JcEY3yVLzUZmwg2J2WWBAXZlf7Dx61OPL23JFaFZdHrZ7atEXUp/veYHdakLPMSr5FVPPL3mB3Wva78wPzfdujFtxAJ6wzfDUve4PdacFEbbHOp+5vhxG0cuO2VrkY953/Sbxgna/d35reYHdajfG0qcBTWvcGu9OCpw0tfRPjKfWoBROVIZcSXy8vvcHutDbQYH0MlF+YHrtpPpdqsYMRmV3F2lMPBLvTElevjK1P8QVc8fWpJQqFsNJW65OoWZuhYHdaIpe3O65yA3EiP0uo+d/vy/5jMziv1+1W1E55x3h7EuxOiz82xCya8baigknPLudtOTw+DXanFUx6xuvAvhDsTis4fmJWK/6lYHdat/RlbaIXVlXhTgveCnP7eAY/a3dYcrXPgkAwdrbjp7B5C35WJV409zGr3nu+8W3uh1eQ8yTO4Yz5PPtDEARBEARBEARBEARBEARBEMRf4CX/42kaWEcGXoEoeM1/8fsPS4ok9O+qn64AAAAASUVORK5CYII=)
+
+^So this was the quandary 18F was in three years ago. 18F is a digital consultancy housed within the GSA, and we partner with other agencies on innovation starting from principles
+including user-centered design, agile development, lean acquisition and open-source practices. 
+
+^So in conjunction with agency partners they were building great product. Yet the challenge of complying with and _documenting_ compliance was leading to product getting stranded, ....
 
 ---
 
-> You can’t fix the problem of a system that is based on rigid rules by specifying new rules.
--- Jen Pahlka 
-
-^We can inject innovation
-
----
-
-![](media/inject-here.png)
-
-
-^Among the efforts to inject innovation, the last administration established the Presidential Innovation Fellow program in 2012, which led in 2014 to the creation of 18F: a digital consultancy within the federal government, housed in the General Services Administration. The team assembled there tackled problems by starting from user-centered design, agile development, lean acquisition and open-source practices. 
-
-^But thanks to those 6,600 pages of regulation standing between their work and obtaining an ATO, their work was either stranded, or stuck. They simply couldn't ship.
-
-
----
-
-![](media/aral-sea.jpg)
+![](https://farm4.staticflickr.com/3654/3417016257_6eb962033d_o_d.jpg)
 
 [.footer: https://www.flickr.com/photos/martijnmunneke/3417016257]
 
+^because they were looking at a process where typically...
+
 ---
 
-![](media/aral-sea.jpg)
+![](https://farm4.staticflickr.com/3654/3417016257_6eb962033d_o_d.jpg)
 
 [.footer: https://www.flickr.com/photos/martijnmunneke/3417016257]
 
 ### 6 to 14 months to ATO
 
-^...because the time to obtain an ATO was 6 to 14 months. The shortcut to an ATO is to reuse technology that already satisfies most of those 6k pages. And cloud computing is a huge boon here, and we have what's called the FedRAMP marketplace
+^... it would take 6 to 14 months to obtain an ATO and actually ship. 
+
+<!-- And they couldn't just regulate their way out of it. Much of the regulation provides valuable guidance, and the documentation can be a useful guide and reference, nor could anyone demand that we comply harder or faster.
+
+---
+
+> You can’t fix the problem of a system that is based on rigid rules by specifying new rules.
+-- Jen Pahlka, Executive Director, Code for America 
+
+-->
+
+---
+
+![original](https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/450093main_hobys_rosette_05_A3_3d_full.jpg)
+
+# Genesis
+[.header: #FFFFFF]
+
+^One shortcut to ATO: Reuse! But in January 2015 the reuse of configuration management tooling wasn't scaling to the needs of the 18F, so after assessing the  tradeoffs between the available cloud and commercial offering, a small team at 18F  built a PaaS w/ Cloud Foundry that would satisfy the majority of the compliance implementation and documentation needs 18F and their partners.
+
+^It was such a success internally, that folks decided to make it available to any agency, and in October 2015,
+
+<!-- 
+^The shortcut to an ATO is to reuse technology that already satisfies most of those 6k pages. And cloud computing is a huge boon here, and we have what's called the FedRAMP marketplace
+and they were looking 
 
 ----
 
@@ -98,14 +110,18 @@ build-lists: false
 
 ^5. So where's the PaaS that can meet controls on OS hardening, and DB encryption, and log managements? In 2015, there wasn't one in FedRAMP. So the 18F answer was to build their own PaaS, satisfy as many of those controls as possible, and make that available for other agencies throughout government. Hence the birth of cloud.gov
 
+-->
+---
+
+![fit](media/2015.png)
+
+^ cloud.gov was launched for federal users in Autumn 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. This is how it looked back then, but its been awhile, and a lot is new.
+
 ---
 
 ![fit](media/2018.png)
 
-^... which launched for federal users in Autumn 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. It's been awhile, and a lot is new.
-
-^Let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
-
+^A new look clearly, but a lot more under the covers. So Let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
 
 ---
 
