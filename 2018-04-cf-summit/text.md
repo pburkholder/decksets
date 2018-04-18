@@ -6,7 +6,7 @@ build-lists: false
 
 ^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working to help federal agencies adopt cloud.gov, and explaining what it means to work in Platform-as-a-Service.
 
-^So it's exciting to be with folks who already understand Cloud Foundry, and may already  be using it government or in their own highly regulated setting. 
+^So it's exciting to be with folks who already understand Cloud Foundry, and may already  be using it government or in their own highly-regulated setting. 
 
 ^To understand cloud.gov and its mission, let's talk about the key ingredient to working effectively in technology: Trust
 
@@ -18,13 +18,20 @@ build-lists: false
 * Team Empowerment
 * Regulatory Setting
 
-^We know from research on team productivity and DevOps practices that the best outcomes are built on teams with a high-level of psychological trust, and when teams are empowered, are entrusted, to deliver value from concept to production. 
+^We know from research on team productivity and DevOps practices that the best outcomes are built on teams with a high-level of psychological trust, and when teams are empowered, are entrusted, to deliver value from concept to production.
 
-^Now these are two different kinds of trust. 1! One is internal to a team: trust that your input matters, trust that your are heard, trust that you can fail without blame or shame. The other 2! is team context: Are they trusted to operate in their domain of expertise? Do they trust that failure be a learning opportunity and not cause for punishment? 
+^Now these are two different kinds of trust. 1! One is internal to a team: trust that your voice is heard, trust that you can fail without blame or shame. The other 2! is team context: Are they trusted to operate in their domain of expertise? Do they trust that failure will be treated as a learning opportunity and not cause for punishment? 
 
-^This latter form of trust is very much in tension with a 3! regulatory setting. And within government trust can be rare by design: our constitutional system is predicated on the populace not trusting the government, on the three branches providing checks on the others' powers. Procurement is set up to not trust the people making the buy to avoid favoritism. Nor to trust the contractors themselves.
+^This latter form of trust is very much in tension with a 3! regulatory setting. And within government, trust can be rare by design: 
 
-^So Trust is replaced by regulation and audit; and this is fine -- it enables a bureaucracy to operate on behalf of the people.  
+
+---
+
+![](https://gdb.voanews.com/F7B0DC49-51F8-4087-98FF-4CB88B380375_w1023_r1_s.jpg)
+
+^our constitutional system is predicated on the populace not trusting the government, on the three branches providing checks on the others' powers. Procurement is set up to not trust the people making the buy to avoid favoritism. Nor to trust the contractors themselves.
+
+^So Trust is replaced by regulation and audit; and this is fine -- it enables a bureaucracy to operate on behalf of the people.
 
 ^Still, it can feed regulatory escalation: A loophole exists, it's exploited, resulting in scandal. The response is to write more regulation. And so on.
 
@@ -39,7 +46,7 @@ build-lists: false
 
 ---
 
-![inline](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAAAb1BMVEUAAAD///8lJSVMTExERETd3d2ZmZmIiIgICAgzMzMcHBz6+vr29vbl5eWKiooRERHExMTw8PCTk5PCwsJ1dXWoqKhfX1+ysrIrKys+Pj5paWk4ODjX19fOzs4XFxelpaVbW1t9fX1SUlK3t7dvb28SRRCMAAADg0lEQVR4nO2c63KqMBCAQUAxgIFWxRtWre//jEdkE3NZsNM2wTPd72ealW8S2Cwk06CI0uDFSKMiiMeWwIiClxurlpeUIgiCIAiCIAiCIAiCIAiCIAjif4RzjxdLt7HKBu3ElnURhmGWrHZHtMM8xth+fwNlGWpkyJBsarXDlNk99iHO8ttaM+OXJmYHPs30HvnMGoSoR2vmTIs19tVKcya9a80r7HKJ0cu31rHAr3fQb0HPWikygx21Y634kNwRw6JpneUFmuWese05kQ0nTKtINA4/342OEC0ubqxKSuxyaErSJ8G/A/bLC6GgNMpn4DqWVgoTW2mpfwtprBlLawtNRq5+g2Y2GOxOC274ykjqRxiu9Uhaq67lw+z63rUvRtIq0TmUs/gxGOxOq7EmqwMmtx4MdqdV2pngDuSN1UhaUGa9mV1XVrtXLRiVxOiZQkLdjaR1gSZjZdtB83wkLQ7rX6MlLg65vxgOdqcVfIRWKghSyFpa0eJXaw5tYS2rPgaPZ5izJ8HutMQzd1uAlneLyUzUNWqO9651VCr5pCyVClort3xrBbHxMibI52jwdKawd6cVrFGrLMKDNd4dasnqSsNcvVGt0qHWGZ3FfIcH+9JCx6rlPKZWr5VRV/jVUu73vF5cr4vPx5RmMRLsRYvJ3FmsIU3xq8xkBbeDV1OFXzlJ3V9v3SorJXfyR+tg8C9h/7JcEY3yVLzUZmwg2J2WWBAXZlf7Dx61OPL23JFaFZdHrZ7atEXUp/veYHdakLPMSr5FVPPL3mB3Wva78wPzfdujFtxAJ6wzfDUve4PdacFEbbHOp+5vhxG0cuO2VrkY953/Sbxgna/d35reYHdajfG0qcBTWvcGu9OCpw0tfRPjKfWoBROVIZcSXy8vvcHutDbQYH0MlF+YHrtpPpdqsYMRmV3F2lMPBLvTElevjK1P8QVc8fWpJQqFsNJW65OoWZuhYHdaIpe3O65yA3EiP0uo+d/vy/5jMziv1+1W1E55x3h7EuxOiz82xCya8baigknPLudtOTw+DXanFUx6xuvAvhDsTis4fmJWK/6lYHdat/RlbaIXVlXhTgveCnP7eAY/a3dYcrXPgkAwdrbjp7B5C35WJV409zGr3nu+8W3uh1eQ8yTO4Yz5PPtDEARBEARBEARBEARBEARBEMRf4CX/42kaWEcGXoEoeM1/8fsPS4ok9O+qn64AAAAASUVORK5CYII=)
+
 
 ^So this was the quandary 18F was in three years ago. 18F is a digital consultancy housed within the GSA, and we partner with other agencies on innovation starting from principles
 including user-centered design, agile development, lean acquisition and open-source practices. 
@@ -62,7 +69,7 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ### 6 to 14 months to ATO
 
-^... it would take 6 to 14 months to obtain an ATO and actually ship. 
+^... it would take 6 to 14 months to obtain an ATO and actually ship. And that's when the cloud.gov began to coalesce.
 
 <!-- And they couldn't just regulate their way out of it. Much of the regulation provides valuable guidance, and the documentation can be a useful guide and reference, nor could anyone demand that we comply harder or faster.
 
@@ -115,13 +122,27 @@ and they were looking
 
 ![fit](media/2015.png)
 
-^ cloud.gov was launched for federal users in Autumn 2015. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. This is how it looked back then, but its been awhile, and a lot is new.
+^ cloud.gov was launched for federal users. And if you we're present at the 2015 or 2016 CF summits, you may have caught Diego or Bret talking about cloud.gov. This is how it looked back then, but its been awhile, and a lot is new.
 
 ---
 
 ![fit](media/2018.png)
 
-^A new look clearly, but a lot more under the covers. So Let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
+^A new look clearly, but a lot more under the covers. And we'll get into that, but first I'd like to share the lessons I learned on my journey to being a true believer not just in cloud.gov, but in the paramount necessity for a high-level PaaS in highly-regulated environments.
+
+---
+
+I came up through technology first as a geophysicist, doing field work and data analysis, and then as a sysadmin for research labs, then the private sector. I caught the DevOps bug in 2010, as soon as I heard about it, as it pulled together the work I'd been doing with infrastructure automation and testing, and it added a framework for team collaboration.
+
+Before joining the US Government, I'd spend two years working for Chef Software, where I'd spent much of my time coaching around DevOps practices, with automation at the core. I struggled to nurture DevOps practices in regulated industries, though, and would see weird antipatterns emerge when different teams wouldn't trust each other's use of the tool, even when they had everything in code, with peer review and testing.
+
+I hadn't fully cracked that nut when I started with 18F. I admit to being dismissive of cloud.gov at first: "It's just Heroku for government. It can't tackle serious problems -- thats for real sysadmins and their DevOps tools." My first engagement with 18F was with an agency just moving past their first pilot or running anything in the cloud.
+
+
+
+ I wasn't around in the early days, and my journey to cloud.gov advocate 
+
+So Let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
 
 ---
 
