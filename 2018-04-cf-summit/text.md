@@ -71,15 +71,6 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^... it would take 6 to 14 months to obtain an ATO and actually ship. And that's when the cloud.gov began to coalesce.
 
-<!-- And they couldn't just regulate their way out of it. Much of the regulation provides valuable guidance, and the documentation can be a useful guide and reference, nor could anyone demand that we comply harder or faster.
-
----
-
-> You can’t fix the problem of a system that is based on rigid rules by specifying new rules.
--- Jen Pahlka, Executive Director, Code for America 
-
--->
-
 ---
 
 ![original](https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/450093main_hobys_rosette_05_A3_3d_full.jpg)
@@ -91,33 +82,6 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^It was such a success internally, that folks decided to make it available to any agency, and in October 2015,
 
-<!-- 
-^The shortcut to an ATO is to reuse technology that already satisfies most of those 6k pages. And cloud computing is a huge boon here, and we have what's called the FedRAMP marketplace
-and they were looking 
-
-----
-
-# The FedRAMP Marketplace
-
-* Cloud Service Providers and JAB P-ATOs
-* Compliance Control Inheritance
-* A FISMA moderate System needs 325 Controls
-* A typical IaaS: ~100 of 325
-* Where's my PaaS?
-
-[.build-lists: true]
-
-^1. Cloud service providers can complete the FedRAMP authorization process, where the broadest authorization is a "Provisional ATO" granted by a "Joint Authorization Board."
-
-^2. When an agency builds systems on top of that provider, they inherit compliance "controls" when then can, and build their town tooling and documentation on the remaining controls. But how many controls are there?
-
-^3. For a FISMA moderate impact system, which can have PII, there are 325 controls to manage. Everything for data center locks and fire suppression, to which ciphers you have in use.
-
-^4. If you build on an IaaS, you can inherit ~100 of those, the rest are "shared" or wholly on you.
-
-^5. So where's the PaaS that can meet controls on OS hardening, and DB encryption, and log managements? In 2015, there wasn't one in FedRAMP. So the 18F answer was to build their own PaaS, satisfy as many of those controls as possible, and make that available for other agencies throughout government. Hence the birth of cloud.gov
-
--->
 ---
 
 ![fit](media/2015.png)
@@ -132,17 +96,81 @@ and they were looking
 
 ---
 
-I came up through technology first as a geophysicist, doing field work and data analysis, and then as a sysadmin for research labs, then the private sector. I caught the DevOps bug in 2010, as soon as I heard about it, as it pulled together the work I'd been doing with infrastructure automation and testing, and it added a framework for team collaboration.
+# images from seismogram, devops, usgov
 
-Before joining the US Government, I'd spend two years working for Chef Software, where I'd spent much of my time coaching around DevOps practices, with automation at the core. I struggled to nurture DevOps practices in regulated industries, though, and would see weird antipatterns emerge when different teams wouldn't trust each other's use of the tool, even when they had everything in code, with peer review and testing.
+^I came up through technology first as a geophysicist, doing field work and data analysis, and then as a sysadmin for research labs, then the private sector. I caught the DevOps bug in 2010, as soon as I heard about it, as it pulled together the work I'd been doing with infrastructure automation and testing, and it added a framework for team collaboration.
 
-I hadn't fully cracked that nut when I started with 18F. I admit to being dismissive of cloud.gov at first: "It's just Heroku for government. It can't tackle serious problems -- thats for real sysadmins and their DevOps tools." My first engagement with 18F was with an agency just moving past their first pilot or running anything in the cloud.
+^Before joining the US Government, I'd spent two years working for Chef Software, where I'd spent much of my time coaching around DevOps practices, with automation at the core. I struggled to nurture DevOps practices in regulated industries, though, and would see weird antipatterns emerge when different teams wouldn't trust each other's use of the tool, even when they had everything in code, with peer review and testing.
+
+^ I hadn't fully cracked that nut when I started with 18F. I admit to being dismissive of cloud.gov at first: "It's just Heroku for government. It can't tackle serious problems -- thats for real sysadmins and their DevOps tools." Then my first engagement with 18F was with an agency just moving past their first pilot or running anything in the cloud. Instead of coaching I was down in the trenches in an agency working with them to build a hardened, functional and automated development & staging environment in Azure. In 9 months we didn't get to the point of having a single line of developer code running in that env, but where I felt failure, they felt we "had exceeded all expectations" by having a repeatable process for building and managing that environment -- and because we had them running "in the cloud"
+
+^ Meanwhile, I saw my other colleagues at 18F shipping and releasing with their partner agenices using cloud.gov. I joined the cloud.gov with two lessons that were crystallizing and I'll go into here:
+
+---
+
+# 1: "Cloud Computing" still means "Cloud Computers"
+
+---
+
+![original 160%](https://cdn-images-1.medium.com/max/1600/1*el4nHcOQdfHxzzcTC99jDw.png)
+# :x:
+
+^Among the work that "exceeded" expectations at unamed agency, was a general intro to cloud talk I gave for contracting and procurement people. I used this image. I regret ever saying "The cloud is someone else's computer" in a general intro talk. Although that saying is cute, and true, it points to a persistent mental model of thinking about "computers" instead of "compute".
+
+^People today visualize their servers humming in racks in their datacenter. When you think of the cloud as someone else's computer, people may well picture virtual servers humming in virtual racks. You can make a one-to-one mapping between your datacenter and the cloud, and miss all the real benefits of cloud computing.
+
+^Has anyone here found a way to make the value of compute evident instead of "computers"? The best I can do at this point is to talk the mission-enablement provided by the code that's bundled in, say, a J2EE WAR file. That code, running in production, is what provides value. 
+
+^Then consider all the bits in an IaaS needed to run that WAR file: VPC, jumpbox, server, OS, Java install, J2EE runtime, scaling group, load balancers, SSL certs, etc. Not to mention what the deployment process is going to be. None of that provides value as such. Only what runs in the WAR. With cloud.gov, you provide the WAR, and the platform takes care of the rest.
 
 
+---
 
- I wasn't around in the early days, and my journey to cloud.gov advocate 
+# 2: A PaaS is a pre-requisite for DevOps outcomes in regulated environments
 
-So Let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
+^So Everybody wants the DevOps. They read about the high performing organizations that move with speed _and_ stability. Then they focus on the tooling and the forms of DevOps, and lose sight of the outcomes which should be paramount. 
+
+^Core to DevOps practice is having teams empowered to deliver value, to deliver on mission, without external bottlenecks. In in smaller start-ups, in mature DevOps organizations, it may be feasible to embed ops expertise in each team, and grant those teams the authority to make changes on behalf on the organizational goals.
+
+^But as we discussed at the beginning of this talk, government and regulated industries are low-trust organizations. When I worked for Chef Software, I would see organizations that would have multiple Chef runs: One for ops, one for security, and one for the developers. Nevermind that they were practicing Infrastructure-as-Code -- that the same developer team they trusted to write code handling credit card data, they wouldn't trust to write code to install Tomcat on their systems. 
+
+^So when folks insist they have a DevOps team, that might be awesome. But it often means they've created CI/CD and infra-as-code team that is, despite best intentions, just a bottleneck to value delivery, because now all changes have to go through that team, instead of trusting the people closest to the product.
+
+^In short, I believe that a PaaS is a prerequisite for DevOps outcomes in government. Without it, teams are unlikely to have the authority to create, change and delete resources, and there will be too many impediments to move with speed and stability. 
+
+---
+
+# 3: Absent a real PaaS, organizations will attempt their own
+
+^So organizations with regulatory requirements, and that are investing in automation, will attempt to build their own guard rails around what product and development teams can do in their infrastructure. Since there are mature and extensible tools for automation, it's tempting to build a toolchain bespoke to the organization's needs.
+
+^Whether it's intentional or not, the drive of "let's build our own PaaS" takes hold. 
+
+^This will take the form of something like: "I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, and commit to Git. The PR gets routed to Pat or Steve for approval, then it'll get instantiated in a validation environment for security scans ... " and so and so on. 
+
+^Toolchains are awesome, but not at scale in an organization that hasn't practiced flow. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service (or PaaCS), with bottlenecks accruing where manual work has to occur. 
+
+---
+
+# Lessons learned:
+1: "Cloud Computing" still means "Cloud Computers"
+2: A PaaS is a pre-requisite for DevOps outcomes in regulated environments
+3: Absent a real PaaS, organizations will attempt their own
+
+^ So my peronal mission is to change how people regard cloud computing, and to nudge them to using the highest-level abstraction they can: Saas over PaaS, PaaS over IaaS, and so on.  And cloud.gov offers me that opportunity.l
+
+---
+
+# What is cloud.gov?
+
+* Cloud Foundry, 100%<sup>*</sup> open-source
+* Running atop AWS GovCloud
+* Only for US government
+* 
+
+^* There are non-functional security tools in our boundary. And AWS itself is not opensource.
+
+^So Let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance.
 
 ---
 
@@ -300,77 +328,18 @@ FedRAMP High | **Adoption, adoption**
 # 1. The ☁️ is someone else's 💻
 ## ("compute", not "computer")
 
-^I deeply regret ever saying "The cloud is someone else's computer" in a general intro talk. Although that saying is cute, and true, it points to a persistent mental model of thinking about "computers" instead of "compute".
-
-^People today visualize their servers humming in racks in their datacenter. When you think of the cloud as someone else's computer, you'll picture virtual servers humming in virtual racks. You can make a one-to-one mapping, and miss all the real benefits of cloud computing.
-
-^A typical example: A potential customer shared a quote from an IaaS contractor. The quote spelled out, for each of their environments, the number of CPUs and GBs RAM, for every server including the Varnish caching server, the NginX web server, the Redis server, and the DB Cluster itself. There was no mention of manage DB services, or scaling groups, or managed load balancers, let alone the cloud value add of automation, elasticity or disposability.
-
-^The best I can do at this point is to talk the mission-enablement provided by the code that's bundled in, say, a J2EE WAR file. That code, running in production, is what provides value. 
-
-^Then consider all the bits in an IaaS needed to run that WAR file: VPC, jumpbox, server, OS, Java install, J2EE runtime, scaling group, load balancers, SSL certs, etc. Not to mention what the deployment process is going to be. None of that provides value as such. Only what runs in the WAR. With cloud.gov, you provide the WAR, and the platform takes care of the rest.
 
 ^But clearing that mental model wall brings us crashing into:
 
 ---
 
-# 2. The broken mirror
-
-^The people I talk to, when they look in the mirror, see someone who has years or decades of experience running datacenters, spec'ing out hardware, configuring routers, and learning various operating systems. What we propose can be really threatening to their identity. We're not taking away their worries, we're taking away their sense of self. 
-^This is Particularly so if there's an mandate coming from on high. And this core identity issue won't be expressed openly, the speaker may just see their objections as fully rooted in the org's best interests.
-
-^What I'm finding is that it works to shift the conversation to all the things the PaaS or Automation doesn't do. The PaaS won't run every application. The applications that aren't cloud-ready need their expertise to get them to cloud ready. The PaaS is still dumb: it doesn't know how to scale your application. It doesn't know what to do with the logs it ships you. That's still on you. And the PaaS doesn't do all the things you've been wanting to do but never had time for: real CI/CD, meaningful dashboards, sensible alerting so you can sleep through the night, or finally getting the developers the tools they need.
-
-^The broken mirror has one particular form that needs to be called out as its own barrier. Namely, when a lot of work has been invested, and we're told: "we already have a PaaS"
-
----
 
 # 3. ✅PaaS 
 ## (or a PaaCS?)
 
-^I see this when an organization is already investing in automation. They see private industry using Terraform/Cloudformation and Chef or Ansible, they adopt these too, and then the "let's build our own PaaS" fever takes hold. 
-
-^For example: "I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, and commit to Git. The PR gets routed to Pat for approval, then it'll get instantiated in a validation environment for security scans ... and so and so on. 
-
-^Toolchains are awesome, but not at scale in an organization that hasn't practiced flow. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service (or PaaCS), with bottlenecks accruing where manual work has to occur. And cloud.gov hits the Not Invented Here syndrome.
-
-^The agencies I talk with are interested in Lean, are interested in experimentation. Since cloud.gov is outside an organization's ecosystem, It doesn't threaten the PaaCS if one pilot system moves to it. And when it works, when we can talk about short lead time and number of releases, then we can tackle risk perception.
 
 ---
 
-# 4. Too risky <br>🎲🎰🎲🎰
-## (status quo bias)
-
-^People ask, "Is cloud.gov secure enough?" Important question, but a better framing is: "Where will my security be best — in cloud.gov, or in my data center, or in an IaaS using a new and unfamiliar toolset?"
-
-^Generally, its best to minimize your attack surface, by using the highest level compute abstraction you can. Saas over PaaS, PaaS over IaaS. 
-
-^But we prefer known risks to new ones. We are prey to the "status quo bias," a cognitive bias to resist change and prefer the current state of affairs, and to discount the advantages change brings. 
-Quantifying risk, quantifying all the hypotheticals is hard, and that's when the status quo bias will nudge people to the shortcut of saying: No.
-
-^To counter this, I'm experimenting more with talking about cognitive biases, with the angle that the people I'm talking to are wise enough to step back and weigh matters objectively, and move past that bias.
-
-^We also need to account for risk budgets: Risk is never zero, and at some point you must deliver on your mission.  cloud.gov enables mission delivery like few other tools available to the federal government.
-
-^The last barrier is: We don't need a PaaS, we have a DevOps team.
-
----
-
-## 5. 🚫 PaaS <br>(we have a DevOps team)
-
-^Everybody wants the DevOps. They read about the high performing organizations that move with speed _and_ stability. Then they focus on the tooling and the forms of DevOps, and lose sight of the outcomes which should be paramount. 
-
-^Core to DevOps practice is having teams empowered to deliver value, to deliver on mission, without external bottlenecks. In private industry, in smaller start-ups, in mature DevOps organizations, it may be feasible to embed ops expertise in each team, and grant those teams the authority to make changes on behalf on the organizational goals.
-
-^But as we discussed at the beginning of this talk, government and regulated industries are low-trust organizations. When I worked for Chef Software, I would see organizations that would have multiple Chef runs: One for ops, one for security, and one for the developers. Nevermind that they were practicing Infrastructure-as-Code -- that the same developer team they trusted to write code handling credit card data, they wouldn't trust to write code to install Tomcat on their systems. 
-
-^So when folks insist they have a DevOps team, that might be awesome. But it often means they've created CI/CD and infra-as-code team that is, despite best intentions, just a bottleneck to value delivery, because now all changes have to go through that team, instead of trusting the people closest to the product.
-
----
-
-# The PaaS to DevOps Outcomes
-
-^In short, I believe that a PaaS is a prerequisite for DevOps outcomes in government. Without it, teams are unlikely to have the authority to create, change and delete resources, and there will be too many impediments to move with speed and stability. And that's what motivates us in cloud.gov:
 
 ---
 
@@ -438,4 +407,11 @@ Points I haven't made yet:
 * How does Kibana work? :white_check_mark:
 * Is cloudfront going away?
 
+Stuff I've cut:
+- Jen Pahlka's quot
+- Introduction to FedRAMP from the shopper's perspective
+- The cloud is someone else's computer.
+- 
+
 -->
+<!--^A typical example: A potential customer shared a quote from an IaaS contractor. The quote spelled out, for each of their environments, the number of CPUs and GBs RAM, for every server including the Varnish caching server, the NginX web server, the Redis server, and the DB Cluster itself. There was no mention of manage DB services, or scaling groups, or managed load balancers, let alone the cloud value add of automation, elasticity or disposability.
