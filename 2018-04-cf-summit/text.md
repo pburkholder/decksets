@@ -157,7 +157,7 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 # 2: Absent a real PaaS, organizations will attempt their own
 
-^So organizations with regulatory requirements, and that are investing in automation, will attempt to build their own guard rails around what product and development teams can do. Since there are these mature tools for automation, it's tempting to build a toolchain bespoke to the organization's needs.
+^You have these mature automation tools, you want guardrails for product and dev teams, it's tempting to build a toolchain bespoke to the organization's needs.
 
 ^Whether it's intentional or not, the drive of "let's build our own PaaS" takes hold. 
 
@@ -172,15 +172,15 @@ including user-centered design, agile development, lean acquisition and open-sou
 # What is cloud.gov?
 
 * Cloud Foundry, 100%<sup>*</sup> open-source
-* Standard buildpacks, brokers for RDS, S3, ES, Redis and others
+* Standard buildpacks, brokers for RDS, S3, ES, Redis, etc.
 * Running atop AWS GovCloud
 * Only for US government
 * Security by convention
 * With a dollop of compliance:
 
-^We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. 
+^We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, We're 100% opensource. Now There are Commercial security tools in our boundary But nothing in our functional support.
 
-^There are non-functional security tools in our boundary. And AWS itself is not opensource.
+^ along with self-service managed marketplace offerings. 
 
 ^Anyone from the US Gov can work in a free sandbox. But we're only for USGov use at this point; expanding to states and localities isn't in the picture at this point. 
 
