@@ -132,7 +132,7 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^Then my first engagement with 18F was with an agency making their first concerted effort to work in a cloud. Instead of coaching I was down in the trenches with the agency partner to build a hardened, functional and automated development environment in Azure. In 9 months we didn't get to running a single line of developer code in that env, but where I felt disappointment, they felt we "had exceeded all expectations" by having a repeatable process for building and managing that environment. 
 
-Which was a real step forward for them, but meanwhile, I saw my colleagues at 18F shipping and releasing with their partner agenices using cloud.gov. I joined that team with two lessons that were crystallizing. They, are, first:
+^Which was a real step forward for them, but meanwhile, I saw my colleagues at 18F shipping and releasing with their partner agenices using cloud.gov. I joined that team with two lessons that were crystallizing. They, are, first:
 
 ---
 
@@ -165,7 +165,7 @@ Which was a real step forward for them, but meanwhile, I saw my colleagues at 18
 
 ^Toolchains are awesome, but not at scale in an organization that hasn't practiced flow. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service (or PaaCS), with bottlenecks accruing where manual work has to occur. 
 
-^ So my peronal mission is to change how people regard cloud computing, and to nudge them to using the highest-level abstraction they can: Saas over PaaS, PaaS over IaaS, and so on.  The more you can abstract away the underlying infrastructure, the more you can invest trust in the teams that are enabling your mission. And cloud.gov offers me that opportunity.  Now, what is this cloud.gov thing?
+^ So I want to make easy and obvious to use the PaaS for the 80% use case, and let operations teams use the other tooling for the remaining hard work. And cloud.gov offers me that opportunity.  Now, what is this cloud.gov thing?
 
 ---
 
@@ -216,7 +216,7 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 ^What this gets us for our tenants is a sign lift of their compliance load.
 
-^August 2016: Began our review with the JAB teams. 23 weeks from JAB kickoff to signed P-ATO, including 8 weeks for technical/operational improvements and 15 weeks for JAB review. 
+^August 2016: Began our review with the JAB teams. 23 weeks from JAB kickoff to signed P-ATO, including 8 weeks for technical/operational improvements and 15 weeks for JAB review. 470 pp, fortnightly meetings, monthly conmons, annual reassessment.
 
 ---
 
@@ -242,7 +242,7 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 ^ Definitely good for our customers.
 ^ Reflected on what we offered, and yanked some features....
-^ Discipline we would want to have regardless. We do quarterly reviews of our plans and processes, and are continually improving. And that discipline around contigency planning has borne fruit. ^470 pp, fortnightly meetings, monthly conmons, annual reassessment.
+^ Discipline we would want to have regardless. We do quarterly reviews of our plans and processes, and are continually improving. 
 ^We better understand the our customers regulation efforts.
 ^ We got better at explaining what cloud.gov does, and how it works, and the value of open source.  
 
@@ -254,7 +254,7 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 <!--[.header: #FF0000]-->
 
-^In short, cloud.gov is Cloud Foundry running on AWS GovCloud, with tooling to keep it fully automated, and enhancements for our federal customers. All our work is open source, it means this it's out there for you to use. I'll highlight a few that are essential or useful.
+^All our work is open source, it means this it's out there for you to use.  There's a lot of it - the background image lists a bunch of them. I'll highlight a few that are essential or useful.
 
 ---
 
@@ -275,7 +275,7 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 ---
 
-# UAA identity provider brokder
+# UAA identity provider broker
 
 ![inline](media/identity.png)
 
@@ -292,6 +292,8 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 * Lots of BOSH Releases
 * Terraform plans and Concourse pipelines
 * Bug Bounty
+
+^ 1, 2, 3
 
 ^The folks at 18F originally adopted Cloud Foundry to solve their delivery problem, they made into _cloud.gov_ to change how agencies operate. How has that worked out? Here are our most active partner agencies, spanning broadly across government.
 
@@ -409,6 +411,14 @@ around trust, which makes systems that enable higher-trust real enablers.
 
 [.header: #EE0000;, alignment(center), line-height(0), text-scale(1.0)]
 
+---
+
+![inline](media/logo.png)
+
+[.background-color: #FFFFFF]
+[.header: #28517c]
+[.hide-footer]
+[.slidenumbers: false]
 
 ---
 
@@ -436,14 +446,3 @@ Prior CF summit talks: https://schd.ws/hosted_files/cfsummit2016/13/CFSummit2016
 Kibana Auth: https://github.com/cloudfoundry-community/logsearch-for-cloudfoundry/tree/develop/src/kibana-cf_authentication and https://github.com/cloudfoundry-community/logsearch-for-cloudfoundry/blob/develop/docs/features.md#kibana-authentication-plugin
 
 [.autoscale: true]
-
----
-
-# Culture of resilience
-
-* Learning opportunity 
-* Blameless post-mortem, published on status page
-* Automation enabled 6-hour recovery
-* Changes: Accounts and regions
-
-^We did not lose the expansion of a key customer, we have learned, and we will continue to invest in openess, honesty and extension of trust. That includes our commitment to 
