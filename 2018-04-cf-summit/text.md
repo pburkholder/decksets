@@ -3,6 +3,18 @@ footer: ![inline 8%](https://www.cloudfoundry.org/wp-content/uploads/2017/10/clo
 build-lists: true
 slidenumbers: true
 
+# Enabling Innovation in Government with Cloud Foundry
+## Peter Burkholder
+
+![inline](media/logo.png)
+
+[.background-color: #FFFFFF]
+[.header: #28517c]
+[.hide-footer: true]
+
+
+---
+
 # `#hi`
 
 ^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working to help federal agencies adopt cloud.gov, and explaining what it means to work in Platform-as-a-Service.
@@ -28,6 +40,8 @@ slidenumbers: true
 
 ---
 
+[.hide-footer: true]
+
 ![](https://gdb.voanews.com/F7B0DC49-51F8-4087-98FF-4CB88B380375_w1023_r1_s.jpg)
 
 ^our constitutional system is predicated on the populace not trusting the government, on the three branches providing checks on the others' powers. Procurement is set up to not trust the people making the buy to avoid favoritism. Nor to trust the contractors themselves.
@@ -43,10 +57,12 @@ slidenumbers: true
 
 ![original](media/6600.png)
 
-## pages in total:
-# ~6600
+# <br>
+## Total 
+## pages: 
+## ~6600
 
-[.header: #FF0000]
+[.header: #EE0000, alignment(right)]
 
 
 ^So three years ago, 18F was in a quandary. 18F is a digital consultancy housed within the GSA, and we partner with other agencies on innovation starting from principles
@@ -95,14 +111,9 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^A new look clearly, but a lot more under the covers. And we'll get into that, but since I wasn't around in those early days, I'd like to share the lessons I learned on my journey to being a true believer not just in cloud.gov, but in the paramount necessity for a high-level PaaS in highly-regulated environments.
 
-<!-- 4m 30s to here -->
 ---
 
-<!-->
-![](https://earthquake.usgs.gov/monitoring/seismograms/data/nca/nc.MDR_EHZ_NC_02_00.2222121200.gif)
--->
-
-# From digging to devops
+# From digging to DevOps
 
 ![inline](https://clubrunner.blob.core.windows.net/00000008680/Images/P-Chung.jpg) ![inline](https://secure.meetupstatic.com/photos/event/c/c/c/5/600_467212421.jpeg)
 
@@ -121,27 +132,9 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^ Meanwhile, I saw my other colleagues at 18F shipping and releasing with their partner agenices using cloud.gov. I joined the cloud.gov with two lessons that were crystallizing and I'll go into here:
 
-<!-- 2m -->
 ---
 
-# 1: "Cloud Computing" still means "Cloud Computers"
-
----
-
-![inline](media/thereIsNoCloud.png)
-
-^Among the work that "exceeded" expectations at unamed agency, was a general intro to cloud talk I gave for contracting and procurement people. I used this image. I regret ever saying "The cloud is someone else's computer" in a general intro talk. Although that saying is cute, and true, it points to a persistent mental model of thinking about "computers" instead of "compute".
-
-^People today visualize their servers humming in racks in their datacenter. When you think of the cloud as someone else's computer, people may well picture virtual servers humming in virtual racks. You can make a one-to-one mapping between your datacenter and the cloud, and miss all the real benefits of cloud computing.
-
-^Has anyone here found a way to make the value of compute evident instead of "computers"? The best I can do at this point is to talk the mission-enablement provided by the code that's bundled in, say, a J2EE WAR file. That code, running in production, is what provides value. 
-
-^Then consider all the bits in an IaaS needed to run that WAR file: VPC, jumpbox, server, OS, Java install, J2EE runtime, scaling group, load balancers, SSL certs, etc. Not to mention what the deployment process is going to be. None of that provides value as such. Only what runs in the WAR. With cloud.gov, you provide the WAR, and the platform takes care of the rest.
-
-
----
-
-# 2: A PaaS is a pre-requisite for DevOps outcomes in regulated environments
+# 1: A PaaS is a prerequisite for DevOps outcomes in regulated environments
 
 ^So Everybody wants the DevOps. They read about the high performing organizations that move with speed _and_ stability. Then they focus on the tooling and the forms of DevOps, and lose sight of the outcomes which should be paramount. 
 
@@ -155,7 +148,7 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ---
 
-# 3: Absent a real PaaS, organizations will attempt their own
+# 2: Absent a real PaaS, organizations will attempt their own
 
 ^So organizations with regulatory requirements, and that are investing in automation, will attempt to build their own guard rails around what product and development teams can do in their infrastructure. Since there are mature and extensible tools for automation, it's tempting to build a toolchain bespoke to the organization's needs.
 
@@ -165,30 +158,28 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^Toolchains are awesome, but not at scale in an organization that hasn't practiced flow. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service (or PaaCS), with bottlenecks accruing where manual work has to occur. 
 
----
+^ So my peronal mission is to change how people regard cloud computing, and to nudge them to using the highest-level abstraction they can: Saas over PaaS, PaaS over IaaS, and so on.  The more you can abstract away the underlying infrastructure, the more you can invest trust in the teams that are enabling your mssion. And cloud.gov offers me that opportunity. 
 
-# Lessons learned:
-1: "Cloud Computing" still means "Cloud Computers"
-2: A PaaS is a pre-requisite for DevOps outcomes in regulated environments
-3: Absent a real PaaS, organizations will attempt their own
-
-^ So my peronal mission is to change how people regard cloud computing, and to nudge them to using the highest-level abstraction they can: Saas over PaaS, PaaS over IaaS, and so on.  And cloud.gov offers me that opportunity.l
-
-
-<!-- 5m 5s -->
 ---
 
 # What is cloud.gov?
 
 * Cloud Foundry, 100%<sup>*</sup> open-source
 * Running atop AWS GovCloud
-* Standard buildpacks
+* Standard buildpacks, brokers for RDS, S3, ES, Redis and others
 * Only for US government
-* With a dollop of compliance & security.
+* Security by convention
+* With a dollop of compliance: 
 
 ^So Let's do quick tour of what cloud.gov offers.  We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, along with self-service managed marketplace offerings. From a government perspective, our killer feature is security and compliance, first among this is FedRAMP authorization.
 
 ^There are non-functional security tools in our boundary. And AWS itself is not opensource.
+
+^Third, we enable tenant security by making the secure choice the default choice. By enabling self-service resources with sane defaults, product teams can focus on source code and functionality. You should totally do this.
+
+^One Example: S3 buckets are either public or private, and that's that, reducing the chance stashing private data in a bucket that is later accidentally exposed. A few others: S3 buckets enforce server-side encryption. DBs are encrypted at rest, and only allow TLS connections. And so on.
+
+^4 Lastly, we're because we're a built-for-compliance offering, we're always looking for ways to make compliance easier on tenants. I'll encourage you to tune in to Bret's talk for what's really new on that front. That's how we support our tenant's compliance and security, what is we've built?
 
 ---
 
@@ -215,79 +206,107 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 ---
 
-# FedRAMP: What we learned
-
-* Reflection
-* Discipline
-* Communication
-* Empathy
-
-^ Definitely good for our customers.
-^ FedRAMP enforces a discipline we would want to have regardless. 
-^ Open-source was a big leap forward for them.
-
----
-
-# Compliance and Security
-
-1. FedRAMP JAB P-ATO
-2. Control Inheritance
-
-^Second, because we're platform-as-a-service, instead of infrastructure-as-a-service, a tenant can inherit a far larger number of security and compliance controls. 
-
----
-
 ![](media/325-graph.png)
+
+[.hide-footer: true]
+
 
 ^As mentioned, if you're running a FISMA-moderate workload, your security plan needs to address 325 controls and if you're building atop a typical IaaS, you could inherit and reuse ~100 controls 
 
 ^When you run atop cloud.gov, you can inherit and reuse up to 269 of those controls, and then you have 56 which are shared or fully your responsibility. And I note we've leveraged FedRAMP ourselves by building atop AWS GovCloud, and inheriting of their 54 controls in our own SSP.
 
+---
+
+# FedRAMP: What we learned
+
+* Reflection
+* Communication
+* Empathy
+* Discipline
+
+^ Definitely good for our customers.
+^470 pp, fortnightly meetings, monthly conmons, annual reassessment.
+^ We got better at explaining what cloud.gov does, and how it works, and the value of open source
+^We better understand the our customers regulation efforts.
+^ FedRAMP enforces a discipline we would want to have regardless. We do quarterly reviews of our plans and processes, and are continually improving. And that discipline around contigency planning has borne fruit. Let's talk about January 9, importance of practice and practicing what we preach.
+
 --- 
 
-# Compliance and Security
-
-1. FedRAMP JAB P-ATO
-2. Control Inheritance
-3. Security by Convention
-
-^Third, we enable tenant security by making the secure choice the default choice. By enabling self-service resources with sane defaults, product teams can focus on source code and functionality. You should totally do this.
-
-^One Example: S3 buckets are either public or private, and that's that, reducing the chance stashing private data in a bucket that is later accidentally exposed. A few others: S3 buckets enforce server-side encryption. DBs are encrypted at rest, and only allow TLS connections. And so on.
+![](media/o0.png)
 
 ---
-# Compliance and Security
 
-1. FedRAMP JAB P-ATO
-2. Control Inheritance
-3. Security by Convention
-4. Continuous Improvement
+![](media/o1.png)
 
-^Lastly, we're because we're a built-for-compliance offering, we're always looking for ways to make compliance easier on tenants. I'll encourage you to tune in to Bret's talk for what's really new on that front. That's how we support our tenant's compliance and security, what is we've built?
+[.hide-footer: true]
+
+---
+
+![](media/o2.png)
+
+[.hide-footer: true]
+
+---
+
+<!-- 
+> (17:29): Multiple customer applications and cloud.gov services are returning HTTP 503 errors as of 5:09 PM EST. We have identified the root cause of this issue and are working to restore service.
+-- cloud.gov
+> (18:28) We’ve determined that a script removed some production platform components due to misconfiguration by a cloud.gov team member. This means that we need to re-construct these platform components from their stored configurations. 
+-- cloud.gov
+
+> (23:08): Most customer applications are now returning 404 errors ("Requested route ('example.gov') does not exist.") instead of the previous 503 errors. 
+> This is a sign of progress: platform components that route requested URLs to customer applications are working. 
+The platform has not yet started running the customer applications, so the result of routing is a Not Found error for now.
+[.autoscale: true]
+-->
+
+![](media/o3.png)
+
+[.hide-footer]
+
+
+---
+
+![](media/o4.png)
+
+[.hide-footer]
+
+^The recovery and subsequent communication gave us a chance to double down on a core value, that of building: 
+
+---
+
+# Culture of resilience
+
+* Learning opportunity 
+* Blameless post-mortem, published on status page
+* Automation enabled 6-hour recovery
+* Changes: Accounts and regions
+
+^We did not lose the expansion of a key customer, we have learned, and we will continue to invest in openess, honesty and extension of trust. That includes our commitment to 
 
 ---
 
 # Open source <br>all-the-things
 
-![original](media/repositories.png)
+![](media/repositories.png)
 
-[.header: #FF0000]
+<!--[.header: #FF0000]-->
 
 ^In short, cloud.gov is Cloud Foundry running on AWS GovCloud, with tooling to keep it fully automated, and enhancements for our federal customers. All our work is open source, it means this it's out there for you to use. I'll highlight a few that are essential or useful.
 
 ---
 
-# cloud.gov Dashboard
 
-https://github.com/18F/cg-dashboard
+# Dashboard
 
-^Gotta have a dashboard
+![inline](media/dashboard.png)
 
 ---
 
-# Kibana proxy to customer logs
 
-https://github.com/cloudfoundry-community/logsearch-for-cloudfoundry
+# UAA-authenticated Kibana
+
+![inline](media/kibana.png)
 
 ^You can't not log
 
@@ -297,17 +316,15 @@ https://github.com/cloudfoundry-community/logsearch-for-cloudfoundry
 
 ![inline](media/letsencrypt.png)
 
-
-
 ^Buying TLS certs is hard
 
 ---
 
 # Behind the scenes
 
-* Lots of Bosh Release
+* Lots of BOSH Releases
 * Terraform plans and Concourse pipelines
-* **Bug Bounty**
+* Bug Bounty
 
 ^So, what's come of all this work?
 
@@ -340,18 +357,27 @@ NSF | USDS | ATF
 
 ^The case study on our site focusses on cost savings, and in a small agency dropping their reducing their $1.4M/annum spend by 85% made a real difference. But I've been more interested in the process and culture change where they could adopt Agile from inception to delivery. Instead of quarterly releases with high change fail rate, they now deliver weekly, and are engaged in user-centered design and rapid prototyping in their endeavor to move the filing system to cloud.gov, not just public view.
 
+^I didn't get clearance to speak about some of our other major tenants, but sometimes it's the little things that matter, like our fourth graders:
+
+
 ---
 
 ![](media/ekip.png)
+
+^Who can now get free passes for our federal lands and waters. This site was tied to a scheduled presidential announcement date, and it turns out that those dates are fixed once they're set. With a 90-day deadline on the line, the site was designed, built and launched in time for the announcement. And it turns out the static sites have been an overlooked need for federal offices.
 
 ---
 
 ![original](https://raw.githubusercontent.com/18F/federalist-docs/master/assets/images/how-federalist-works-for-presentation.png)
 
-^Federalist now hosts 119 sites for eight federal agencies.
+[.hide-footer]
 
 ^Many offices just need a static website they can update as needed. CMS's
 are overkill for them, so our sibling project Federalist lets people edit locally, push to GitHub, preview on the web, and the publish.
+
+^Federalist now hosts 119 sites for eight federal agencies, and updates are happening hundreds of time per week.
+
+^More generally Within GSA, many of our products are now built for cloud.gov, and we have team adept at generating the require documentation, and at working with our auditors.   Remember 6-14 months to ATO?
 
 ---
 
@@ -359,7 +385,7 @@ are overkill for them, so our sibling project Federalist lets people edit locall
 
 # 1 month to ATO
 
-^Within GSA, many of our products are now built for cloud.gov, and we have team adept at generating the require documentation, and at working with our auditors. As the auditors are also now familiar with cloud.gov, this ATO Sprinting Team can now obtain ATOs in less than a month.
+^As the auditors are also now familiar with cloud.gov, this ATO Sprinting Team can now obtain ATOs in about a month.
 
 ^All this has us looking forward to 
 
@@ -377,9 +403,10 @@ CI/CD-as-a-Service | Container Runtime
 
 ---
 
-![fit](media/cloud-gov.png)
+![inline](media/logo.png)
 
 [.background-color: #FFFFFF]
+[.header: #28517c]
 [.hide-footer]
 [.slidenumbers: false]
 
@@ -390,12 +417,14 @@ around trust, which makes systems that enable higher-trust and super satisfying.
 
 ---
 
-# <br> <br> <br>Thank you!
+# <br>
+# <br>
+# Thank you!
 
 ![original](media/cgteam.png)
 
 
-<!-- 8m 11s + 14m 15s = 22m 30s -->
+[.header: #EE0000;, alignment(center), line-height(18), text-scale(1.0)]
 
 ---
 
@@ -404,8 +433,6 @@ around trust, which makes systems that enable higher-trust and super satisfying.
 Mark Schwartz, How DevOps Can Fix Federal Government IT, https://www.youtube.com/watch?v=QwHVlJtqhaI, DevOps Enterprise Summit 2014
 
 Jen Pahlka, "Death Star Thinking and Government Reform", Journal of Design and Science, https://jods.mitpress.mit.edu/pub/issue3-pahlka
-
-Brad Katsuyama, Regulatory Death Spiral. _N.B._ I've been unable to find this other than one photo of slide online. Thanks to Julian Dunn for bringing it to my attention, e.g., https://www.slideshare.net/chef-software/security-at-velocity-dc-cap-one
 
 cloud.gov repositories: https://cloud.gov/docs/ops/repos/
 
@@ -417,7 +444,6 @@ Characteristics of a PaaS: https://csrc.nist.gov/publications/detail/sp/800-145/
 
 # References and Resources 2/2
 
-Status Quo Bias: Mark Schwartz, March 2018: https://medium.com/aws-enterprise-collection/reducing-risk-in-the-cloud-by-overcoming-the-status-quo-bias-4a2459cca2ef and Daniel Kahneman, _Thinking, Fast and Slow_, 2013.
 
 Announcement of cloud.gov launch: https://18f.gsa.gov/2015/10/09/cloud-gov-launch/ 
 
@@ -426,16 +452,3 @@ Prior CF summit talks: https://schd.ws/hosted_files/cfsummit2016/13/CFSummit2016
 Kibana Auth: https://github.com/cloudfoundry-community/logsearch-for-cloudfoundry/tree/develop/src/kibana-cf_authentication and https://github.com/cloudfoundry-community/logsearch-for-cloudfoundry/blob/develop/docs/features.md#kibana-authentication-plugin
 
 [.autoscale: true]
-
----
-
-<!-- 
-Points I haven't made yet:
-* DOD and JEDI and PaaS first
-* What about _The Outage_?  DevOps investment, failure happens, drill for it.
-* ATO sprinting team successes
-* How does Kibana work? :white_check_mark:
-* Is cloudfront going away?
-
-Stuff I've cut:
-- Jen Pahlka's quot
