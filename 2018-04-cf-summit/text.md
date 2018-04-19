@@ -1,4 +1,4 @@
-theme: work,7
+theme: next,1
 footer: ![inline 8%](https://www.cloudfoundry.org/wp-content/uploads/2017/10/cloud-gov.png)
 build-lists: true
 slidenumbers: true
@@ -352,7 +352,7 @@ NSF | USDS | ATF
 
 # Federal Election Commission
 
-> We had a complete culture change about how to do user-centered design and agile.
+> **We had a complete culture change about how to do user-centered design and agile.**
 -- FEC product owner
 
 ^The case study on our site focusses on cost savings, and in a small agency dropping their reducing their $1.4M/annum spend by 85% made a real difference. But I've been more interested in the process and culture change where they could adopt Agile from inception to delivery. Instead of quarterly releases with high change fail rate, they now deliver weekly, and are engaged in user-centered design and rapid prototyping in their endeavor to move the filing system to cloud.gov, not just public view.
@@ -383,7 +383,15 @@ are overkill for them, so our sibling project Federalist lets people edit locall
 
 ![original](https://farm2.staticflickr.com/1023/784286985_51338a3fe1_o_d.jpg)
 
+# <br>
+# <br>
+# <br>
+# <br>
+# <br>
+# <br>
 # 1 month to ATO
+
+[.header: alignment(right)]
 
 ^As the auditors are also now familiar with cloud.gov, this ATO Sprinting Team can now obtain ATOs in about a month.
 
@@ -417,14 +425,15 @@ around trust, which makes systems that enable higher-trust and super satisfying.
 
 ---
 
-# <br>
-# <br>
+ <br>
+ <br>
+<br>
 # Thank you!
 
 ![original](media/cgteam.png)
 
+[.header: #EE0000;, alignment(center), line-height(0), text-scale(1.0)]
 
-[.header: #EE0000;, alignment(center), line-height(18), text-scale(1.0)]
 
 ---
 
