@@ -17,11 +17,11 @@ slidenumbers: true
 
 # `#hi`
 
-^Hi. I'm Peter Burkholder, with cloud.gov, I spend most of my days working to help federal agencies adopt cloud.gov, and explaining what it means to work in Platform-as-a-Service.
+^Hi. I'm Peter Burkholder, with cloud.gov, days working help federal agencies adopt cloud.gov, and explaining Platform-as-a-Service.
 
-^So it's exciting to be with folks who already understand Cloud Foundry, and may already  be using it government or in their own highly-regulated setting. 
+^s exciting understand Cloud Foundry, already  using it government or highly-regulated setting. 
 
-^To understand cloud.gov and its mission, let's talk about the key ingredient to working effectively in technology: Trust
+^To understand cloud.gov and its mission, key ingredient to working : Trust
 
 ---
 
@@ -31,11 +31,11 @@ slidenumbers: true
 * Team Empowerment
 * Regulatory Setting
 
-^We know from research on team productivity and DevOps practices that the best outcomes are built on teams with a high-level of psychological trust, and when teams are empowered, are entrusted, to deliver value from concept to production.
+^We research team productivity and DevOps practices best outcomes teams high-level of psychological trust, and when teams empowered, entrusted, deliver value concept to production.
 
-^Now these are two different kinds of trust. 1! One is internal to a team: trust that your voice is heard, trust that you can fail without blame or shame. The other 2! is team context: Are they trusted to operate in their domain of expertise? Do they trust that failure will be treated as a learning opportunity and not cause for punishment? 
+^1! is internal to a team: your voice is heard, that you can fail without blame or shame. 2! is team context: Are trusted operate in domain expertise? failure treated learning opportunity and not punishment? 
 
-^This latter form of trust is very much in tension with a 3! regulatory setting. And within government, trust can be rare by design: 
+^Latter trust tension with a 3! regulatory setting. And within government, trust rare by design: 
 
 
 ---
@@ -44,13 +44,15 @@ slidenumbers: true
 
 ![](https://gdb.voanews.com/F7B0DC49-51F8-4087-98FF-4CB88B380375_w1023_r1_s.jpg)
 
-^our constitutional system is predicated on the populace not trusting the government, on the three branches providing checks on the others' powers. Procurement is set up to not trust the people making the buy to avoid favoritism. Nor to trust the contractors themselves.
+^our constitutional spredicated on the populace not trusting the government, on the three branches providing checks. 
 
-^So Trust is replaced by regulation and audit; and this is fine -- it enables a bureaucracy to operate on behalf of the people.
+^Procurement to not trust the people making the buy favoritism. Not trust the contractors .
+
+^Replaced by regulation and audit; fine -- it enables a bureaucracy to operate on behalf 
 
 <!-- ^Still, it can feed regulatory escalation: A loophole exists, it's exploited, resulting in scandal. The response is to write more regulation. And so on. -->
 
-^Now, the regulatory framework for tech in the Federal government is the "Authority to Operate" process. Any US Government information system, like a web application, must be granted an Authority to Operate, or ATO. The ATO documentation runs between 200-1000 pages, to address all these published regulations:
+^Now, framework for tech government AUTHORITY..." process. Any US Government IS, like a web application, must Authority to Operate, or ATO. The ATO 200-1000 pages, address all these published 
 
 ---
 
@@ -65,10 +67,12 @@ slidenumbers: true
 [.header: #EE0000, alignment(right)]
 
 
-^So three years ago, 18F was in a quandary. 18F is a digital consultancy housed within the GSA, and we partner with other agencies on innovation starting from principles
-including user-centered design, agile development, lean acquisition and open-source practices. 
+^So 3 years ago, 18F was in a QUANDARY. 18F is a housed within the GSA, and we PARTNER with other agencies PRINCIPLEs
+including 
 
-^So in conjunction with agency partners they were building great product. Yet the challenge of complying with and _documenting_ compliance was leading to product getting stranded, ....
+^USER-centered design, AGILE development, LEAN acquisition and OPEN-SOURCE practices. 
+
+^So in conjunction with agency partners they were BUILDING great product. Yet the challenge of COMPLYING with and _DOCUMENTING_ compliance STRANDED, ....
 
 ---
 
@@ -95,7 +99,9 @@ including user-centered design, agile development, lean acquisition and open-sou
 # Genesis
 [.header: #FFFFFF]
 
-^One shortcut to ATO: Reuse! But in January 2015 the reuse of configuration management tooling wasn't scaling to the needs of the 18F, so after assessing the  tradeoffs between the available cloud and commercial offering, a small team at 18F  built a PaaS w/ Cloud Foundry that would satisfy the majority of the compliance implementation and documentation needs 18F and their partners.
+^One shortcut to ATO: Reuse! But in January 2015 the reuse of configuration management tooling wasn't SCALING to the needs of the 18F, ASSESSING the  tradeoffs between CLOUD & COMMERCIAL`, a small team at 18F BUILT PaaS w/ Cloud Foundry 
+
+^TO meet COMPLY and DOC and their partners.
 
 ^It was such a success internally, that folks decided to make it available to any agency, and in October 2015,
 
@@ -117,9 +123,9 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ![inline](https://clubrunner.blob.core.windows.net/00000008680/Images/P-Chung.jpg) ![inline](https://secure.meetupstatic.com/photos/event/c/c/c/5/600_467212421.jpeg)
 
-^I came up through technology first as a geophysicist, doing field work and data analysis, and then as a sysadmin for research labs and the private sector. I caught the DevOps bug in 2010, as soon as I heard about it, as it pulled together the work I'd been doing with automation and testing, and with the framework for team collaboration.
+^I first as a geophysicist, field work and data analysis, and then sysadmin for LABS and the PRIVATE . I caught the DevOps bug in 2010, SOON AS HEARD, as it PULLED together AUTOMATION and testing, and with the FRAMEWORK for team collaboration.
 
-^Before joining the US Government, I'd spent two years with Chef Software, where I'd spent time coaching around DevOps practices, with automation at the core. I struggled to nurture DevOps in regulated industries, though, and would see weird antipatterns emerge when different teams wouldn't trust each other's use of the tool.
+^Before US Government, I'd spent two years with AUTOMATION VENDOR, where I'd spent time COACHING around DevOps, I struggled to NURTURE DevOps in REGULATED , though, and would see weird ANTIPATTERNS emerge when  TEAMS wouldn't TRUST each OTHER's use of the TOOL.
 
 ---
 
@@ -127,28 +133,34 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ![inline](https://18f.gsa.gov/assets/blog/join-us/18F-IRL-2016.jpg)
 
-^ I hadn't fully cracked that trust question when I started with 18F. I admit now to being dismissive of cloud.gov at first: "It's just Heroku for government. It can't tackle serious problems -- thats for real sysadmins and their DevOps toolkit" 
+^ CRACKED, Started, Dismissive: Heroku - Not for REAL SysADMIN - DevOps Toolkit
 
-^Then my first engagement with 18F was with an agency making their first concerted effort to work in a cloud. Instead of coaching I was down in the trenches with the agency partner to build a hardened, functional and automated development environment in Azure. In 9 months we didn't get to running a single line of developer code in that env, but where I felt disappointment, they felt we "had exceeded all expectations" by having a repeatable process for building and managing that environment. 
+^Agency First effort. Not coaching, In trenches, w/ partner. 
 
-^Which was a real step forward for them, but meanwhile, I saw my colleagues at 18F shipping and releasing with their partner agenices using cloud.gov. I joined that team with two lessons that were crystallizing. They, are, first:
+^Hardned, Functional, Repeatable, Automated.  NINE months, no Developer code.
+
+^"had exceeded all expectations" by having a repeatable process for building and managing that environment. 
+
+^real step forward for them,  my colleagues at 18F SHIPPING and RELEASING with their partner agenices using cloud.gov. I joined  with TWO Lesson Crystalizing.
 
 ---
 
 # 1: A PaaS is a prerequisite for DevOps outcomes in regulated environments
 
-^So Everybody wants the DevOps. They read about the high performing organizations that move with speed _and_ stability. Then they focus on the tooling and the forms of DevOps, and lose sight of the outcomes.
+^Want DEVOPS. Read HiPerf Speed & Stability. But -> Tooling and Forms, Not OUTCOMES
 
-^Core to DevOps is having teams empowered to deliver value, to deliver on mission, without bottlenecks. In smaller start-ups, in mature DevOps organizations, it might work to embed ops expertise in each team, and grant those teams the authority to make changes on behalf on the organization.
+^Core DevOps: Empower Deliver Value/Mission. No BottleNeck
+
+^StartUps/Mature : EMBED ops TEAM, GRANt AUTHORITY to make changes on behalf on the organization.
 
 ^Yes: you can run terraform to build a new test env. Yes: you can run that Chef recipe to install Tomcat.
 
-^But as we discussed earlier, government and regulated industries are low-trust organizations. Even with Infrastructure-as-Code -- the same developer team they trusted to write code handling credit card data, they wouldn't trust to write code to install Tomcat on their systems.
+^government and regulated industries are low-trust organizations. Even with Infrastructure-as-Code -- they trusted to write code handling credit card data, they wouldn't trust to write code to install Tomcat on their systems.
 
 <!--When I worked for Chef Software, I would see organizations with multiple Chef runs: One for ops and security, and one for the developers. 
 -->
 
-^As you probably know: that leaves product teams and developers begging: please can I just an app server and db server in a shared env, and has the ops teams working hard as ever.
+^BEGGING: please APP SERVER AND DB SERVER IN A SHARED ENV, and has the ops teams wORKING HARD as ever.
 
 ^A PaaS is a prerequisite for DevOps outcomes in government. 
 
@@ -158,13 +170,13 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^You have these mature automation tools, you want guardrails for product and dev teams, it's tempting to build a toolchain bespoke to the organization's needs.
 
-^Whether it's intentional or not, the drive of "let's build our own PaaS" takes hold. 
+^drive of "let's build our own PaaS" takes hold. 
 
 ^This might take the form of something like: "I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, and commit to Git. The PR gets routed to Pat or Steve for approval, then it'll get instantiated in a validation environment for security scans ... " and so and so on. 
 
-^Toolchains are awesome, but not at scale in an organization that hasn't practiced flow. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service (or PaaCS), with bottlenecks accruing where manual work has to occur. And folks are still waiting.
+^Toolchains are AWESOME, but NOT at SCALE when NO FLOW. SEEN this DEVOLVE into Platform-as-a-Concierge-Service (or PaaCS), with BOTTLENECKS  Manual work.
 
-^I want to stop this. So I want to make easy and obvious to use PaaS for the 80% use case, and let operations teams use the other tooling for the remaining hard work. And cloud.gov offers me that opportunity.  Now, what is this cloud.gov thing?
+^STOP THIS. EASU use PaaS for the 80% use case, and let OPS do HARD WROK. I get to. What is this cloud.gov thing?
 
 ---
 
@@ -177,13 +189,10 @@ including user-centered design, agile development, lean acquisition and open-sou
 * Security by convention
 * With a dollop of compliance:
 
-^We, of course, offer the core functionality of Cloud Foundry: the ability to run application code for you in the cloud, We're 100% opensource. Now There are Commercial security tools in our boundary But nothing in our functional support.
-
-^ along with self-service managed marketplace offerings. 
 
 ^Anyone from the US Gov can work in a free sandbox. But we're only for USGov use at this point; expanding to states and localities isn't in the picture at this point. 
 
-^We enable tenant security by making the secure choice the default choice. By enabling self-service resources with sane defaults, product teams can focus on source code and functionality. Example: S3 buckets... 
+^secure choice the default choice. Focus on source code and functionality. Example: S3 buckets... 
 
 ^From a government perspective, our killer feature is security and compliance, first among this is FedRAMP authorization.
 
@@ -207,13 +216,11 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 [.build-lists: true]
 
-^First, we're FedRAMP JAB authorized for workloads up to FISMA moderate. 
+^August 2016: Began our review with the JAB teams. 23 weeks from JAB kickoff to signed P-ATO, including 8 weeks for technical/operational improvements and 15 weeks for JAB review. 470 pp, fortnightly meetings, monthly conmons, annual reassessment.
 
-^At an agency, you can obtain from FedRAMP our entire System Security Plan and compliance findings. You don't have to do you own technical audit, that's been done. From those docs, you determine whether our security posture fits your needs, and how you want to inherit those controls.
 
 ^What this gets us for our tenants is a sign lift of their compliance load.
 
-^August 2016: Began our review with the JAB teams. 23 weeks from JAB kickoff to signed P-ATO, including 8 weeks for technical/operational improvements and 15 weeks for JAB review. 470 pp, fortnightly meetings, monthly conmons, annual reassessment.
 
 ---
 
@@ -280,11 +287,11 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 ![inline](media/identity.png)
 
-^Since we were already using our customer's agencies single-sign-on with UAA, why not make it easier on developers to enable agency authentication in their apps by just reusing that service?
+^Since ALREADY using our CUSTOMER's agencies SINGLE-SIGN-ON with UAA, make it easier on to enable AGENCY AUTHENTICATION in their apps by just REUSING?
 
-^The cloud.gov identity provider service has a single oauth-client plan, and you provide the redirect URI and scope. The applications can then get the credentials to your provider via a service key. 
+^The cloud.gov IDENTITY PROVIDER service has a SINGLE OAUTH-CLIENT plan, and you PROVIDE rEDIRECT URI AND SCOPE. The APPcan then get the CREDENTIALS to your PROVIDER with SERVICE KEY
 
-^I've shown one example here -- the system I used to request buying my workshop registration, requests.18f.gov, which is built to redirect me to the ageny SSO, and then I'm authenticated and ready to work.
+^I've shown one example, I BUY, get REDIR
 
 ---
 
@@ -327,11 +334,11 @@ NSF | USDS | ATF
 > **We had a complete culture change about how to do user-centered design and agile.**
 -- FEC product owner
 
-^The case study on our site focusses on cost savings, and in a small agency it matters that they save 85% on operation. But cloud.gov was also key to process transformation. As the product owner says:
+^cost savings, ELASTIC. it matters that they save 85% on operation. Key TRANSFORM. QUOTE:
 
 ^Agile from inception to delivery. Instead of quarterly releases, they now deliver bi-weekly, and are engaged in user-centered design and rapid prototyping. 
 
-^They're not the only agency that has realized cost-savings, and better capacity, and  delivery on their mission. Dept of Education and College Scorecard; the FDIC; The Forest Service; have all seen cloud.gov as a key component of transformation.
+^COST-savings, and better CAPACITY, and  DELIVERY on their mission. Dept of eDUCATION and College Scorecard; the FDIC; The FOREST sERVICE; 
 
 ^And sometimes it's the little things that matter, like our fourth graders:
 
@@ -394,6 +401,8 @@ CI/CD-as-a-Service | Container Runtime
 
 ---
 
+# _cloud-gov-inquiries@gsa.gov_
+
 ![inline](media/logo.png)
 
 [.background-color: #FFFFFF]
@@ -418,6 +427,8 @@ around trust, which makes systems that enable higher-trust real enablers.
 [.header: #EE0000;, alignment(center), line-height(0), text-scale(1.0)]
 
 ---
+
+# _cloud-gov-inquiries@gsa.gov_
 
 ![inline](media/logo.png)
 
