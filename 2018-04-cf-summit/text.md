@@ -127,7 +127,6 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ![inline](https://18f.gsa.gov/assets/blog/join-us/18F-IRL-2016.jpg)
 
-
 ^ I hadn't fully cracked that trust question when I started with 18F. I admit now to being dismissive of cloud.gov at first: "It's just Heroku for government. It can't tackle serious problems -- thats for real sysadmins and their DevOps toolkit" 
 
 ^Then my first engagement with 18F was with an agency making their first concerted effort to work in a cloud. Instead of coaching I was down in the trenches with the agency partner to build a hardened, functional and automated development environment in Azure. In 9 months we didn't get to running a single line of developer code in that env, but where I felt disappointment, they felt we "had exceeded all expectations" by having a repeatable process for building and managing that environment. 
@@ -163,9 +162,9 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^This might take the form of something like: "I know, let's kick of the process with a Remedy ticket, which opens up a Puppet/Chef/Terraform template they can fill in, and commit to Git. The PR gets routed to Pat or Steve for approval, then it'll get instantiated in a validation environment for security scans ... " and so and so on. 
 
-^Toolchains are awesome, but not at scale in an organization that hasn't practiced flow. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service (or PaaCS), with bottlenecks accruing where manual work has to occur. 
+^Toolchains are awesome, but not at scale in an organization that hasn't practiced flow. Time and again, in the public and private sector, I've seen this devolve into Platform-as-a-Concierge-Service (or PaaCS), with bottlenecks accruing where manual work has to occur. And folks are still waiting.
 
-^ So I want to make easy and obvious to use the PaaS for the 80% use case, and let operations teams use the other tooling for the remaining hard work. And cloud.gov offers me that opportunity.  Now, what is this cloud.gov thing?
+^I want to stop this. So I want to make easy and obvious to use PaaS for the 80% use case, and let operations teams use the other tooling for the remaining hard work. And cloud.gov offers me that opportunity.  Now, what is this cloud.gov thing?
 
 ---
 
@@ -184,17 +183,15 @@ including user-centered design, agile development, lean acquisition and open-sou
 
 ^Anyone from the US Gov can work in a free sandbox. But we're only for USGov use at this point; expanding to states and localities isn't in the picture at this point. 
 
-^We enable tenant security by making the secure choice the default choice. By enabling self-service resources with sane defaults, product teams can focus on source code and functionality. Example: S3 buckets are either public or private, and that's that, reducing the chance stashing private data in a bucket that is later accidentally exposed. 
+^We enable tenant security by making the secure choice the default choice. By enabling self-service resources with sane defaults, product teams can focus on source code and functionality. Example: S3 buckets... 
 
 ^From a government perspective, our killer feature is security and compliance, first among this is FedRAMP authorization.
 
 ---
 
-
 # Compliance
 
 FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
-
 
 ^Let's unpack that:
 
@@ -224,8 +221,7 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 [.hide-footer: true]
 
-
-^As mentioned, if you're running a FISMA-moderate workload, your security plan needs to address 325 controls and if you're building atop a typical IaaS, you could inherit and reuse ~100 controls 
+^As mentioned, if you're running a FISMA-moderate workload, your security plan needs to address 325 controls and if you're building atop a typical IaaS, you could inherit and reuse ~100 controls. Physical env, physical security, media protection, perimeter security, maintenance. About 225 is on you. 
 
 ^When you run atop cloud.gov, you can inherit and reuse up to 269 of those controls, and then you have 56 which are shared or fully your responsibility. And I note we've leveraged FedRAMP ourselves by building atop AWS GovCloud, and inheriting of their 54 controls in our own SSP.
 
@@ -258,12 +254,15 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 ---
 
-
 # Dashboard
 
 ![inline](media/dashboard.png)
 
-^Basic admin functionality and overview. Australia contributions, Stratos likely will replace.
+^Orgs, spaces, user invites, the broker marketplace, managing env var, stop/start and scale application, and other features.
+
+^Mostly focussing on the non day-to-day non technial users.
+
+^Australia contributions, Stratos likely will replace.
 
 ---
 
@@ -271,7 +270,9 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 ![inline](media/kibana.png)
 
-^We store customer logs with ELK for 180 days, but stored logs aren't much use if you can't view them. So any cloud.gov use can authenticate against UAA and see their logs, and their logs only, in Kibana. Adam Kendall on our team wrote a UAA plugin for Kibana, so once authenticated all user searches are filtered to include the @cf_org_id and @cf_space_id. Not just useful, but another step forward in making it easier to operate in compliance
+^We store customer logs with ELK for 180 days, but stored logs aren't much use if you can't view them. So any cloud.gov use can authenticate against UAA and see their logs, and their logs only, in Kibana. 
+
+^Adam Kendall on our team wrote a UAA plugin for Kibana, so once authenticated all user searches are filtered to include the @cf_org_id and @cf_space_id. Not just useful, but another step forward in making it easier to operate in compliance
 
 ---
 
@@ -295,12 +296,13 @@ FedRAMP JAB P-ATO, FISMA Moderate, January 2017.
 
 ^ 1, 2, 3
 
-^The folks at 18F originally adopted Cloud Foundry to solve their delivery problem, they made into _cloud.gov_ to change how agencies operate. How has that worked out? Here are our most active partner agencies, spanning broadly across government.
+^Set aside money for bounties, paid very little, did get notified on a few things to tighten up, mostly feedback that they were impressed by our work.
+
+^So 18F made _cloud.gov_ to change how agencies operate. How has that worked out? Here are our most active partner agencies, 
 
 --- 
 
 # Making a difference
-
 
 Agencies: | <br> | <br>
 ---|---|---
@@ -312,7 +314,9 @@ NSF | USDS | ATF
 
 (plus 71 agencies in sandbox orgs)
 
-^One good case study is the Fed Elec Commission. The case study on our site focusses on cost savings, and in a small agency it matters that they save 85% on operation. But cloud.gov was also key to process transformation. As the product owner says:
+^ spanning broadly across government. NOAA, AirForce... 
+
+^One good case study is the Fed Elec Commission. 
 
 ---
 
@@ -322,6 +326,8 @@ NSF | USDS | ATF
 
 > **We had a complete culture change about how to do user-centered design and agile.**
 -- FEC product owner
+
+^The case study on our site focusses on cost savings, and in a small agency it matters that they save 85% on operation. But cloud.gov was also key to process transformation. As the product owner says:
 
 ^Agile from inception to delivery. Instead of quarterly releases, they now deliver bi-weekly, and are engaged in user-centered design and rapid prototyping. 
 
