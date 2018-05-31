@@ -1,5 +1,5 @@
 theme: next,1
-footer: ![inline 8%](https://www.cloudfoundry.org/wp-content/uploads/2017/10/cloud-gov.png)
+footer: ![inline 8%](https://www.cloudfoundry.org/wp-content/uploads/2017/10/cloud-gov.png) @18f
 build-lists: true
 slidenumbers: true
 
