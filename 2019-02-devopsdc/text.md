@@ -34,3 +34,13 @@ slidenumbers: true
 * Psychological Safety
 * Team Empowerment
 * Regulatory Setting
+
+---
+
+# References
+
+John Willis: http://itrevolution.com/devops-culture-part-1/ - A Dive into Devops Culture
+John Willis: https://blog.chef.io/2010/07/16/what-devops-means-to-me/ - 2010 first blog post on CAMS, following 2010 Mountainview DevOpsDays
+
+
+
