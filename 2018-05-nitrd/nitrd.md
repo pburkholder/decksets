@@ -1,4 +1,3 @@
-
 theme: next,1
 footer: ![inline 8%](https://www.cloudfoundry.org/wp-content/uploads/2017/10/cloud-gov.png) @18f
 build-lists: true
@@ -171,5 +170,48 @@ SLO: SLI is met 99.97% of time per month (13m/month)
 * Product autonomy
 * Measure and emit culture metrics
 
+* Authorization reuse (FedRAMP)
+* Build at high cable-car mark
+  * SaaS > PaaS > IaaS > data center
+
 
 ^  (Audit, control, collaboration, sharing, communicate) - not runbooks
+
+# Strategy words:
+
+* Agile procurement
+  * [I have nothing on this except what's in this slide: https://gsa-tts.slack.com/archives/C054NH1FW/p1526483032000750]
+ 
+
+* Start small, start core
+  * The Forest Service christmas tree permitting is a good example. FS makes
+    lots of money from lumber permitting. They started literally with their
+    smallest tree. But it's a public-facing one, one that could see a complete
+    transformation.
+
+  * Small
+    * What's the right size? The two-pizza team
+    * Self-sufficient. Must have autonony, with embedded team members in ops/security/acq, or dedicated personnel who are empowered
+    * No CRB/CABs. They have negative value
+  * Core
+    * Are people excited about it?
+    * Compete the opportunity to be involved
+    * Broadcast progress with updates, or dashboards
+
+  * How to tell it's working
+
+
+* Everything in Version Control
+  * Openness
+  * Builds habits of everything being expressed in code
+  * Builds habits of peer review and accountability
+  * Make code the _only_ way changes are made (Infrastructure-as-Code, release
+    pipelines)
+  * Audit & Control
+
+  * How to tell its working
+    * People communicate over merge/pull requests
+    * People take pride in commit history
+
+* Release from day one
+
