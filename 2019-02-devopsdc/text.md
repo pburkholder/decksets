@@ -39,7 +39,50 @@ slidenumbers: true
 
 # Puppet state of DevOps reports
 
+- Key Players:
+  - Gene Kim
+  - Jez Humble
+  - James Turnbull
+  - John Willis
+- 2012 Survey Data
+- Report to Velocity, June 2013
 
+---
+
+## High Performing DevOps Teams (2012)
+
+- They’re	 more	 agile	 
+  - 30x	 more	 frequent	 deployments  
+  - 8,000x	 shorter	 lead	 time
+  (minutes/hours	 vs.	 months/quarters)
+- They’re	more	 reliable  
+  - 2x	 the	 change	 success	 rate	
+  - 12x	 faster	 MTTR	 
+  
+.footer: 2013 State of DevOps Slides (June): https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more
+
+--- 
+
+## Measuring Culture  (2012)
+
+> “I’ll tell you EXACTLY what devops means. Devops means giving a shit about your job enough to not pass the buck. Devops means giving a shit about your job enough to want to learn all the parts and not just your little world. Developers need to understand infrastructure. Operations people need to understand code. People need to fucking work with each other and not just occupy space next to each other.” John Vincent | @lusis | http://bit.ly/12DkRhf
+
+.footer: 2013 State of DevOps Slides (June): https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more
+
+---
+
+##  Measuring Culture (2012)
+
+- Trust (and Verify)
+- Continuous Improvement vs Risk Management Theater
+- “Human Error”
+- Heroes / "high performers
+
+.footer: 2013 State of DevOps Slides (June): https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more
+
+^ They identified that they need to measure culture, to identify High Mgmt Trust vs Low Mgmt Trust styles, and that they needed metrics that enable regression, using a "Likert-type scale"
+
+---
 
 until Nicole Forsgren starting working with Puppet on the State of DevOps Survey in 2013, and published their first report in 2014.
 
@@ -77,26 +120,6 @@ First Westrum DevOps Survey https://www.researchgate.net/publication/263198947_2
 John Willis: http://itrevolution.com/devops-culture-part-1/ - A Dive into Devops Culture
 
 2013 State of DevOps Slides (June): https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more
-
---- 
-> 33. Measuring Culture: “I’ll tell you EXACTLY what devops means. Devops means giving a shit about your job enough to not pass the buck. Devops means giving a shit about your job enough to want to learn all the parts and not just your little world. Developers need to understand infrastructure. Operations people need to understand code. People need to fucking work with each other and not just occupy space next to each other.” John Vincent | @lusis | http://bit.ly/12DkRhf
-34. Measuring Culture
-- Trust (and Verify)
-- Continuous Improvement vs Risk Management Theater
-- “Human Error”
-- Heroes / "high performers
-https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more
-
----
-
-# Overcoming barriers to DevOps adoption:
-Biggest barriers were cultural:
-- Lack of manager buy-in
-- Lack of team buy-in
-- Value of DevOps not understood outside my group
-
-Challenge:
-- It's easier to teach tools than teach people skills
 
 
 
