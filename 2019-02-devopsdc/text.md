@@ -1,8 +1,11 @@
+theme: Business Class, 5
 build-lists: true
 slidenumbers: true
+autoscale: true
+footer: @pburkholder
 
 
-# 🌱Culture is not Squushy🌱
+# 🌱Culture is not Squushy 🌱   
 
 ## Peter Burkholder
 
@@ -15,13 +18,12 @@ slidenumbers: true
 
 ---
 
-# "Let's measure our Westrum typology!"
+# “Let’s measure our Westrum typology!”
+
 
 ^Suggested to mgmt that we do Westrum surveys', much like "Lets do coffee!" -- assuming a) universal knowledge and b) universal agreement. 
 
-^There comes a time when you work with smart, closely aligned colleagues when you're surprised when they don't  know a thing that you think is obvious and of clear value. And knowing that they're smart and competent, maybe you should question your assumptions and value proposition.
-
-^So let's tackle some of the assumptions that I was making, starting with some DevOps history. Back in 2009, Patrick Debois organized the first Agile Infrastructure conference, and to harness Twitter's 140-character limit, he dubbed it DevOps Days, a term that we carry with us still. Since there's no DevOps Manifesto, DevOps has been defined variously be diff practitioners, but an early outline came from John Willis and Damon Edwards, namely:
+^So let's talk DevOps and Culture and History. Back in 2009, Patrick Debois organized the first Agile Infrastructure conference, and to harness Twitter's 140-character limit, he dubbed it DevOps Days, a term that we carry with us still. Since there's no DevOps Manifesto, DevOps has been defined variously be diff practitioners, but an early outline came from John Willis and Damon Edwards, namely:
 
 ---
 
@@ -48,7 +50,7 @@ slidenumbers: true
   * James Turnbull
   * John Willis
 * 2012 Survey Data
-* Report to Velocity, June 2013
+* Presentation at _Velocity_, June 2013
 
 ---
 
@@ -63,7 +65,6 @@ slidenumbers: true
 
 
 [.footer: https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more]
-[.theme: Courier,1]
 
 --- 
 
@@ -72,6 +73,7 @@ slidenumbers: true
 > “I’ll tell you EXACTLY what devops means. Devops means giving a shit about your job enough to not pass the buck. Devops means giving a shit about your job enough to want to learn all the parts and not just your little world. Developers need to understand infrastructure. Operations people need to understand code. People need to fucking work with each other and not just occupy space next to each other.” 
 -- John Vincent | @lusis | http://bit.ly/12DkRhf
 
+[.autoscale: true]
 [.footer: https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more]
 
 ---
@@ -92,14 +94,21 @@ slidenumbers: true
 
 ---
 
-On my team...
+# How is your organizational culture?
+
+---
+
+# On my team...
 
 * information is actively sought.
-* failures are learning opportunities, and messengers of them are not punished.
+* messengers are not punished when they deliver news failure or other bad news.
 * responsibilities are shared.
 * cross-functional collaboration is encouraged and rewarded.
 * failure causes enquiry.
 * new ideas are welcomed.
+* failures are treated primarily as opportunities to improve.
+
+# Rank from 1 (strongly disagree) to 7 (strongly agree)
 
 ^The 2013 survey introduced questions, which you were to rank on a scale from 1 to 7, with 1 being Strongly diagree and 7 being strongly agree
 
@@ -124,7 +133,7 @@ On my team...
 
 ---
 
-# Organizational Culture 
+# Organizational Culture
 
 # vs.
 
@@ -134,38 +143,36 @@ On my team...
 
 ---
 
-# Safety Culture 
-
-# vs.
-
-# Safety Climate
-
----
-
 # A sampling of safety culture measures:
 
 * White & Wilson: 113 questions on a 7-point scale
 * Competing Values Framework: 65 questions, 1-5 ranking
 * Team Climate Inventory: 44 items across 15 subscales
 * Ostroff Organizational Climate Survey: 94 Items
-* Zohar 2005: Only 16 questions, but
-  * Considers safety when setting production schedule
-  * Quickly corrects any safety hazard
+* Zohar 2005: Only 16 questions, but:
+  * “Considers safety when setting production schedule”
+  * “Quickly corrects any safety hazard”
+
 
 ---
 
 # Ron Westrum, Eastern Michigan University
 
+**Pathological organisations** are characterized by large amounts of fear and threat. 
 
+**Bureaucratic organisations** protect departments. 
 
-**Pathological organisations** are characterized by large amounts of fear and threat. People often hoard information or withhold it for political reasons, or distort it to make themselves look better.
+**Generative organisations** focus on the mission. 
 
-**Bureaucratic organisations** protect departments. Those in the department want to maintain their “turf,” insist on their own rules, and generally do things by the book — their book.
-
-**Generative organisations** focus on the mission. How do we accomplish our goal? Everything is subordinated to good performance, to doing what we are supposed to do.
 
 [.autoscale: true]
 The Study of Information Flow: A Personal Journey; Westrum
+
+^People often hoard information or withhold it for political reasons, or distort it to make themselves look better.
+
+^Those in the department want to maintain their “turf,” insist on their own rules, and generally do things by the book — their book.
+
+^ How do we accomplish our goal? Everything is subordinated to good performance, to doing what we are supposed to do.
 
 ---
 
@@ -192,6 +199,26 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 [.autoscale: true]
 
+---
+
+# Case studies and anecdotes
+
+---
+
+# 🚀
+
+---
+
+> I sent the engineer a bottle of champagne because I wanted everybody to know that honesty pays off, even if someone may run the risk of incriminating himself. Absolute honesty is something you cannot dispense with in a team effort as difficult as that of missile development
+-- <br/>
+
+---
+
+> I sent the engineer a bottle of champagne because I wanted everybody to know that honesty pays off, even if someone may run the risk of incriminating himself. Absolute honesty is something you cannot dispense with in a team effort as difficult as that of missile development
+-- Werner von Braun<br/>
+
+---
+
 ^ How do you measure culture. In his typology paper, Westrum lamented there wasn't a good tool for this:
 
 ---
@@ -213,6 +240,9 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 # [fit] Results
 
+![left](https://images-na.ssl-images-amazon.com/images/I/610tbJ%2BV-aL.jpg)
+
+
 ---
 
 ![inline](westrum_inputs.png)
@@ -229,45 +259,64 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 > Westrum organizational culture is highly correlated with (eNPS)27 and that elite performers are 1.8 times more likely to recommend their team as a great place to work.
 
 > In 2016, 31% of respondents were classified as pathological, 48% bureaucratic, and 21% generative.
-
-Excerpt From: Nicole Forsgren, PhD, Jez Humble and Gene Kim. “Accelerate.” iBooks. 
+--Excerpt From: Nicole Forsgren, PhD, Jez Humble and Gene Kim. “Accelerate.” iBooks. 
 
 ---
 
 # Let's measure this! What could possibly go wrong?
 
----
-
-# Measure:
-
-* How would you measure?
-* Who else is doing this?
-* What could you learn?
+* Scope to a team or unit
+* Ask the seven questions, scoped to unit
+* Analyse
 
 ---
 
+# Questions to ask going into this
 
-# Cinderella
-
-^ "Does the isolated generative unit become a Cinderella, the target of hostile jibes and political actions?"
-
----
-
-# Does culture matter?
-
-# Can you measure it?
-
-# Can you change it?
+* What if there's bimodal/skew distribution?
+* What if there's variance (lack of _convergence_) across questions? 
+* What will do for _pathological_ results?
 
 ---
 
+# Longitudinal considerations
+
+* There's _very_ little written on this
+* What about leading and lagging indicators?
+* How will you separate climate from culture?
+
 ---
 
-# Trust
+# Pitfalls
 
-* Psychological Safety
-* Team Empowerment
-* Regulatory Setting
+* Comparing teams against each other
+* Basis of pay or promotion
+* “Your team doesn’t appreciate our culture”
+* Cinderellas
+> "Does the isolated generative unit become a Cinderella, the target of hostile jibes and political actions?"
+
+---
+
+# Your stories & questions
+
+---
+
+# Summary
+
+* DevOps and the CALMS model
+* No common criteria for culture, but DORA uses Westrum
+* Information flow categorizes you as
+    * Pathological | Bureaucratic |  Generative
+* 7 criteria
+* Lean & CD → Generative → SDO & Org outcomes
+  * p < 0.05 confidence
+* Use at your own risk
+
+---
+
+# “Let’s (not) measure our Westrum typology?”
+
+## The paradox of leadership
 
 ---
 
