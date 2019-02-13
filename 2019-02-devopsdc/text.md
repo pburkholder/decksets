@@ -98,6 +98,13 @@ footer: @pburkholder
 
 ---
 
+# Nicole Forsgren
+
+![inline  ](https://static1.squarespace.com/static/571faf00c2ea510eafddb70b/t/5722c12340261dcef4d23ca4/1462043581840/Nicole-93.jpg?format=1500w)
+
+
+---
+
 # On my team...
 
 * information is actively sought.
@@ -166,7 +173,7 @@ footer: @pburkholder
 
 
 [.autoscale: true]
-The Study of Information Flow: A Personal Journey; Westrum
+[.footer: The Study of Information Flow: A Personal Journey; Westrum]
 
 ^People often hoard information or withhold it for political reasons, or distort it to make themselves look better.
 
@@ -205,7 +212,7 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 ---
 
-# 🚀
+# [fit]🚀
 
 ---
 
@@ -219,12 +226,12 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 ---
 
-^ How do you measure culture. In his typology paper, Westrum lamented there wasn't a good tool for this:
 
----
 
 > The true need is for a scheme that captures one or few dimensions in an easy to understand way
 --- Ron Westrum
+
+^ How do you measure culture. In his typology paper, Westrum lamented there wasn't a good tool for this:
 
 ---
 
@@ -240,7 +247,7 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 # [fit] Results
 
-![left](https://images-na.ssl-images-amazon.com/images/I/610tbJ%2BV-aL.jpg)
+![right](https://images-na.ssl-images-amazon.com/images/I/610tbJ%2BV-aL.jpg)
 
 
 ---
@@ -320,28 +327,24 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 ---
 
-# References
+# References 
 
-https://www.devopsdays.org/blog/2009/11/11/devopsdays-2009-belgium-a-great-success/
+Westrum, Ron. "A typology of organisational cultures." BMJ Quality & Safety 13.suppl 2 (2004): ii22-ii27.
 
-First Westrum DevOps Survey https://www.researchgate.net/publication/263198947_2014_State_of_DevOps_Report
+Westrum, Ron. "The study of information flow: A personal journey." Safety Science 67 (2014): 58-63.
+
+Forsgren, Nicole, Jez Humble, and Gene Kim. Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations. IT Revolution, 2018.
+
+Forsgren, Nicole, Gene Kim, Nigel Kerstnen, Jez Humble. "2014 State of DevOps Report" https://www.researchgate.net/publication/263198947_2014_State_of_DevOps_Report
 
 John Willis: http://itrevolution.com/devops-culture-part-1/ - A Dive into Devops Culture
 
-2013 State of DevOps Slides (June): https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more
-
-
+Kim, Gene, Jez Humble, James Turnbull, John Willis. "DevOps: It's Not Just For WebOps And We Have The Metrics to Prove It." Velocity Conference 2013 (slides). https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more
 
 John Willis: https://blog.chef.io/2010/07/16/what-devops-means-to-me/ - 2010 first blog post on CAMS, following 2010 Mountainview DevOpsDays
-
 
 Schulte, Mathis & Ostroff, Cheri & Shmulyian, Svetlana & Kinicki, Angelo. (2009). Organizational Climate Configurations: Relationships to Collective Attitudes, Customer Satisfaction, and Financial Performance. The Journal of applied psychology. 94. 618-34. 10.1037/a0014365. 
 
 Zohar, Dov, and Gil Luria. "A multilevel model of safety climate: cross-level relationships between organization and group-level climates." Journal of applied psychology 90.4 (2005): 616.
 
----
 
-```sh
-mmdc -i westrum_inputs.mmd -o westrum_inputs.png -b transparent
-mmdc -i westrum_outputs.mmd -o westrum_outputs.png -b transparent
-```
