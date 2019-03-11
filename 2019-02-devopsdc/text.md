@@ -14,12 +14,13 @@ footer: @pburkholder
 
 ^A few weeks ago at work there was some discussion whether our group had the same values and drive as we did a few year ago, and I jumped in with what I thought was an obvious answer, namely:
 
-^T.C. Baxter in the key bowl
-
 ---
 
 # “Let’s measure our Westrum typology!”
 
+---
+
+#  `¯\_(ツ)_/¯`
 
 ^Suggested to mgmt that we do Westrum surveys', much like "Lets do coffee!" -- assuming a) universal knowledge and b) universal agreement. 
 
@@ -159,6 +160,8 @@ footer: @pburkholder
 * Zohar 2005: Only 16 questions, but:
   * “Considers safety when setting production schedule”
   * “Quickly corrects any safety hazard”
+* Gallup Q12 (paid only)
+* Dimensions of Learning questionnaire
 
 
 ---
@@ -210,9 +213,21 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 # Case studies and anecdotes
 
+<!--[left](https://media.giphy.com/media/1xnbsOCTvkna6xVIe1/giphy.gif)
+-->
+![original](https://www.gannett-cdn.com/-mm-/c9422a3d291fb1bb5b699da56c0ffaca0721cf36/c=0-92-2000-1220/local/-/media/Indianapolis/Indianapolis/2014/03/13//1394728375000-globo-5kf1dhoi41s1i6uhd9ej-original.jpg?width=1600&height=800)
+
 ---
 
-# [fit]🚀
+![](https://www.gannett-cdn.com/-mm-/c9422a3d291fb1bb5b699da56c0ffaca0721cf36/c=0-92-2000-1220/local/-/media/Indianapolis/Indianapolis/2014/03/13//1394728375000-globo-5kf1dhoi41s1i6uhd9ej-original.jpg?width=1600&height=800)
+# ATR-72
+
+* "There were five pre-Roselawn ATR-42 incidents that occurred in severe icing conditions"
+  * But no global alert issued, due to heavy pressure from French aviation
+* October 31, 1994, American Eagle #4184 killed all 68 aboard
+  
+^A crash of an ATR-72 airliner in Italy, for instance, was carefully written up to avoid finger pointing, thanks to heavy pressure from the French aviation industry. The crash did not lead to a worldwide alert that the aircraft might have a mode, under certain conditions, that would lead to one of the wings dipping suddenly, and thus causing loss of lift. The failure to engage a global fix may have led to a second ATR-72 that crashed in Roselawn, Illinois.21 The encapsulation of the facts by the original accident report had a devastating result.
+
 
 ---
 
@@ -226,8 +241,6 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 ---
 
-
-
 > The true need is for a scheme that captures one or few dimensions in an easy to understand way
 --- Ron Westrum
 
@@ -238,7 +251,11 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 # Likert scales
 
 * Do you feel you can provide feedback to management and it will be genuinely taken into consideration?
-* I can provide feedback to management and it will be genuinely taken into consideration.
+
+Vs:
+
+* I can provide feedback to management.
+* My feedback will be genuinely taken into consideration.
   * 1 <-- Strongly disagree .... 4 .... Strongly agree --> 7
 
 [.build-lists: true]
@@ -263,7 +280,7 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 ---
 
-> Westrum organizational culture is highly correlated with (eNPS)27 and that elite performers are 1.8 times more likely to recommend their team as a great place to work.
+> Westrum organizational culture is highly correlated with _eNPS_  and that elite performers are 1.8 times more likely to recommend their team as a great place to work.
 
 > In 2016, 31% of respondents were classified as pathological, 48% bureaucratic, and 21% generative.
 --Excerpt From: Nicole Forsgren, PhD, Jez Humble and Gene Kim. “Accelerate.” iBooks. 
@@ -282,7 +299,7 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 
 * What if there's bimodal/skew distribution?
 * What if there's variance (lack of _convergence_) across questions? 
-* What will do for _pathological_ results?
+* What to do for _pathological_ results?
 
 ---
 
@@ -291,6 +308,18 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 * There's _very_ little written on this
 * What about leading and lagging indicators?
 * How will you separate climate from culture?
+
+^Only data points I have are @andykalk and @chef
+
+---
+
+# Recommendations (from Humble, et al)
+
+* Run semi-annually or annually
+* Make aggregated results available to all
+* Ensure execs meet to discuss findings, next steps
+
+^Disassociate culture surveys from pay and performance reviews. Make the aggregated results available to all employees and ensure executives set up meetings to discuss the findings and plan next steps. Run surveys annually or semiannually to provide a baseline for comparison and measurement of change over time.
 
 ---
 
@@ -335,11 +364,21 @@ Westrum, Ron. "The study of information flow: A personal journey." Safety Scienc
 
 Forsgren, Nicole, Jez Humble, and Gene Kim. Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations. IT Revolution, 2018.
 
+---
+
+# References 2
+
 Forsgren, Nicole, Gene Kim, Nigel Kerstnen, Jez Humble. "2014 State of DevOps Report" https://www.researchgate.net/publication/263198947_2014_State_of_DevOps_Report
 
-John Willis: http://itrevolution.com/devops-culture-part-1/ - A Dive into Devops Culture
+ Willis, John. http://itrevolution.com/devops-culture-part-1/ - A Dive into Devops Culture
 
 Kim, Gene, Jez Humble, James Turnbull, John Willis. "DevOps: It's Not Just For WebOps And We Have The Metrics to Prove It." Velocity Conference 2013 (slides). https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more
+
+Humble, Jez, Joanne Molesky, Barry O'Reilly. _Lean Enterprise_, 2014, OReilly
+
+---
+
+# References 3
 
 John Willis: https://blog.chef.io/2010/07/16/what-devops-means-to-me/ - 2010 first blog post on CAMS, following 2010 Mountainview DevOpsDays
 
