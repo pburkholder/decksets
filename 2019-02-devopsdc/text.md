@@ -74,6 +74,8 @@ footer: @pburkholder
 > “I’ll tell you EXACTLY what devops means. Devops means giving a shit about your job enough to not pass the buck. Devops means giving a shit about your job enough to want to learn all the parts and not just your little world. Developers need to understand infrastructure. Operations people need to understand code. People need to fucking work with each other and not just occupy space next to each other.” 
 -- John Vincent | @lusis | http://bit.ly/12DkRhf
 
+[.text: #000000, alignment(left|center|right), line-height(10), text-scale(2.0), Avenir Next Regular]
+
 [.autoscale: true]
 [.footer: https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more]
 
@@ -91,7 +93,7 @@ footer: @pburkholder
 ^ They identified that they need to measure culture, to identify High Mgmt Trust vs Low Mgmt Trust styles, and that they needed metrics that enable regression, using a "Likert-type scale"
 
 
-^ until Nicole Forsgren starting working with Puppet on the State of DevOps Survey in 2013, and published their first report in 2014.
+^ until Nicole Forsgren starting working with Puppet on the State of DevOps Survey in 2013, and published their first report in 2014. She realized that you can't just go in and ask:
 
 ---
 
@@ -103,6 +105,7 @@ footer: @pburkholder
 
 ![inline  ](https://static1.squarespace.com/static/571faf00c2ea510eafddb70b/t/5722c12340261dcef4d23ca4/1462043581840/Nicole-93.jpg?format=1500w)
 
+^ so the next SODOR including responding to these statements:
 
 ---
 
@@ -153,8 +156,8 @@ footer: @pburkholder
 
 # A sampling of safety culture measures:
 
+* *Competing Values Framework*: 65 questions, 1-5 ranking
 * White & Wilson: 113 questions on a 7-point scale
-* Competing Values Framework: 65 questions, 1-5 ranking
 * Team Climate Inventory: 44 items across 15 subscales
 * Ostroff Organizational Climate Survey: 94 Items
 * Zohar 2005: Only 16 questions, but:
@@ -163,6 +166,8 @@ footer: @pburkholder
 * Gallup Q12 (paid only)
 * Dimensions of Learning questionnaire
 
+^ so if you can't subject a survey population to these, how can you query them to elict
+which kind of organizational culture they're a member of 
 
 ---
 
@@ -227,6 +232,16 @@ Novelty crushed |Novelty leads to problems | Novelty implemented
 * October 31, 1994, American Eagle #4184 killed all 68 aboard
   
 ^A crash of an ATR-72 airliner in Italy, for instance, was carefully written up to avoid finger pointing, thanks to heavy pressure from the French aviation industry. The crash did not lead to a worldwide alert that the aircraft might have a mode, under certain conditions, that would lead to one of the wings dipping suddenly, and thus causing loss of lift. The failure to engage a global fix may have led to a second ATR-72 that crashed in Roselawn, Illinois.21 The encapsulation of the facts by the original accident report had a devastating result.
+
+---
+
+![](https://www.gannett-cdn.com/-mm-/c9422a3d291fb1bb5b699da56c0ffaca0721cf36/c=0-92-2000-1220/local/-/media/Indianapolis/Indianapolis/2014/03/13//1394728375000-globo-5kf1dhoi41s1i6uhd9ej-original.jpg?width=1600&height=800)
+# What examples can you think of?
+
+* GM ignition switch flaw: 124 deaths
+* Toyota sudden accelerations: 89 deaths
+* Boeing 737-Max: 346 deaths
+* Equifax and struts patch: blame 1 person
 
 
 ---
@@ -293,6 +308,7 @@ Vs:
 * Ask the seven questions, scoped to unit
 * Analyse
 
+
 ---
 
 # Questions to ask going into this
@@ -310,6 +326,38 @@ Vs:
 * How will you separate climate from culture?
 
 ^Only data points I have are @andykalk and @chef
+
+--- 
+
+# How we did this in 18F engineering
+
+* Amy Mok
+* Alex Soble
+* Peter Burkholder
+
+---
+
+# Selected questions from:
+
+* DevOps Westrum Culture Survey
+* Steven Huang, Culture Amp: [5 Diversity and Inclusions Questions](https://blog.cultureamp.com/5-diversity-and-inclusion-questions-to-use-at-your-company)
+* Amy Edmondson, reWork at Google: [Questions to measure psychological safety](https://rework.withgoogle.com/guides/understanding-team-effectiveness/steps/foster-psychological-safety/)
+* Past culture surveys from 2017 and 2018
+* And our newly invented demographic measure:
+  * "I identify as a member of an under-represented demographic in technology."
+
+
+---
+
+![fit](./media/cultureamp.png)
+
+---
+
+![fit](./media/rework.png)
+
+---
+
+#[Results](https://docs.google.com/presentation/d/10bSoMODbOYAMOHw2KMnyF36A-6rfRUUH-qd3dyyqIsI/edit#slide=id.g586a8807f2_0_5)
 
 ---
 
