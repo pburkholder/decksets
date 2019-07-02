@@ -1,5 +1,4 @@
 theme: Business Class, 5
-build-lists: true
 slidenumbers: true
 autoscale: true
 footer: @pburkholder
@@ -10,6 +9,8 @@ footer: @pburkholder
 ## Peter Burkholder
 
 ## DevOpsDC, February 2019
+
+### with tweaks for TTS DevOps Guild, May 2019
 
 
 ^A few weeks ago at work there was some discussion whether our group had the same values and drive as we did a few year ago, and I jumped in with what I thought was an obvious answer, namely:
@@ -73,8 +74,6 @@ footer: @pburkholder
 
 > “I’ll tell you EXACTLY what devops means. Devops means giving a shit about your job enough to not pass the buck. Devops means giving a shit about your job enough to want to learn all the parts and not just your little world. Developers need to understand infrastructure. Operations people need to understand code. People need to fucking work with each other and not just occupy space next to each other.” 
 -- John Vincent | @lusis | http://bit.ly/12DkRhf
-
-[.text: #000000, alignment(left|center|right), line-height(10), text-scale(2.0), Avenir Next Regular]
 
 [.autoscale: true]
 [.footer: https://www.slideshare.net/realgenekim/2013-velocity-devops-metrics-its-not-just-for-webops-any-more]
@@ -146,7 +145,7 @@ footer: @pburkholder
 
 # Organizational Culture
 
-# vs.
+er# vs.
 
 # Safety Culture
 
@@ -163,11 +162,13 @@ footer: @pburkholder
 * Zohar 2005: Only 16 questions, but:
   * “Considers safety when setting production schedule”
   * “Quickly corrects any safety hazard”
-* Gallup Q12 (paid only)
+* [Gallup Q12 (paid only)](https://www.goalbusters.net/uploads/2/2/0/4/22040464/gallup_q12.pdf)
 * Dimensions of Learning questionnaire
 
 ^ so if you can't subject a survey population to these, how can you query them to elict
 which kind of organizational culture they're a member of 
+
+^ I really dislike the CVF, with Clan Focus, Market focus, Hierarcy and AdHocracy (for flexibility and external focus)
 
 ---
 
@@ -191,7 +192,7 @@ which kind of organizational culture they're a member of
 
 ---
 
-Pathological  | Bureaucratic | Generative
+Pathological  | Hierarchical | Generative
 -------|--------- | ----------
 _Power-oriented_ | _Rule-oriented_ | _Performance-oriented_
 Low co-operation | Modest co-operation | High co-operation

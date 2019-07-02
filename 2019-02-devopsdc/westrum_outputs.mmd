@@ -1,4 +1,10 @@
 graph LR
-B("Westrum<br/>Organizational<br/>Culture")
-B --> D("Software<br/>Delivery<br/>Performance")
-B --> F("Organizational<br/>Performance")
+OC("Westrum<br/>Organizational<br/>Culture")
+JS("Job Satisfaction")
+SD("Software<br/>Delivery<br/>Performance")
+OP("Organizational<br/>Performance")
+OC --> SD
+SD --> OP
+OC --> JS
+OC --> OP
+JS --> OP

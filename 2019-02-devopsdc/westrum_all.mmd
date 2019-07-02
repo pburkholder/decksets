@@ -1,0 +1,16 @@
+graph LR
+CD("Continuous<br/>Delivery")
+LM("Lean<br/>Management")
+LD("Lean Product<br/>Development")
+CD --> OC
+LM --> OC
+LD --> OC
+OC("Westrum<br/>Organizational<br/>Culture")
+JS("Job Satisfaction")
+SD("Software<br/>Delivery<br/>Performance")
+OP("Organizational<br/>Performance")
+OC --> SD
+SD --> OP
+OC --> JS
+OC --> OP
+JS --> OP
