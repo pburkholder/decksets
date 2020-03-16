@@ -46,5 +46,35 @@ CA's screw up too:
 
 * https://www.pcworld.com/article/3157406/godaddy-revokes-nearly-9-000-ssl-certificates-issued-without-proper-validation.html
 * Symantec has been a dumpster fire
+* Troy Hunt https://www.troyhunt.com/on-the-perceived-value-ev-certs-cas-phishing-lets-encrypt/
+
+---
+
+Who is Let's Encrypt?
+
+- Funding
+- Board of Directors
+- Why they exist
+
+--- 
+
+Growth of TLS is good, EVs are now deprecated.
+
+---
+
+All the downsides of Let's Encrypt are features, not bugs 
+
+---
+
+What happened with this issue and why the revocations?
+
+REmember LE has now issued 1Bn certs...
+
+---
+
+The protection is DNS is not relevant. Even if you don't use LE, if you don't control your DNS, then someone else could.
+
+DNSSEC is a different issue.
+
 
 
