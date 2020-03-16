@@ -1,17 +1,38 @@
-TLs is 2 things
+Theme: Next, 1
+text: Libre Franklin, #53585F
+text-strong: Libre Franklin, #EE783F
+text-emphasis: Libre Franklin Italic
+header: Libre Franklin, #53585F
+header-strong: Roboto Strong,#EE783F
+header-emphasis: Reklame Script, #53585F  
+code: Fira Code Medium, #EE783F, #8B3D90, #2E59A2, #DF393F, #1EA8D9
+background-color: #FFFFFF  
+slidenumbers: true
+footer: ![inline 8%](https://www.cloudfoundry.org/wp-content/uploads/2017/10/cloud-gov.png) 
+build-lists: true
 
-1 - Lock - End-to-end encryption
-2 - CheckMark - Service entity validation
+# TLS is 2 things:
 
---
+1. - 🔐 - Encrypted transport
+2. - ✅ - Service entity validation
 
-1 - The lock is agreed upon between the client and services. Most clients don't agree to use weak encryption. All the services we run use strong well-supported encryption. 
-  It's not in the picture when we talk about Let's Encrypt vs., say, DigiCert
-2 - The checkmark - how do you know, when browing to `example.gov` that the page is actually coming from `example.gov`, and not `evil.ru`?
+---
 
---
+# 🔐 - Encrypted transport
 
-The conversation:
+The encryption is agreed upon between the client and services. Most clients don't agree to use weak encryption. All the services we run use strong well-supported encryption. It's not in the picture when we talk about Let's Encrypt vs., say, DigiCert
+
+---
+
+# ✅ - Service entity validation
+
+How do you know, when browsing to `example.gov` that the page is actually coming from `example.gov`, and not `evil.ru`?
+
+From the server certificate with a signature from a Certificate Authority (CA)
+
+---
+
+# The conversation
 
 - When the client connects with the server, it says "ClientHello" - I accept these ciphers, lets' talk.
 - The server replies, "Cool, here's my Server Certificate proving I'm example.gov"
@@ -20,19 +41,29 @@ The client now validates the server's certificate
 
 ---
 
+# The validation
+
 The server certification is signed by a "Certificate Authority"
 
 The client has a list, e.g. Firefox: about:preferences#privacy
 
 It checks if the Server Certificate has a valid signature that can be traced back to the Certificate Authority.
 
---
+---
 
-# Key point: From a server operator's perspective, any CA is identical to any others: the clients will treat them the same. Use the cheapest and easiest one.
+# Key point as server operator:
+
+**From a server operator's perspective, any CA is identical to any others: the clients will treat them the same. Use the cheapest and easiest one.**
 
 I have felt this way since 2002, and nothing since then has change my perpspective. (https://www.sans.org/reading-room/whitepapers/threats/paper/480)
 
-# Key point: From a client (desktop) operator's prespective, I may want to restrict CAs:
+---
+
+# Key point as a desktop system manager:
+
+From a client (desktop) operator's prespective, I may want to restrict CAs, as .mil does.
+
+---
 
 https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-dod_approved_external_pkis_master_document_v6-3_20180305-1.pdf
 
@@ -42,11 +73,10 @@ https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-dod_approved_ext
 
 --- 
 
-CA's screw up too:
+Commercial CAs have had their own issues:
 
 * https://www.pcworld.com/article/3157406/godaddy-revokes-nearly-9-000-ssl-certificates-issued-without-proper-validation.html
-* Symantec has been a dumpster fire
-* Troy Hunt https://www.troyhunt.com/on-the-perceived-value-ev-certs-cas-phishing-lets-encrypt/
+* https://www.digicert.com/replace-your-symantec-ssl-tls-certificates/
 
 ---
 
@@ -68,7 +98,7 @@ All the downsides of Let's Encrypt are features, not bugs
 
 What happened with this issue and why the revocations?
 
-REmember LE has now issued 1Bn certs...
+Remember LE has now issued 1Bn certs...
 
 ---
 
