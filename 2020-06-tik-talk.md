@@ -14,7 +14,7 @@ build-lists: true
 # [fit]**TicTalk**
 Peter Burkholder
 TTS Security/Compliance Guild
-2020-06-26
+2020-06-26 -- https://github.com/pburkholder/decksets
 
 ---
 
@@ -89,6 +89,10 @@ This is not fair and balanced coverage of the TIC3.0 landscape
 # Trust Zones
 
 ^But what's a trust zone. Consider the next slide and tell me what you think...
+
+---
+
+![fit](./media/trust-zones.png)
 
 ---
 
@@ -193,7 +197,7 @@ Web Policy Enforcement
 * Needs _outcome-based_ criteria w/ empirical validation
 * Need to eliminate VPNs
 * Too much off-topic guidance
-* :left-arrow: More latency & chokepoints
+* More latency & chokepoints
 
 ---
 
