@@ -85,6 +85,21 @@ This is not a fair and balanced coverage of the TIC3.0 landscape
 
 ---
 
+![fit](./media/trust-zones.png)
+# Trust Zones
+
+^But what's a trust zone. Consider the next slide and tell me what you think...
+
+---
+
+![fit](media/trust-zone-table.png)
+
+---
+
+> The "Agency's Enterprise Network" can be considered a high trust zone.
+
+---
+
 ![fit](./media/pep-logical-arch.png)
 # PEPs
 
@@ -92,13 +107,40 @@ This is not a fair and balanced coverage of the TIC3.0 landscape
 
 ---
 
-![fit](./media/trust-zones.png)
-# Trust Zones
+# PEPs
+
+* Files // Email
+* **Web**
+* Networking // _Resiliency_
+* DNS (still DNSSEC)
+* Intrusion detection (distinct from NCPS)
+  * calls for CT log monitoring
 
 ---
 
+# Web PEP
+![fit](media/web-pep.png)
 
+---
 
+![fit](media/web-pep.png)
+
+---
+
+Web Policy Enforcement
+
+**This is only meant for CLIENTS**
+
+> An environment used for web browsing purposes, hereafter referred to as Web"
+
+---
+
+# Use cases
+
+* Use cases are based on TIC implementations ... piloted or vetted by CISA
+* Agencies can combine use cases.
+* Only branch office and traditional published so far
+* Should take 6 months, SBA has been at for 2 years
 
 ---
 
@@ -107,46 +149,77 @@ This is not a fair and balanced coverage of the TIC3.0 landscape
 > TIC telemetry does not negate telemetry [for] NCPS & CDM
 -- Vol 1, section 10
 
+
 ---
 
+# NCPS (was EINSTEIN)
+![fit](media/ncps-duties.png)
 
-TIC Objectives
+---
 
-The objectives intend to limit the potential impact of a cybersecurity event. 
+![fit](media/ncps-duties.png)
 
-Manage Traffic
-* Observe, validate, and filter data connections to align with authorized activities; least privilege and default deny
-Protect Traffic Confidentiality
-* Ensure only authorized parties can discern the contents of data in transit; sender and receiver identification and enforcement
-* Protect Traffic Integrity
-Prevent alteration of data in transit; detect altered data in transit
-Ensure Service Resiliency
-* Promote resilient application and security services for continuous operation as the technology and threat landscape evolveEnsure Effective Response
+---
+
+# CLAWS
+![fit](media/claws.png)
+
+---
+
+![fit](media/claws.png)
+
+---
+
+# Public comments
+
+* Marianne Bellotti
+* Eric Mill
+* Alan Ning
+* Alla Seiffert
+
+---
+
+# Public Comments 1/2
+* Control != Security
+* High/Medium/Low confusing
+* Doesn't support ZTA / muddies issue
+* Trust within a zone is dangerous
+* Unclear on goals / outcomes
+
+---
+
+# Public Comments 2/2
+* Perpetuates underinvestment in app security
+* Needs _outcome-based_ criteria w/ empirical validation
+* Need to eliminate VPNs
+* Too much off-topic guidance
+* :left-arrow: More latency & chokepoints
+
+---
+
+# [fit]Conclusion
+
+---
+
+# Little guidance for 
+# providing secure 
+# services to the public
+
+---
+---
+
+TIC Objectives: limit the potential impact of a cybersecurity event. 
+
+* Manage Traffic: Observe, validate, and filter data connections to align with authorized activities; least privilege and default deny
+* Protect Traffic Confidentiality: Ensure only authorized parties can discern the contents of data in transit; sender and receiver identification and enforcement
+* Protect Traffic Integrity: Prevent alteration of data in transit; detect altered data in transit
+* Ensure Service Resiliency: Promote resilient application and security services for continuous operation as the technology and threat landscape evolveEnsure Effective Response
 * Promote timely reaction and adapt future response to discovered threats; policies defined and implemented; simplified adoption of new countermeasures
+
+[.autoscale: true]
 
 ---
 
 # Universal Capabilities (Kitchen Sink)
 
 These all seem to overlay to NIST controls for our systems.
-
----
-
-Web Policy Enforcement
-
-**This is only meant for CLIENTS**
-
-"An environment used for web browsing purposes, hereafter referred to as Web"
-
----
-
-No good guidance for providing secure services to the public
-
----
-
-
-* Whither EINSTEIN?
-* The P.E.P Talk
-* cloud.gov & TIC
-
-^ This is subtext that's likely not going to be covered in the 3pm talk, but we'll see
