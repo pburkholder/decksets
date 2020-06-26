@@ -45,7 +45,7 @@ Sean is policy lead for TIC at DHS
 
 # Caveat
 
-This is not a fair and balanced coverage of the TIC3.0 landscape
+This is not fair and balanced coverage of the TIC3.0 landscape
 
 ^As there's a Cloud Strategy meeting this afternoon, I'm only noting what I, personally, find interesting/compelling/problematic. This may be critical but my intent is to help you fill in the blanks during future conversations and perhaps nudge CISA in a more productive direction
 
@@ -59,7 +59,7 @@ This is not a fair and balanced coverage of the TIC3.0 landscape
 * Capabilities don't need to be tied to TICAPs or MITIPs. 
 * TIC use cases to let agencies demonstrate secure scenarios
 
-^In fact EINSTEIN NCPS is statutorily required to meet intrusion detection/prevention "_such as_ the .. EINSTEIN suite" (emphasis mine, noting that NCPS/EINSTEIN is not required)
+^In fact EINSTEIN NCPS is statutorily required to meet intrusion detection/prevention "_such as_ the .. EINSTEIN suite" (emphasis mine, noting that NCPS/EINSTEIN is not required). Memo is only 4 pages long.
 
 ---
 
@@ -76,7 +76,7 @@ This is not a fair and balanced coverage of the TIC3.0 landscape
 # The DRAFT 
 
 * 8 Documents, December 2019
-* Some omments at https://github.com/cisagov/tic3.0
+* Some comments at https://github.com/cisagov/tic3.0
 * Next drafts in Summer 2020, not Spring
 
 ---
