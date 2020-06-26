@@ -18,130 +18,135 @@ TTS Security/Compliance Guild
 
 ---
 
-# Agenda
+# The Email
 
-* What's driving change?
+> [Sean had] seen some commentary on cloud.gov's website around TIC that was based on the 2.0 Reference Architecture and could use updating.
+-- Jay Huie
+
+Sean is policy lead for TIC at DHS
+
+^In early March I heard that the folks in the DHS TIC office though that cloud.gov's TIC compliance page was not keeping up with the the times. Indeed, it comes up short
+
+---
+
+![fit](./media/cg-tic-arch.png)
+
+---
+
+# Resources
+* [YouTube Video](https://www.youtube.com/watch?v=sQHde_YQPnI)
+* [TIC site: https://www.cisa.gov/trusted-internet-connections](https://www.cisa.gov/trusted-internet-connections)
+* [OMB Memo M-19-26](https://www.whitehouse.gov/wp-content/uploads/2019/09/M-19-26.pdf)
+* [GitHub TIC3.0 Comments - https://github.com/cisagov/tic3.0/issues](https://github.com/cisagov/tic3.0/issues)
+
+^I learned this morning that there are hundreds of comments, only 12 of them submitted as GitHub issues.
+
+---
+
+# Caveat
+
+This is not a fair and balanced coverage of the TIC3.0 landscape
+
+^As there's a Cloud Strategy meeting this afternoon, I'm only noting what I, personally, find interesting/compelling/problematic. This may be critical but my intent is to help you fill in the blanks during future conversations and perhaps nudge CISA in a more productive direction
+
+
+---
+
+# The Memo M1-19-26 Sept 2019
+
+* Rescinded a bunch of memos, "a physical TIC access point ... has proven to be an obstacle [to cloud]"
+* Required "TIC Use Cases" from DHS for alternative controls to a physical point
+* Capabilities don't need to be tied to TICAPs or MITIPs. 
+* TIC use cases to let agencies demonstrate secure scenarios
+
+^In fact EINSTEIN NCPS is statutorily required to meet intrusion detection/prevention "_such as_ the .. EINSTEIN suite" (emphasis mine, noting that NCPS/EINSTEIN is not required)
+
+---
+
+# Memo Appendix - Use Cases
+
+1. Traditional (default) ✅
+2. Cloud
+  * IaaS / PaaS / EaaS / SaaS 
+3. Agency Branch Office ✅
+4. Remote [Federal] Users
+
+---
+
+# The DRAFT 
+
+* 8 Documents, December 2019
+* Some omments at https://github.com/cisagov/tic3.0
+* Next drafts in Summer 2020, not Spring
+
+---
+
+# [fit] What's new?
+
+---
+
+![fit](./media/pep-logical-arch.png)
+# PEPs
+
+^ Security capabilities are dispersed to PEPs instead of just at TIC AP
+
+---
+
+![fit](./media/trust-zones.png)
+# Trust Zones
+
+---
+
+
+
+
+---
+
+# Multiple Telemetry Requirements
+
+> TIC telemetry does not negate telemetry [for] NCPS & CDM
+-- Vol 1, section 10
+
+---
+
+
+TIC Objectives
+
+The objectives intend to limit the potential impact of a cybersecurity event. 
+
+Manage Traffic
+* Observe, validate, and filter data connections to align with authorized activities; least privilege and default deny
+Protect Traffic Confidentiality
+* Ensure only authorized parties can discern the contents of data in transit; sender and receiver identification and enforcement
+* Protect Traffic Integrity
+Prevent alteration of data in transit; detect altered data in transit
+Ensure Service Resiliency
+* Promote resilient application and security services for continuous operation as the technology and threat landscape evolveEnsure Effective Response
+* Promote timely reaction and adapt future response to discovered threats; policies defined and implemented; simplified adoption of new countermeasures
+
+---
+
+# Universal Capabilities (Kitchen Sink)
+
+These all seem to overlay to NIST controls for our systems.
+
+---
+
+Web Policy Enforcement
+
+**This is only meant for CLIENTS**
+
+"An environment used for web browsing purposes, hereafter referred to as Web"
+
+---
+
+No good guidance for providing secure services to the public
+
+---
+
+
 * Whither EINSTEIN?
 * The P.E.P Talk
 * cloud.gov & TIC
 
 ^ This is subtext that's likely not going to be covered in the 3pm talk, but we'll see
-
----
-
-# The Memo 
-
-* [M-19-26](https://www.whitehouse.gov/wp-content/uploads/2019/09/M-19-26.pdf) - Update to the Trusted Internet Connections (TIC) Initiative
-* Rescinded a bunch of memos, "These previous OMB memoranda required agency traffic to flow through a physical TIC access point, which has proven to be an obstacle to the adoption of cloud-based infrastructure"
-* Required "TIC Use Cases" from DHS for alternative controls to a physical point
-* Capabilities don't need to be tied to TICAPs or MITIPs. 
-* TIC use cases give agencies the chance to demonstrate secure scenarios and meet intrusion detection/prevention "_such as_ the .. EINSTEIN suite" (emphasis mine, noting that NCPS/EINSTEIN is not required)
-
-
----
-
-# The Appendix
-
-1. Traditional (default)
-2. Cloud
-  * IaaS / PaaS / EaaS / SaaS 
-3. Agency Branch Office
-4. Remote [Federal] Users
-
-# TLS is 2 things:
-
-1. - 🔐 - Encrypted transport
-2. - ✅ - Service entity validation
-
----
-
-# 🔐 - _Encrypted_ **transport** yes
-
-The encryption is agreed upon between the client and services. Most clients don't agree to use weak encryption. All the services we run use strong well-supported encryption. It's not in the picture when we talk about Let's Encrypt vs., say, DigiCert
-
----
-
-# ✅ - Service entity validation
-
-How do you know, when browsing to `example.gov` that the page is actually coming from `example.gov`, and not `evil.ru`?
-
-From the server certificate with a signature from a Certificate Authority (CA)
-
----
-
-# The conversation
-
-- When the client connects with the server, it says "ClientHello" - I accept these ciphers, lets' talk.
-- The server replies, "Cool, here's my Server Certificate proving I'm example.gov"
-
-The client now validates the server's certificate
-
----
-
-# The validation
-
-The server certification is signed by a "Certificate Authority"
-
-The client has a list, e.g. Firefox: about:preferences#privacy
-
-It checks if the Server Certificate has a valid signature that can be traced back to the Certificate Authority.
-
----
-
-# Key point as server operator:
-
-**From a server operator's perspective, any CA is identical to any others: the clients will treat them the same. Use the cheapest and easiest one.**
-
-I have felt this way since 2002, and nothing since then has change my perpspective. (https://www.sans.org/reading-room/whitepapers/threats/paper/480)
-
----
-
-# Key point as a desktop system manager:
-
-From a client (desktop) operator's prespective, I may want to restrict CAs, as .mil does.
-
----
-
-https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-dod_approved_external_pkis_master_document_v6-3_20180305-1.pdf
-
- DoD Approved External PKI Certificate Trust Chains - Version 7.3
- https://public.cyber.mil/pki-pke/interoperability/
-
-
---- 
-
-Commercial CAs have had their own issues:
-
-* https://www.pcworld.com/article/3157406/godaddy-revokes-nearly-9-000-ssl-certificates-issued-without-proper-validation.html
-* https://www.digicert.com/replace-your-symantec-ssl-tls-certificates/
-
----
-
-Who is Let's Encrypt?
-
-- Funding
-- Board of Directors
-- Why they exist
-
---- 
-
-Growth of TLS is good, EVs are now deprecated.
-
----
-
-All the downsides of Let's Encrypt are features, not bugs 
-
----
-
-What happened with this issue and why the revocations?
-
-Remember LE has now issued 1Bn certs...
-
----
-
-The protection is DNS is not relevant. Even if you don't use LE, if you don't control your DNS, then someone else could.
-
-DNSSEC is a different issue.
-
-
-
